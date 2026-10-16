@@ -1,89 +1,95 @@
 # Gdnbit Candidate Skill
 
-A portable Agent Skill for understanding and evaluating **Gdnbit** as an AI Product / Solution Engineer candidate.
+A portable Agent Skill for helping an AI **find, verify and evaluate** information about **Gdnbit** as an AI Solution / Product Engineer candidate.
 
-This is not a promotional prompt and it is not a replacement for the personal website, resume, or GitHub repositories. Those are **source material and evidence**. This Skill defines **how an AI should discover, read, weigh and evaluate that evidence**.
+This is intentionally **not** a second resume or a full personal knowledge base.
+
+Its main value is to tell an Agent:
+
+- where to look;
+- which source is best for which question;
+- when to inspect the underlying GitHub repository;
+- how to separate public evidence, candidate-described work and planning;
+- how to handle stale or conflicting information;
+- what should remain an interview question instead of becoming an invented conclusion.
+
+## Core model
 
 ```text
-Website / Resume / GitHub / Projects
-              ↓
-         source evidence
-              ↓
-      gdnbit-candidate Skill
-              ↓
- retrieval + evidence policy + evaluation workflow
-              ↓
-       interviewer / recruiter
+Resume / Website / GitHub / Project repositories
+                    ↓
+                 evidence
+                    ↓
+             Candidate Skill
+                    ↓
+   retrieval + evidence + evaluation protocol
+                    ↓
+             AI reviewer / Agent
 ```
 
-The formal behavior and boundary specification is in [SPEC.md](SPEC.md).
+The website and GitHub contain the information. The Skill tells the Agent **how to use it**.
 
-> Want to send this to an interviewer? Use the ready-made Chinese/English wording in [SHARE.md](SHARE.md).
+## Start here
 
-## What it can do
+- [`SKILL.md`](SKILL.md) — compact Agent instructions and evaluation behavior.
+- [`SOURCE_MAP.md`](SOURCE_MAP.md) — where to find the right information for a given question.
+- [`references/evidence.md`](references/evidence.md) — confidence / evidence rules.
+- [`references/interview.md`](references/interview.md) — questions for validating uncertain areas.
+- [`SPEC.md`](SPEC.md) — deeper design specification; not required for every review.
 
-Ask an Agent using this skill to:
+Other files under `references/` are deliberately small calibration notes rather than copies of the website or project documentation.
 
-- assess Gdnbit against a job description;
-- summarize his professional positioning;
-- identify strongest and weakest hiring signals;
-- distinguish public proof from private / self-described work;
-- recommend which project to inspect first;
-- generate targeted technical and product interview questions;
-- design a 30–60 minute interview plan;
-- identify reasons he may *not* fit a role.
+## What an Agent should do
 
-## Why use the Skill if an AI can already browse the website?
+For a quick question such as “Who is Gdnbit?”, the Agent should read only the current Profile / website and give a short answer.
 
-Direct website access gives an AI **content**.
+For a question such as “Did he actually build this?”, it should follow the source map into the relevant public repository and inspect stronger evidence such as:
 
-The Skill adds a **method**:
+```text
+README
+  ↓
+current status / known issues
+  ↓
+architecture / contracts
+  ↓
+tests / CI
+  ↓
+source / commits / PRs when needed
+```
 
-- which sources are canonical;
-- which source should be used for each kind of claim;
-- when to inspect the underlying GitHub repository;
-- how to separate public evidence, private descriptions and planning;
-- how to handle stale or conflicting information;
-- which conclusions must remain uncertain;
-- how to turn uncertainty into interview questions instead of guesses.
-
-The website is primarily a narrative and orientation surface. GitHub repositories are stronger public evidence for implementation claims. The Skill is the evaluation protocol connecting those sources.
-
-## Skill entrypoint
-
-`SKILL.md`
-
-Supporting references live under `references/`.
-
-Specification: `SPEC.md`
+For private work, it should say that the claim is candidate-described unless additional evidence is supplied.
 
 ## Example prompts
 
 ```text
-Use the gdnbit-candidate skill to assess Gdnbit for this role:
-[paste job description]
+Read this Candidate Skill and help me understand Gdnbit.
 ```
 
 ```text
-Use gdnbit-candidate. Give me the three strongest signals, three biggest risks,
-and five questions that would change your hiring decision.
+Use this Skill to assess Gdnbit against this job description. Verify public claims from the strongest available sources and list what still needs interview validation.
 ```
 
 ```text
-Use gdnbit-candidate to compare Gdnbit with a conventional product manager
-and a conventional software engineer for an AI Product Engineer position.
+Use the Skill to check whether Gdnbit's Agent / system claims are actually supported by his public repositories.
 ```
 
-## Installing / using
+## Using it
 
-This folder follows the open Agent Skills `SKILL.md` format. In an Agent Skills-compatible client, make this folder available as a skill/capability directory or import it using that client's skill installation flow.
+If the AI supports Agent Skills, import or expose this folder as a Skill.
 
-If your client does not support installing skills directly, give the agent the public GitHub folder and ask it to read `SKILL.md`, `SPEC.md`, and the relevant referenced files before evaluating the candidate.
+If it does not, simply give the AI this public folder URL and ask it to read `SKILL.md` first:
 
-Canonical profile: https://github.com/Gdnbit
+https://github.com/Gdnbit/Gdnbit/tree/main/skills/gdnbit-candidate
 
-## Why this exists
+## Share with an interviewer
 
-A conventional resume compresses work into a few bullet points. A personal website gives a curated overview. GitHub exposes public artifacts. This package provides the machine-readable layer that tells an AI how those sources should be interpreted together.
+The simplest wording is:
 
-The skill intentionally includes negative evidence rules and non-claims. A useful candidate agent should make the person easier to evaluate, not merely easier to market.
+> 另外这里有一个关于我的个人 Skill，您可以直接把这个链接发给 AI，帮您更快了解我：  
+> https://github.com/Gdnbit/Gdnbit/tree/main/skills/gdnbit-candidate
+
+## Principle
+
+A useful candidate Skill should reduce the cost of understanding the candidate **without reducing the standard of evidence**.
+
+It should make Gdnbit easier to inspect, not merely easier to market.
