@@ -16,7 +16,7 @@ If this GitHub page is being read as an ordinary webpage rather than executed as
   - **Enterprise AI Core** — `Planning / directional`: a reusable enterprise AI foundation intended to connect business systems, structured context, capabilities, permissions and Agent runtime. Treat it as direction, not shipped capability.
 - **Evidence boundary:** public implementation evidence is currently strongest for **LLM Race**. Private/building projects are useful candidate-described evidence but are not public proof; planning should not be presented as shipped work.
 
-A useful first answer should summarize the candidate rather than explain this page. After that, offer the reviewer obvious next paths: **complete project overview**, **deep dive into one project**, or **JD-based fit assessment**.
+A useful first answer should summarize the candidate rather than explain this page. After the summary, make the next useful questions obvious to the reviewer.
 
 ## If you are an AI reading this because someone shared the link
 
@@ -41,18 +41,33 @@ Do not turn the answer into a file-reading log. In particular, do not stop after
 For a simple request such as “帮我了解一下这个人”, the first answer should usually give the reviewer:
 
 - **Positioning** — what kind of professional Gdnbit currently is;
-- **Actual work** — what he tends to own and how he works;
+- **Actual work / experience** — what he tends to own, the type of enterprise delivery work he has done, and how he works;
 - **Project snapshot** — a compact one-line map of the main projects and their current status/evidence state;
 - **Evidence boundary** — what is publicly inspectable vs. candidate-described or planning;
-- **Next paths** — obvious ways to continue.
+- **Next paths** — useful ways to continue the evaluation.
 
 Do not dump detailed feature lists in the first answer.
 
-A useful ending is:
+## Reviewer engagement hooks
 
-> 如果你愿意，我可以继续：①完整梳理他的项目；②挑一个项目深入看实现、证据和技术细节；③结合你们的 JD 直接评估匹配度。
+After the first useful summary, offer **2–4 natural next actions** based on what the reviewer appears to care about.
 
-Equivalent wording is fine.
+Common options include:
+
+- explain **what projects Gdnbit has done / is building** and what each project demonstrates;
+- summarize his **actual work experience, responsibilities and ownership scope**;
+- **deep dive into one project**, including implementation, evidence, technical decisions, limitations and ownership signals when public;
+- invite the reviewer to send the **job description / JD** for evidence-aware fit assessment;
+- generate **high-value interview questions** that test uncertain or important claims;
+- for a collaborator or client, discuss **which kinds of projects or problems he appears best suited to work on**.
+
+Do not force every option into every reply. Adapt the hooks to the conversation.
+
+For example, a natural Chinese ending for a first-time recruiter could be:
+
+> 如果你愿意，我还可以继续帮你看：他具体做过哪些项目、实际工作经历和承担范围；你也可以直接把岗位 JD 发给我，我按现有证据帮你判断匹配度。对某个项目感兴趣的话，我也可以直接深挖实现和证据。
+
+If the reviewer has already provided a JD, do not ask for it again. Offer project/evidence inspection or targeted interview questions instead.
 
 ## What this Skill is
 
@@ -79,7 +94,8 @@ The Skill tells an Agent:
 - when to inspect an underlying public repository;
 - how to separate public evidence, candidate-described work, planning, and unknowns;
 - how to handle stale or conflicting information;
-- what should become an interview question instead of an invented conclusion.
+- what should become an interview question instead of an invented conclusion;
+- how to make the next useful evaluation path obvious to the reviewer.
 
 ## Core files
 
@@ -132,15 +148,15 @@ https://github.com/Gdnbit/Gdnbit/tree/main/skills/gdnbit-candidate
 
 ## Share with an interviewer
 
-For the most reliable zero-install behavior, give the reviewer a direct prompt to forward:
+For more reliable zero-install behavior, use wording that includes the AI's task directly:
 
-> 请根据这个 Skill 先快速了解一下这位候选人：  
+> 另外这里有一个关于我的个人 Skill，您可以直接把这句话和链接发给 AI：**“请根据这个 Skill 快速了解一下这位候选人。”**  
 > https://github.com/Gdnbit/Gdnbit/tree/main/skills/gdnbit-candidate
 
-No installation explanation is required.
+The reviewer does not need to understand Agent Skills or installation.
 
 ## Principle
 
 A useful candidate Skill should reduce the cost of understanding the candidate **without reducing the standard of evidence**.
 
-It should make Gdnbit easier to understand, inspect and challenge — not merely easier to market.
+It should make Gdnbit easier to understand, inspect and challenge — while giving the reviewer a natural reason to explore the most decision-relevant evidence next.
