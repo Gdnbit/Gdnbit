@@ -4,6 +4,8 @@ A portable Agent Skill for understanding and evaluating **Gdnbit** as an AI Prod
 
 This is not a promotional prompt. It is designed to help an AI reviewer separate public evidence, candidate-described private work, current projects, planning, strengths, gaps and interview questions.
 
+> Want to send this to an interviewer? Use the ready-made Chinese/English wording in [SHARE.md](SHARE.md).
+
 ## What it can do
 
 Ask an Agent using this skill to:
