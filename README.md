@@ -1,16 +1,60 @@
-## Hi there 👋
+<div align="center">
 
-<!--
-**Gdnbit/Gdnbit** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+# Hi, I'm Gdnbit 👋
 
-Here are some ideas to get you started:
+### AI Product Engineer · Agent Delivery
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+**Building agentic systems and AI-native workflows.**
+
+`Agent Systems` · `MCP` · `Context Engineering` · `Workflow Design`
+
+</div>
+
+<table>
+<tr>
+<td valign="top" width="50%">
+
+#### 💼 Experience
+
+**Enterprise AI Delivery** · `2026 — Now`
+
+- Operations workflows
+- Administration workflows
+- Procurement workflows
+- Business system delivery
+
+**What I do**
+
+`Requirement Interpretation` → `Workflow Design` → `Product/System Design` → `Delivery`
+
+<sub>Private client work · details withheld for confidentiality.</sub>
+
+</td>
+<td valign="top" width="50%">
+
+#### 🚀 Selected Projects
+
+**🏎️ [LLM Race](https://github.com/Gdnbit/llm-race)**  
+MCP-powered model selection engine for AI agents.
+
+**🏫 Class OS** `🚧 Building`  
+Agent-native workspace for class teachers.
+
+**🔬 Research OS** `🚧 Building`  
+Evidence-driven AI research workflow.
+
+**⚙️ More projects** `🚧 Coming soon`
+
+</td>
+</tr>
+</table>
+
+---
+
+<div align="center">
+
+### Context → Tools → Workflows → Outcomes
+
+<sub>Gdnbit · Giraffes Don't Believe in Tears. 🦒</sub>
+
+</div>
