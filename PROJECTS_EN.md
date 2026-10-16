@@ -2,48 +2,45 @@
 
 [中文](PROJECTS.md) · [English](PROJECTS_EN.md)
 
-This is not a flat repository list. It is a map of the **AI-native products and infrastructure** I am building or planning. I care first about who the system is for, what pain it removes, and what workflow it changes; architecture comes second.
+This page prioritizes **what each system actually does**. Architecture and technical terms are used to explain implementation, not to replace the product itself.
 
-> **Status:** `Public` = source available now · `Building` = active/private development · `Preparing OSS` = being cleaned for future open source · `Planning` = a defined direction that is not yet a complete public project.
+> **Status:** `Building` = active/private implementation exists · `Planning` = a defined design direction that is not yet a complete project.
 
 ---
+
+# Four Core Projects
 
 ## 🏢 Enterprise AI Core
 
 `Planning` · Enterprise AI / Reusable Infrastructure
 
-**Who it is for**  
-Organizations that already run on Excel, OA, ERP, SaaS, file servers and manual handoffs, while AI still exists only as isolated tools or chatbots.
+A reusable **AI-native enterprise foundation** for small and traditional organizations. The goal is not another standalone SaaS product, but a shared layer connecting existing systems and repeatedly needed AI capabilities.
 
-**Pain points**
+### Planned capabilities
 
-- business state is fragmented across systems, files and people;
-- OCR, ASR, document parsing, model access and file conversion are repeatedly integrated project by project;
-- each new departmental request rebuilds accounts, permissions, interfaces and workflows;
-- agents can answer questions but cannot safely perform real business actions;
-- legacy systems cannot be replaced overnight, yet organizations still need a path toward AI-native operation.
-
-**What I want to build**  
-A reusable enterprise AI layer that connects existing systems, business context and AI capabilities, then exposes them upward as shared context and executable tools.
+- **Connect existing systems**: consume data and exports from `ERP / OA / SaaS / Excel / CSV / Files` without requiring a rip-and-replace migration.
+- **Enterprise Context Layer**: represent people, organizations, roles, business objects, events, tasks, state and evidence as queryable enterprise context.
+- **Capability Layer**: standardize `OCR / ASR / Vision / Document Parsing / File Conversion / Search / RAG / Model Access` for reuse across business modules.
+- **Model / Tool Gateway**: hide provider/model differences so the business layer can switch implementations without being rebuilt.
+- **Domain Packs**: package schemas, rules, workflows and agent capabilities for procurement, administration, finance, operations and other domains.
+- **Permission / Approval / Audit**: make read scope, action scope, human approval and execution history explicit.
+- **Agent Runtime / Business Command Gateway**: let agents advance real workflows through controlled commands and write results back safely.
 
 ```text
-Existing ERP / OA / SaaS / Files
-              ↓
-     Enterprise Context Layer
-              ↓
-       Capability / Tool Layer
-              ↓
- Permissions / Approval / Audit
-              ↓
-          Agent Runtime
-              ↓
-     Domain Apps / Workflows
+Existing Systems / Files
+          ↓
+Enterprise Context
+          ↓
+Reusable Capabilities
+          ↓
+Permissions / Audit
+          ↓
+Agent Runtime
+          ↓
+Domain Apps & Workflows
 ```
 
-**Core capabilities**  
-`Context / Ontology` · `Domain Packs` · `OCR / ASR / Vision` · `Model Gateway` · `Tool Adapters` · `Permissions` · `Audit` · `Agent Runtime`
-
-The goal is not to add another chatbot. It is to let AI read business state, invoke capabilities, advance workflows and write results back safely.
+This is the next abstraction layer above my current enterprise AI delivery work: **moving from building one system per request toward reusable enterprise AI capabilities.**
 
 ---
 
@@ -51,184 +48,146 @@ The goal is not to add another chatbot. It is to let AI read business state, inv
 
 `Building` · Agent-native Work System
 
-**Who it is for**  
-K-12 homeroom teachers managing teaching, student affairs, parent communication and constant ad-hoc work.
+A personal class-management workbench for Chinese K-12 homeroom teachers. The core idea is not “AI chat for teachers,” but keeping long-running facts, follow-ups and responsibilities inside one traceable operational system.
 
-**Pain points**
+### Existing / actively validated functionality
 
-- student information is scattered across chats, spreadsheets, paper notes and memory;
-- commitments and follow-up tasks are easy to lose;
-- real student events have context, while traditional spreadsheets preserve only fragments;
-- drafting notices or reviewing history requires jumping between many sources;
-- a generic AI chat box does not know the class state and cannot safely manage it.
+- **Class & roster**: classes, student rosters, immutable student IDs and controlled name corrections.
+- **Typed Facts**: record student facts/events as structured records instead of loose text.
+- **Task / Follow-up**: turn follow-up work into Tasks with responsibility, status and source relationships.
+- **Today**: a focused view of what needs attention now.
+- **Student Timeline**: inspect facts, events and tasks for one student over time.
+- **Corrections & audit**: preserve previous values, versions and audit history instead of silently overwriting facts.
+- **Identity / Permission Boundary**: local owner, login, sessions and recovery boundaries.
+- **Query Gateway / Business Command Gateway**: route reads and writes through explicit boundaries instead of letting UI/agents edit storage directly.
+- **Agent query / drafts**: implementation exists, but database regression and formal gates are still in progress, so this is not presented as fully validated production capability.
 
-**What the system does**  
-It brings facts, events, tasks, commitments, communication, timelines, permissions and evidence into one workspace so the teacher and the agent operate on the same structured state.
+Typical flow:
 
-Examples include recording what actually happened to a student, creating linked follow-up tasks, querying a student's historical context, drafting communication from verified data, and controlling agent read/write actions through approval and audit boundaries.
+```text
+Login
+ → Create class / import roster
+ → Record student facts or follow-ups
+ → Review Today
+ → Inspect Student Timeline
+ → Preview / confirm corrections and business changes
+```
 
-**Core question**  
-How do you turn a real work domain into a system of **facts + events + tasks + permissions + timelines + agents** rather than bolt AI onto existing software?
+The project tests whether a real work domain can become **structured state that both humans and agents can operate safely.**
 
 ---
 
-## 🩺 Health OS
+## 🩺 Health OS / Family Health Records
 
-`Building` · Personal / Family Health Information
+`Building` · Personal / Family Health Information System
 
-**Who it is for**  
-People who want to manage long-term personal or family health records instead of searching through photos, chats and paper reports before every appointment.
+A long-term health record system for personal and family use. The current implementation is a Chinese household-oriented customization and extension of the open-source project **MediKeep**, with emphasis on source preservation, human review, trends, member isolation and recoverability.
 
-**Pain points**
+### Current source capabilities
 
-- checkups, clinic visits, labs, imaging and medication history are fragmented;
-- medical reports are information-dense and difficult to track over time;
-- people forget when tests should be repeated or when old results are no longer current;
-- wearable data and hospital records live in separate silos;
-- AI can extract information, but medical facts should not be silently written by an unreliable model.
+- **Multi-file upload & source preservation** for checkups, lab reports and other health documents.
+- **OCR / parser candidates** that remain provisional instead of becoming official facts automatically.
+- **Human review → official record** with editable candidates and revision history.
+- **Health records** for labs, vitals, medications, allergies, vaccines, visits and attachments.
+- **Trends & batch comparison** across measurements and checkup sessions.
+- **AI assistance** in constrained flows such as “what changed recently,” with source references and no direct writes to official facts.
+- **Members & sharing** with household member separation, invitations and scoped visibility.
+- **Export & recovery** including CSV/SVG/report export, full backups, verification and isolated restore drills.
 
-**What the system does**  
-It builds a longitudinal health timeline across reports, measurements, visits, medications, follow-up plans and wearable data, using a **AI extraction → human confirmation → official record** workflow to reduce incorrect writes.
+Core data path:
 
-Areas of interest include report OCR and structuring, trends, follow-up scheduling, appointment preparation, Apple Health / Health Connect integration, and privacy-aware family-member separation.
+```text
+Original Report
+      ↓
+OCR / Parsed Candidate
+      ↓
+Human Review
+      ↓
+Official Health Record
+      ↓
+Trend / Comparison / Export
+```
 
-**Core question**  
-How can personal health data become a long-term, traceable and reviewable health record instead of a pile of documents?
+The key rule is simple: **AI can help organize health data, but it must not silently create medical facts.**
 
 ---
 
 ## 🔬 Research OS
 
-`Building` · Evidence-driven Research & Decision System
+`Building` · Evidence-driven Personal Research & Decision System
 
-**Who it is for**  
-People who use AI for research, comparisons and decisions, but do not want important conclusions to disappear into a chat transcript.
+A personal **evidence-driven decision support system**. The current goal is not a generic search engine or a chat archive, but a recoverable end-to-end flow from source ingestion to judgment, outcome capture and later replay.
 
-**Pain points**
-
-- a conclusion survives while its sources are forgotten;
-- claims and evidence are not explicitly connected;
-- assumptions behind a decision are hard to reconstruct later;
-- real-world outcomes are rarely fed back into the original judgment;
-- the same research often starts from zero next time.
-
-**What the system does**
+### Current local v0.1 flow
 
 ```text
-Source
-  ↓
-Claim ↔ Evidence
-  ↓
-Decision Snapshot
-  ↓
+Upload / Ingestion
+      ↓
+RawSource / ClaimCard / EvidenceSpan
+      ↓
+Selected-source Chat / Briefing
+      ↓
+DecisionSnapshot
+      ↓
 Outcome
-  ↓
-Replay / Review
+      ↓
+Replay
 ```
 
-The goal is not to generate a longer AI report. It is to preserve the relationship between **sources, evidence, judgment, decisions and outcomes** so the work can be reviewed and replayed later.
+### Current functionality
 
-**Core question**  
-How do you turn a one-off AI conversation into a research and decision system with evidence, memory and feedback?
+- **Source upload / parsing / ingestion** into persistent RawSource records.
+- **ClaimCard / EvidenceSpan** linking claims back to original evidence passages.
+- **Strict selected-source chat** where the user defines which sources are allowed for the current analysis.
+- **Stop-before-generation on insufficient evidence** across chat, briefing and committee flows.
+- **Briefing mode** with direction, action, summary, supporting points, counterpoints, risk and field-level evidence state.
+- **DecisionSnapshot** to persist the evidence/judgment state at decision time.
+- **Outcome** capture after real-world results become available.
+- **Replay** to compare original evidence/judgment with later outcomes.
+- **Committee** as an optional multi-model review mode, without claiming it is inherently better than the default flow.
 
----
+The loop is:
 
-## 🏎️ LLM Race
-
-`Public` · Agent Infrastructure  
-[GitHub →](https://github.com/Gdnbit/llm-race)
-
-**Who it is for**  
-AI agents, agent workflows and developers that need to choose the right model for different tasks.
-
-**Pain points**
-
-- pricing, context windows, modalities and capability signals are fragmented;
-- the strongest overall model is not always the best model for one workflow step;
-- agents are often hard-wired to one model;
-- manually checking leaderboards and editing configuration does not fit automated workflows.
-
-**What the system does**  
-It aggregates model metadata and evaluation signals, aligns models across sources, scores candidates, and exposes model selection through MCP as an agent-callable capability.
-
-An agent can ask for a shortlist under concrete requirements such as long context, cost sensitivity and modality support, then receive candidates, score breakdowns and rationales instead of a static leaderboard.
-
-**Core question**  
-How can model selection become a dynamic capability inside an agent runtime instead of a developer-only configuration step?
+**sources → evidence → analysis → judgment → decision snapshot → real outcome → replay.**
 
 ---
 
-## 🧠 Personal Context Infrastructure
+# Other Directions Taking Shape
 
-`Planning` · Personal Agent Infrastructure
+## 🧠 Personal Context Infrastructure · `Planning`
 
-**Who it is for**  
-People who want a personal agent to understand long-term life and work context instead of repeatedly explaining themselves in every conversation.
+Align audio, location, calendars, app usage, health/wearable data and files onto a canonical timeline; extract `Event / Person / Claim / Task` with provenance; expose the resulting context through API / MCP to personal agents. The key idea is that **the user owns the context layer and agents consume it.**
 
-**Pain points**
+## 🎙️ Audio Intelligence Gateway · `Planning`
 
-- personal context is scattered across audio, location, photos, calendars, app usage, health data and files;
-- most agents see only the current conversation or a few connected sources;
-- long-term memory without provenance and timelines becomes unreliable;
-- users cannot easily move their own context between different agents or models.
-
-**What the system does**  
-It aligns multi-source personal data onto a canonical timeline, extracts structures such as Event / Person / Claim / Task, preserves provenance, and exposes the result through API / MCP for personal agents.
-
-The important idea is that **the user owns the context layer** and agents consume it, rather than memory being locked inside one product.
-
----
-
-## 🎙️ Audio Intelligence Gateway
-
-`Planning` · Reusable AI Capability
-
-Speech-to-text in real environments is more than one ASR API call: recordings contain multiple speakers, accents, noise, domain terms, segmentation problems and context-dependent corrections.
-
-The direction is to package multiple ASR engines, speaker diarization, context correction, cross-model verification and Transcript → Artifact generation behind one reusable interface.
-
-This capability can support Class OS, Personal Context, interviews, meetings and other products without rebuilding the transcription pipeline each time.
-
----
+A reusable layer for multi-ASR, speaker diarization, context correction, domain terminology, cross-model verification and `Transcript → Artifact`, serving Class OS, Personal Context, meetings, interviews and other products.
 
 ## 🖼️ Image Quality Audit / Image Dedup
 
-`Preparing OSS` · Local-first Utilities
-
-These are smaller, more self-contained tool products.
-
-**Image Dedup** addresses duplicate and near-duplicate cleanup in photo collections or datasets using exact hashes, perceptual similarity and human review instead of filenames or manual inspection alone.
-
-**Image Quality Audit** evaluates image assets or training datasets across quality metrics such as blur, exposure, resolution, duplication and face suitability, then supports review and export.
-
-Their value is in demonstrating a complete workflow of **clear input → explainable detection → human review → exportable result**.
+Smaller local-first utility workflows for duplicate / near-duplicate detection, image-quality assessment, human review and export. Their main value is demonstrating a complete **clear input → explainable detection → human review → exportable result** workflow.
 
 ---
 
-## How the projects connect
-
-They are different layers of the same broader question:
+# How the projects connect
 
 ```text
-Concrete business pain
+Real business / personal context
         ↓
-Usable workflow / product
+Domain System
         ↓
-Reusable AI capabilities
+Reusable Capabilities
         ↓
-Structured context / state
+Structured Context / State
         ↓
-Tools + permissions + runtime
+Tools + Permission + Runtime
         ↓
-Agent-native systems
+Agent-native System
 ```
 
-Class OS, Health OS and Research OS are **domain systems**. LLM Race and Audio Gateway sit closer to **capabilities / agent infrastructure**. Personal Context explores the context foundation for long-running personal agents. Enterprise AI Core is the attempt to bring those ideas together inside real organizational environments.
+- **Class OS / Health OS / Research OS** are three domain systems in different real-world contexts.
+- **Enterprise AI Core** abstracts repeated capabilities from enterprise delivery into a reusable foundation.
+- **Personal Context / Audio Gateway** add reusable context and capabilities for long-running personal agents and other products.
 
-## Public proof vs. work in progress
-
-I keep a clear distinction between public, independently inspectable work; private projects already under development; projects being prepared for open source; and directions that are still at the planning/design stage.
-
-A `Planning` label is not presented as something already delivered, and private client work is not used as public proof.
+I keep `Building` and `Planning` clearly separated, and I do not present private client systems, other people's repositories or unvalidated features as public proof.
 
 [← Back to profile](README_EN.md) · [Work →](WORK_EN.md) · [Now →](NOW_EN.md)
