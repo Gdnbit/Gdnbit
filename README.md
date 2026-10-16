@@ -49,7 +49,7 @@
 可复用的企业 AI 底座：连接 `ERP / OA / SaaS / Excel / Files`，向上提供统一的 `Context`、能力调用、权限 / 审计、Agent Runtime 与 Domain Packs，减少每个部门需求都重新集成一遍。
 
 **🏫 Class OS** · `🚧 Building`  
-班主任工作台：班级 / 名单、学生事实、跟进 Task、Today、Student Timeline、更正与审计，以及受控的 Agent 查询 / 草稿能力。目标是让班务事项可记录、可跟进、可追溯。
+班主任工作台：班级 / 名单、学生事实、跟进 Task、Today、Student Timeline、更正与审计，以及正在验证的受控 Agent 查询 / 草稿链路。目标是让班务事项可记录、可跟进、可追溯。
 
 **🩺 Health OS** · `🚧 Building`  
 个人 / 家庭健康档案：报告与多文件上传、OCR / 解析候选、人工复核后正式入库、检验与生命体征趋势、体检批次对比、成员共享、导出与备份恢复。AI 输出不会直接写成健康事实。
