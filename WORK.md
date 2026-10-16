@@ -1,88 +1,90 @@
-# Work
+# 工作方式
 
-## AI solution & product delivery
+[中文](WORK.md) · [English](WORK_EN.md)
 
-I work on turning real business requirements into usable internal software with AI-assisted development.
+## AI 解决方案 / 产品交付
 
-The public description is intentionally anonymized. Client names, internal repository names, screenshots, business data, contracts and identifying implementation details are not published here.
+我现在主要做的是：**把真实业务需求进一步抽象、拆解并转化成可以被实现、验证和交付的软件系统。**
 
-## What I actually do
+公开内容会主动脱敏。客户名称、内部仓库、截图、业务数据、合同信息，以及能够反向识别客户或项目的实现细节不会出现在这里。
 
-In my current enterprise work, requirements are usually collected or proposed by client-side departments. My responsibility starts from **interpreting those requirements, resolving business logic, shaping the workflow and driving the system toward something usable**.
+## 我实际负责什么
+
+在当前企业项目里，很多需求本身是由甲方各部门先提出或采集的。我的责任通常从 **理解需求、补齐业务逻辑、梳理流程、定义系统行为并推动落地** 开始，而不是把所有问题都包装成“由我从零发现”。
 
 ```text
-Requirement interpretation
-        ↓
-Process / rule modeling
-        ↓
-Workflow & product design
-        ↓
-Data / API / tool contracts
-        ↓
-AI-assisted implementation
-        ↓
-Validation, iteration & delivery
+需求理解 / 澄清
+      ↓
+流程与业务规则建模
+      ↓
+Workflow / Product Design
+      ↓
+数据 / API / Tool / 交互契约
+      ↓
+AI-assisted Implementation
+      ↓
+验证、迭代与交付
 ```
 
-Typical work includes:
+典型工作包括：
 
-- understanding an existing process and the real intent behind a request;
-- finding missing rules, edge cases and conflicting assumptions;
-- defining inputs, outputs, states, permissions and interaction flows;
-- translating product logic into implementation instructions and acceptance criteria;
-- using coding agents to accelerate implementation and iteration;
-- reviewing outputs, testing whether the workflow actually works, and pushing the system toward delivery.
+- 理解现有流程和需求背后的真实意图；
+- 找出缺失规则、边界条件和相互冲突的假设；
+- 定义输入、输出、状态、权限与交互流程；
+- 把产品逻辑转化成实现约束、开发说明与验收标准；
+- 使用 Coding Agents / AI 工具加速实现和迭代；
+- 审查结果，判断系统是否真的符合业务流程，并持续推进到可交付状态。
 
-I spend more attention on **problem framing, business logic, system boundaries, acceptance criteria and judgement** than on maximizing the amount of code I type manually.
+我更重视 **问题定义、业务逻辑、系统边界、验收标准、结果判断与推进能力**，而不是用“手写了多少代码”来定义自己的价值。
 
-## Two delivery modes I have experienced
+## 我经历过的两种交付模式
 
-### Ongoing delivery
+### 1. 持续型企业交付
 
-For longer-running enterprise work, the pattern is usually:
+常见路径是：
 
-**given / collected requirements → interpretation → design → implementation → iteration → delivery**
+**已有 / 已采集需求 → 理解与澄清 → 设计 → 实现 → 迭代 → 交付**
 
-This is not the same as claiming full consulting ownership of every business problem. I distinguish clearly between requirements I discovered myself and requirements already proposed by the client side.
+这里我会刻意区分：哪些需求是我主动发现的，哪些是客户侧已经提出的，不把正常的交付工作包装成完整咨询诊断。
 
-### Rapid MVP / pre-sales work
+### 2. 快速 MVP / 售前验证
 
-I have also participated in short-cycle work where requirements were gathered end-to-end and converted into a focused MVP before a full commercial rollout decision.
+我也参与过从完整需求收集开始，在较短周期内针对一个明确问题做出工作型 MVP 的项目。
 
-A working MVP is evidence of discovery and prototyping ability; it is not presented as a production deployment if the project does not proceed further.
+这类经历证明的是 **需求发现、快速抽象、MVP 设计与验证能力**。如果后续没有进入正式商业化或生产部署，我也不会把它写成“正式上线交付”。
 
-## How I use coding agents
+## 我怎么使用 Coding Agents
 
-Coding agents are a core part of my development workflow, not an occasional autocomplete layer.
+Coding Agents 是我开发工作流里的核心生产工具，而不是偶尔使用的补全插件。
 
-I use them against:
+我更关注让 Agent 在一个高质量的工作环境里执行，包括：
 
-- business and product requirements;
-- repository-level context;
-- implementation constraints and contracts;
-- tests and acceptance criteria;
-- review loops and failure cases;
-- iterative product feedback.
+- 清晰的业务与产品需求；
+- repository-level context；
+- 实现约束、接口与数据契约；
+- 测试、验收标准和失败用例；
+- 可持续的 review loop；
+- 与实际业务反馈连接的迭代过程。
 
-The valuable interface is increasingly the **quality of the problem definition, repository environment, specs, constraints and evaluation loop** that the agent operates against.
+对我来说，AI-native development 的重点不是“让 AI 多写代码”，而是 **让问题定义、仓库环境、规格、约束和评价机制本身变成开发接口的一部分。**
 
-## Where I fit
+## 我的市场定位
 
-The closest public labels are:
+目前最接近我的公开标签是：
 
 **AI Solution Engineer** · **AI Product Engineer** · **Enterprise AI Delivery**
 
-My work also overlaps with FDE-style delivery: translating customer workflows into working software. The difference is that my current strength is weighted more toward **business interpretation, product logic, workflow design, AI-assisted implementation and delivery judgement** than toward traditional low-level software engineering.
+我的工作形态也和一部分 FDE / Forward Deployed 工作有交集：需要把客户业务流程转成可运行的软件。但我当前的优势更偏向 **业务理解、产品逻辑、流程设计、AI-assisted implementation、结果判断与交付推进**，而不是传统意义上以底层工程和独立手写代码为核心的 FDE。
 
-## What I do not claim
+## 我不会把什么算成自己的成绩
 
-I do not treat every repository inside an organization as my work, and I do not present private client systems as open-source proof.
+我不会把一个组织里所有仓库都当成自己的工作，也不会把私有客户系统当成开源项目来证明能力。
 
-The public portfolio separates:
+公开 Portfolio 会明确区分：
 
-- work I directly contributed to;
-- personal projects I designed or built;
-- public repositories that can be independently inspected;
-- private / building projects that are clearly labeled as such.
+- 我直接参与并承担责任的工作；
+- 我自己设计或构建的个人项目；
+- 可以独立检查的公开仓库；
+- 仍处于 private / building 状态、尚未公开验证的项目。
 
-[← Back to profile](README.md) · [Projects →](PROJECTS.md) · [Now →](NOW.md)
+[← 返回主页](README.md) · [项目 →](PROJECTS.md) · [当前方向 →](NOW.md)
