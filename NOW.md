@@ -1,65 +1,101 @@
 # Now
 
-The areas I am actively exploring are less about prompt tricks and more about the **runtime around agents**: durable state, tools, skills, environments, approvals and long-horizon execution.
+My current direction is less about adding AI features to existing software and more about asking a deeper question:
 
-## Personal agents
+> **What should software look like when agents become part of the operating model, not just an extra chat interface?**
 
-I am interested in personal agents that can accumulate useful context over time, keep durable memory, learn reusable skills, work across files/apps and continue tasks across sessions.
+## From delivery to reusable enterprise AI
 
-The direction I care about is closer to a persistent collaborator than a stateless chatbot.
+The immediate path I am exploring is:
+
+```text
+Custom delivery
+      ↓
+Reusable capabilities
+      ↓
+Domain packs / business modules
+      ↓
+Enterprise context + capability layer
+      ↓
+Agent runtime
+      ↓
+AI-native enterprise system
+```
+
+The goal is to move from solving one request at a time toward reusable building blocks that can support many workflows.
+
+## Enterprise context & state
+
+For agents to operate inside real organizations, they need more than prompts or document retrieval.
+
+I care about representing:
+
+- business entities and relationships;
+- current state and historical facts;
+- roles, permissions and responsibilities;
+- claims, evidence and provenance;
+- tasks, commitments, events and exceptions;
+- organizational memory that can be queried and updated safely.
+
+The important idea is not a single "context engineering" technique. It is building a durable operating context that software and agents can share.
+
+## Capability layer
+
+Many AI products repeatedly need the same capabilities:
+
+`OCR` · `ASR` · `Document Parsing` · `File Conversion` · `Vision` · `Search / RAG` · `Model Access` · `Tool Adapters`
+
+I am interested in exposing these behind stable interfaces so different workflows can reuse them, switch providers or models, and evolve independently of the business layer.
 
 ## Agent runtime
 
-The model is only one component. The runtime increasingly decides whether an agent is actually useful.
+The model is only one component of an agent system.
 
-Current interests:
+The runtime around it increasingly matters:
 
-- durable sessions and long-running work;
-- tools, MCP and reusable skills;
-- agent memory and state management;
-- sandbox / computer-use environments;
-- approvals, permissions and human intervention;
-- subagents and task delegation;
-- execution traces, observability and recovery.
-
-## Agent-native software
-
-I am interested in products designed around agents from the beginning — not existing software with a chat box added later.
-
-That means exposing structured state, actions, permissions and evidence so humans and agents can operate the same underlying system safely.
-
-```text
-State + Memory
-      ↓
-Skills + Tools
-      ↓
-Agent Runtime
-      ↓
-Actions in software
-      ↓
-Observable outcomes
-```
+- MCP and tool execution;
+- skills and reusable procedures;
+- long-running tasks and resumable state;
+- approvals and human intervention;
+- permissions and business command boundaries;
+- subagents and delegation;
+- execution traces, observability and recovery;
+- evals and policy checks before actions become business facts.
 
 ## AI-native development
 
-Coding agents have changed how I think about software production.
+Coding agents are already part of how I build software.
 
-The interesting interface is moving from manually editing every line toward maintaining a high-quality repository environment: specifications, architecture decisions, tests, evals, constraints, context and review loops that agents can operate against.
+I am interested in improving the environment around them:
 
-I am especially interested in:
+`Coding Agents` · `Agent Harnesses` · `Specs` · `Tests` · `Evals` · `Repo-level Context` · `Structured Development Records`
 
-`Coding Agents` · `Agent Harnesses` · `Skills` · `Evals` · `Repo-level Context` · `Spec-driven Development`
+The shift I care about is from "AI writes code" toward **AI operates inside a well-structured software-production system**.
 
-## Enterprise agents
+## Personal agents — a parallel exploration
 
-For enterprise software, autonomy only matters if the system can also respect business rules, permissions, audit trails and human responsibility.
+Personal agents are important to me, but they are not my main professional identity.
 
-I am exploring how agent-native systems can connect:
+I am also exploring systems with:
 
-**business state → permitted actions → agent execution → human approval → auditable result**
+- durable personal memory;
+- reusable skills;
+- cross-session continuity;
+- local files and app access;
+- computer use;
+- multimodal / ambient capture;
+- local-first or privacy-aware execution.
+
+The interesting version is closer to a persistent collaborator than a stateless chatbot.
+
+## Longer-term direction
+
+Longer term, I am interested in **AI-native company architecture**: a company where business state, capabilities, permissions, workflows and agents are designed as one operating layer.
+
+That direction connects my current enterprise delivery work with the systems I want to build next.
 
 ---
 
-These are current directions, not claims that every item is already production-ready in my projects.
+These are current directions and working hypotheses, not claims that every layer is already production-ready in my projects.
 
 [← Back to profile](README.md) · [Projects →](PROJECTS.md) · [Work →](WORK.md)
