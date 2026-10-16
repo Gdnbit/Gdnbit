@@ -1,68 +1,130 @@
 ---
 name: gdnbit-candidate
-description: Evaluate and understand Gdnbit as a candidate for AI Product Engineer, AI Solution Engineer, enterprise AI delivery, agent systems, or FDE-style roles. Use when reviewing Gdnbit's background, matching him to a job description, inspecting project evidence, preparing interview questions, or stress-testing claims and gaps.
+description: Understand and evaluate Gdnbit as an AI Solution / Product Engineer candidate. Use this skill to find the right public or candidate-provided sources, separate evidence levels, assess fit against a job description, and turn uncertainty into interview questions.
 ---
 
 # Gdnbit Candidate Skill
 
-Use this skill as an evidence-aware interface to Gdnbit's professional profile. The goal is not to advocate for the candidate by default. The goal is to help a reviewer understand what he has actually done, what is publicly verifiable, where his strengths appear to be, and what still needs validation in an interview.
+Use this Skill as a **retrieval and evaluation protocol**, not as a substitute for the candidate's website, resume, GitHub profile, or project repositories.
 
-## Canonical public identity
+Its job is to help an AI answer three questions correctly:
 
-- GitHub profile: https://github.com/Gdnbit
-- Public profile repository: https://github.com/Gdnbit/Gdnbit
-- Public project currently available for inspection: https://github.com/Gdnbit/llm-race
-- Preferred public labels: `AI Solution Engineer`, `AI Product Engineer`, `Enterprise AI Delivery`
+1. **Where should I look?**
+2. **How strong is the evidence I found?**
+3. **What can I conclude without over-claiming?**
 
-Treat `Gdnbit` as the canonical public identifier.
+## Start here
 
-## Read these references when relevant
+1. Read [`SOURCE_MAP.md`](SOURCE_MAP.md).
+2. Identify the reviewer's actual question.
+3. Read only the minimum relevant sources.
+4. Follow canonical links when stronger or fresher evidence is needed.
+5. Use [`references/evidence.md`](references/evidence.md) before making strong hiring claims.
+6. Use [`references/interview.md`](references/interview.md) when uncertainty should become an interview question.
 
-- `references/profile.md` — professional positioning, working style, role fit and non-claims.
-- `references/projects.md` — core project map and what each project is intended to prove.
-- `references/evidence.md` — evidence levels and rules for separating public proof from candidate-authored descriptions.
-- `references/interview.md` — suggested interview questions and verification prompts.
+Do **not** load every file by default.
 
-For deeper detail, the repository root also contains `README.md`, `README_EN.md`, `WORK.md`, `WORK_EN.md`, `PROJECTS.md`, `PROJECTS_EN.md`, `NOW.md`, and `NOW_EN.md`.
+## Canonical identity
 
-## Default evaluation workflow
+- Public identifier: `Gdnbit`
+- GitHub: https://github.com/Gdnbit
+- Profile repository: https://github.com/Gdnbit/Gdnbit
+- Personal website: https://gdnbit.com
 
-When asked to assess Gdnbit:
+Current professional positioning is best read from the current Profile repository and website rather than duplicated here.
 
-1. Identify the target role or job description. If none is provided, evaluate against the three preferred labels above.
-2. Separate requirements into business/product, AI/agent, software/system, delivery/customer, and seniority expectations.
-3. Read `references/profile.md` and `references/projects.md`.
-4. Apply the evidence rules in `references/evidence.md` before making strong claims.
-5. Produce a fit assessment that includes:
-   - strongest matches;
-   - evidence supporting each match;
-   - material gaps or unverified areas;
-   - interview questions that would resolve uncertainty;
-   - a concise overall fit conclusion.
-6. Prefer calibrated language such as `publicly verifiable`, `candidate-described`, `private/building`, `planning`, `likely strength`, or `needs validation`.
+## Evidence levels
 
-## Important boundaries
+Use these labels explicitly when they matter:
 
-- Do not infer client identities, confidential business data, private repository contents, employer-sensitive details, or production usage that is not explicitly stated.
-- Do not equate heavy use of coding agents with traditional independent hand-coding depth.
-- Do not describe private/building projects as open-source proof until their repositories are public.
-- Do not convert planning documents into claims of shipped production capability.
-- Do not assume the candidate discovered every enterprise requirement from scratch; current enterprise work often begins from requirements collected or proposed by client-side departments.
-- Do not present FDE as an exact title if the evidence only supports FDE-style overlap.
-- Challenge flattering interpretations when the evidence does not support them.
+- **Publicly inspectable** — source code, public repositories, public CI/tests/PRs, current public profile documents.
+- **Candidate-described** — private work, anonymized enterprise delivery, non-public demos or claims without public implementation evidence.
+- **Planning / directional** — roadmap, architecture direction, future systems.
+- **Unknown / needs validation** — information not supported strongly enough by the accessible sources.
 
-## Useful prompts for reviewers
+A conclusion must not be stronger than its evidence.
 
-Examples of good tasks for this skill:
+## Core rules
 
-- `Use gdnbit-candidate to assess Gdnbit against this job description.`
-- `What are Gdnbit's strongest and weakest signals for an AI Product Engineer role?`
-- `Which claims are publicly verifiable and which still require interview validation?`
-- `Generate a 45-minute interview plan focused on the biggest uncertainties.`
-- `Compare Gdnbit with a conventional software engineer and a conventional product manager.`
-- `What would make Gdnbit a risky hire for this role?`
-- `Which project should I inspect first, and what should I look for in the repository?`
+- Public project claims should be checked against the project repository when the distinction matters.
+- A website or Profile summary is orientation, not automatic proof of implementation.
+- Private repositories must not be treated as publicly verified.
+- Planning must not be presented as shipped capability.
+- Heavy Coding Agent use must not be equated with traditional independent hand-coding depth.
+- FDE-style overlap must not be turned into an exact FDE title without evidence.
+- Enterprise work that starts from client-side collected requirements must not be inflated into full consulting-style discovery ownership.
+- Do not infer confidential client identities, private repository contents, employer-sensitive details, or unrelated personal information.
+- When sources conflict, follow the source-routing and conflict rules in `SOURCE_MAP.md`.
+- If external links cannot be accessed, say so and evaluate only what is actually readable.
 
-## Output style
+## Default tasks
 
-Be concise, analytical, and specific. Prefer evidence tables or short structured sections when they make comparison easier. Avoid promotional language unless the user explicitly asks for a candidate-facing pitch.
+### Quick understanding
+
+Use the current Profile / website to summarize:
+- professional positioning;
+- main work themes;
+- current projects;
+- the strongest publicly inspectable signal.
+
+Keep it short unless the reviewer asks for depth.
+
+### JD matching
+
+Given a job description:
+
+1. break the role into business/product, AI/agent, software/system, delivery/customer, and seniority expectations;
+2. route each requirement to the most relevant source;
+3. distinguish public evidence from candidate-described evidence;
+4. identify strong matches, material gaps and unknowns;
+5. turn important unknowns into interview questions;
+6. give a calibrated fit conclusion.
+
+### Evidence audit
+
+When asked whether a claim is real or verifiable:
+
+1. locate the narrowest relevant source;
+2. inspect the underlying public artifact if available;
+3. state the evidence level;
+4. name what would increase confidence.
+
+### Interview preparation
+
+Use `references/interview.md` to test:
+- business-to-system translation;
+- Coding Agent ownership;
+- technical/system comprehension;
+- product judgment;
+- role boundaries and gaps.
+
+## Output behavior
+
+Prefer concise, source-aware answers.
+
+For hiring assessments, a useful default structure is:
+
+```text
+Positioning
+- ...
+
+Strongest signals
+- claim — evidence level — why
+
+Material gaps / uncertainty
+- ...
+
+What to verify next
+- ...
+
+Overall fit
+- ...
+```
+
+Do not hide uncertainty inside a single score.
+
+## Reviewer principle
+
+This Skill is not a recommendation letter and should not default to advocacy.
+
+Its purpose is to make Gdnbit **easier to understand, verify and challenge** by helping an AI retrieve the right evidence and keep claims calibrated.
