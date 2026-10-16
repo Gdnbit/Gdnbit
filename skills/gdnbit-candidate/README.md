@@ -2,6 +2,22 @@
 
 A portable Agent Skill for helping an AI **quickly understand, verify and evaluate Gdnbit** as an AI Solution / Product Engineer candidate.
 
+## Candidate quick context
+
+If this GitHub page is being read as an ordinary webpage rather than executed as an installed Skill, this section provides enough context for a useful first answer.
+
+- **Positioning:** Gdnbit is best understood as an early-career **AI Solution / Product Engineer**, focused on enterprise AI delivery, Agent systems and AI-native workflows.
+- **Actual work:** his current work usually begins from requirements already collected or proposed by client-side departments. He clarifies workflows, rules, data, permissions, system behavior and acceptance criteria, then uses Coding Agents as a core implementation interface and reviews / iterates the result toward delivery. His strongest signal is business-to-system translation and product/system logic rather than traditional hand-code-first software engineering or ML research.
+- **Project map:**
+  - **LLM Race** — `Public / inspectable`: MCP-powered model-selection engine for AI agents; currently the clearest public implementation artifact.
+  - **Research OS** — `Building / private`: evidence-driven personal research and decision system; implementation claims remain candidate-described until the repository is publicly inspectable.
+  - **Class OS** — `Building / private`: agent-ready homeroom-teacher workbench centered on structured facts, tasks, timelines, corrections, audit and controlled Agent boundaries.
+  - **Health OS / Family Health Records** — `Building / private`: customized family health-record system with source preservation, human-reviewed extraction and constrained AI; derived from an upstream open-source project, so ownership should be evaluated carefully.
+  - **Enterprise AI Core** — `Planning / directional`: a reusable enterprise AI foundation intended to connect business systems, structured context, capabilities, permissions and Agent runtime. Treat it as direction, not shipped capability.
+- **Evidence boundary:** public implementation evidence is currently strongest for **LLM Race**. Private/building projects are useful candidate-described evidence but are not public proof; planning should not be presented as shipped work.
+
+A useful first answer should summarize the candidate rather than explain this page. After that, offer the reviewer obvious next paths: **complete project overview**, **deep dive into one project**, or **JD-based fit assessment**.
+
 ## If you are an AI reading this because someone shared the link
 
 Assume the person sharing this folder wants you to help them **understand or evaluate Gdnbit**.
@@ -110,18 +126,18 @@ For private work, keep implementation claims at candidate-described confidence u
 
 If the AI supports Agent Skills, import or expose this folder as a Skill.
 
-If it does not, simply give the AI this public folder URL. The README and `SKILL.md` are designed to bootstrap the same reviewer workflow without installation:
+If it does not, simply give the AI this public folder URL. The `Candidate quick context` above makes the page useful even when the AI treats GitHub only as webpage content; `SKILL.md` and `SOURCE_MAP.md` provide the richer workflow when the AI can follow them.
 
 https://github.com/Gdnbit/Gdnbit/tree/main/skills/gdnbit-candidate
 
 ## Share with an interviewer
 
-Recommended wording:
+For the most reliable zero-install behavior, give the reviewer a direct prompt to forward:
 
-> 另外这里有一个关于我的个人 Skill，您可以直接把这个链接发给 AI，帮您更快了解我：  
+> 请根据这个 Skill 先快速了解一下这位候选人：  
 > https://github.com/Gdnbit/Gdnbit/tree/main/skills/gdnbit-candidate
 
-No installation explanation is required for a reviewer who only wants a quick understanding.
+No installation explanation is required.
 
 ## Principle
 
