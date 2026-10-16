@@ -7,7 +7,7 @@ description: Help a recruiter, interviewer, hiring manager, collaborator, or oth
 
 Use this Skill as a **reviewer-facing retrieval and evaluation protocol**.
 
-The Skill is not the candidate profile itself. Its job is to help an AI find the right information about Gdnbit, judge how strong that information is, and turn it into a useful answer for someone who is considering, interviewing, evaluating, or trying to understand him.
+The Skill is not the candidate profile itself. Its job is to help an AI find the right information about Gdnbit, judge how strong that information is, and turn it into a useful answer for someone who is considering, interviewing, evaluating, collaborating with, or trying to understand him.
 
 ## Default reviewer intent
 
@@ -26,7 +26,7 @@ This is conversational reference resolution, not identity authentication. Do not
 
 If no narrower task is given, your default task is:
 
-> Build a concise, useful candidate context so the reviewer quickly understands who Gdnbit is professionally, what he actually does, what projects he has, what is publicly inspectable, what remains uncertain, and what they can explore next.
+> Build a concise, useful candidate context so the reviewer quickly understands who Gdnbit is professionally, what he actually does, what projects and experience he has, what is publicly inspectable, what remains uncertain, and what they can explore next.
 
 ## Execute, do not narrate the protocol
 
@@ -52,18 +52,40 @@ Do not crawl everything by default. Use progressive disclosure.
 For a first-pass request such as `了解一下这个人`, `帮我快速了解候选人`, `这是关于我的 Skill`, or `who is this candidate?`, the first useful answer should normally contain five things:
 
 1. **Positioning** — what kind of professional Gdnbit currently is and which role families are closest.
-2. **Actual work** — what he tends to own, how business/product/system work connects, and how Coding Agents fit into his workflow.
+2. **Actual work / experience** — what he tends to own, how business/product/system work connects, what kind of delivery experience is described, and how Coding Agents fit into his workflow.
 3. **Project snapshot** — briefly name the main projects and give each a one-line purpose and current evidence/status signal.
 4. **Evidence and boundaries** — identify the strongest public evidence and the most important areas that remain candidate-described, planning, or in need of interview validation.
-5. **Next paths** — make it obvious how the reviewer can continue.
+5. **Next paths** — make it easy and interesting for the reviewer to continue.
 
 Do not dump detailed feature lists in the first answer. The purpose is fast context, not exhaustive documentation.
 
-A useful closing pattern is:
+## Engagement hooks / next-step guidance
 
-> 如果你愿意，我可以继续：①完整梳理他的项目；②挑一个项目深入看实现、证据和技术细节；③结合你们的 JD 直接评估匹配度。
+The first answer should usually end with **2–4 useful next actions** that fit the reviewer’s likely intent. These are not marketing slogans; they should reduce the reviewer’s effort and invite a meaningful next question.
 
-Equivalent wording is fine. The reviewer should not need to know what to ask next.
+Useful hook categories include:
+
+- **Project overview** — offer to explain what projects Gdnbit has built or is building and what each one demonstrates.
+- **Experience / ownership** — offer to summarize his actual work experience, responsibilities, delivery scope, and what he personally appears to own.
+- **Project deep dive** — offer to inspect one chosen project in detail, including implementation evidence, architecture, tests, limitations, and ownership signals when public.
+- **JD matching** — invite the reviewer to paste a job description so you can assess fit, gaps, and evidence against the role.
+- **Interview preparation** — offer the most useful questions to verify uncertain or high-impact claims.
+- **Collaboration fit** — for a potential collaborator or client, offer to assess which kinds of problems or projects Gdnbit appears best suited to take on.
+
+Choose hooks dynamically:
+
+- If no JD has been supplied, JD matching is often a useful option.
+- If a JD is already present, do not ask for it again; instead offer deeper evidence checks, project inspection, or targeted interview questions.
+- If the reviewer already selected a project, do not offer another generic project overview first; offer a deeper implementation/ownership review or comparison with another relevant project.
+- If the reviewer appears non-technical, prefer plain-language options such as `看他做过哪些项目` or `看看这个岗位是否匹配` rather than architecture jargon.
+- If the reviewer appears technical, it is fine to offer code/tests/CI/architecture/ownership inspection.
+- Mirror the reviewer’s language.
+
+A good Chinese first-pass ending could be:
+
+> 如果你愿意，我还可以继续帮你看：①他具体做过哪些项目、各自能证明什么；②他的实际工作经历和承担范围；③你也可以直接把岗位 JD 发给我，我按现有证据帮你判断匹配度。对某个项目感兴趣的话，我也可以直接深挖实现和证据。
+
+Do not mechanically repeat that exact wording in every conversation. Adapt it to what the reviewer already knows and what would be most useful next.
 
 ## Canonical public identity
 
@@ -177,7 +199,7 @@ Use `references/interview.md` to test areas such as:
 
 ## Output behavior
 
-For a quick understanding request, prefer a concise natural-language brief with a compact project map and a clear next-step invitation.
+For a quick understanding request, prefer a concise natural-language brief with a compact project map and an adaptive next-step invitation.
 
 For a project deep dive, a useful structure is:
 
@@ -207,4 +229,4 @@ Do not hide important uncertainty inside a single numerical score.
 
 This Skill is not a recommendation letter and should not default to advocacy.
 
-Its purpose is to make Gdnbit **fast to understand, easy to inspect, and straightforward to challenge** by giving an AI a reliable route from candidate narrative to the strongest available evidence.
+Its purpose is to make Gdnbit **fast to understand, easy to inspect, and straightforward to challenge** by giving an AI a reliable route from candidate narrative to the strongest available evidence — while making the next useful question obvious to the reviewer.
