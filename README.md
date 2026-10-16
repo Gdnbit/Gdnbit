@@ -2,11 +2,11 @@
 
 # Hi, I'm Gdnbit 👋
 
-### AI Product Engineer · Agentic Product Builder
+### AI Solution & Product Engineer · Enterprise AI Delivery
 
-**Building personal agents, agent-native products, and enterprise AI systems.**
+**Turning real business requirements into AI-native workflows, tools, and usable systems.**
 
-`Personal Agents` · `Agent Runtime` · `MCP / Tool Use` · `Memory & Skills` · `AI-native Development`
+`Enterprise AI` · `Agent Systems` · `Workflow Automation` · `MCP / Tooling` · `AI-native Development`
 
 [**Projects**](PROJECTS.md) · [**Work**](WORK.md) · [**Now**](NOW.md) · [**LLM Race ↗**](https://github.com/Gdnbit/llm-race)
 
@@ -20,16 +20,17 @@
 
 **Enterprise AI Delivery** · `2026 — Now`
 
-Turning real department requirements into usable internal software — from ambiguous business rules to workflows, product behavior and delivery.
+I work between **business requirements, product logic, system design and AI implementation** — turning department-level needs into software that can actually be used.
 
 `Requirement Interpretation`  
-→ `Workflow / Product Design`  
-→ `AI-assisted Implementation`  
-→ `Iteration & Delivery`
+→ `Process & Rule Modeling`  
+→ `Product / System Design`  
+→ `AI Workflow / Tools / Data`  
+→ `Validation & Delivery`
 
 <sub>Client identities, internal repositories, business data and identifying details are intentionally not published.</sub>
 
-[More about how I work →](WORK.md)
+[How I work →](WORK.md)
 
 </td>
 <td valign="top" width="50%">
@@ -45,18 +46,21 @@ Agent-native workspace built around structured facts, tasks, permissions and hum
 **🔬 Research OS** · `🚧 Building`  
 Evidence-driven AI research and decision workflow with traceable sources and replayable outcomes.
 
-[See the project map →](PROJECTS.md)
+[Project map →](PROJECTS.md)
 
 </td>
 </tr>
 </table>
 
-### 🔭 What I'm betting on
+### 🧭 Where I'm heading
 
-- **Personal agents** with durable memory, reusable skills and cross-session continuity.
-- **Agent runtimes** built around tools, MCP, sandboxes, approvals, observability and recovery — not just a model call.
-- **Agent-native software** where humans and agents operate the same structured state and actions instead of bolting chat onto legacy interfaces.
-- **AI-native development** where coding agents work against specs, tests, evals and repository-level context.
+I am moving from **one-off AI delivery** toward **reusable enterprise AI systems**:
+
+`Custom Delivery` → `Reusable Capabilities` → `Domain Packs` → `Enterprise Context / Capability Layer` → `Agent Runtime`
+
+The long-term question I care about is simple: **how do agents become part of the operating system of a real organization, instead of sitting beside it as a chat interface?**
+
+I also explore **personal agents, durable memory, skills, computer use and local-first AI** as a parallel product direction.
 
 [What I'm exploring now →](NOW.md)
 
@@ -64,7 +68,7 @@ Evidence-driven AI research and decision workflow with traceable sources and rep
 
 <div align="center">
 
-### Memory → Skills → Tools → Actions → Outcomes
+### Business → Systems → Agents → Outcomes
 
 <sub>Gdnbit · Giraffes Don't Believe in Tears. 🦒</sub>
 
