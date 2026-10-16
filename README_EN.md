@@ -10,7 +10,7 @@
 
 [**中文**](README.md) · [**English**](README_EN.md)
 
-[**Projects**](PROJECTS_EN.md) · [**Work**](WORK_EN.md) · [**Now**](NOW_EN.md)
+[**Projects**](PROJECTS_EN.md) · [**Work**](WORK_EN.md) · [**Now**](NOW_EN.md) · [**AI-readable Candidate Skill**](skills/gdnbit-candidate/README.md)
 
 </div>
 
