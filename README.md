@@ -1,6 +1,6 @@
 <div align="center">
 
-# Hi, I'm Gdnbit 👋
+# Gdnbit — AI Solution & Product Engineer 👋
 
 ### AI 解决方案 / 产品工程师 · 企业 AI 交付
 
@@ -81,6 +81,6 @@
 
 ### 业务 → 系统 → Agent → 结果
 
-<sub>Gdnbit · Giraffes Don't Believe in Tears. 🦒</sub>
+<sub>[github.com/Gdnbit](https://github.com/Gdnbit) · Giraffes Don't Believe in Tears. 🦒</sub>
 
 </div>
