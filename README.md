@@ -4,9 +4,9 @@
 
 ### AI Product Engineer · Agent Delivery
 
-**Building agentic systems and AI-native workflows.**
+**Building personal agents, agent-native products, and enterprise AI systems.**
 
-`Agent Systems` · `MCP` · `Context Engineering` · `Workflow Design`
+`Personal Agents` · `Agentic Products` · `MCP / Tool Use` · `Agent Memory` · `AI-native Development`
 
 </div>
 
@@ -41,7 +41,7 @@ MCP-powered model selection engine for AI agents.
 Agent-native workspace for class teachers.
 
 **🔬 Research OS** `🚧 Building`  
-Evidence-driven AI research workflow.
+Evidence-driven AI research & decision system.
 
 **⚙️ More projects** `🚧 Coming soon`
 
@@ -49,11 +49,15 @@ Evidence-driven AI research workflow.
 </tr>
 </table>
 
----
-
 <div align="center">
 
-### Context → Tools → Workflows → Outcomes
+#### 🔭 Currently Exploring
+
+Persistent personal agents · memory & skills · tool-use runtimes · agent-native enterprise software
+
+---
+
+### Memory → Tools → Actions → Outcomes
 
 <sub>Gdnbit · Giraffes Don't Believe in Tears. 🦒</sub>
 
