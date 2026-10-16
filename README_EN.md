@@ -4,13 +4,13 @@
 
 ### AI Solution & Product Engineer · Enterprise AI Delivery
 
-**Turning real business requirements into AI-native workflows, tools, and usable systems.**
+**Turning real business requirements into workflows, rules and working systems — then shipping them with an AI-native development process.**
 
 `Enterprise AI` · `Agent Systems` · `Workflow Automation` · `MCP / Tooling` · `AI-native Development`
 
 [**中文**](README.md) · [**English**](README_EN.md)
 
-[**Projects**](PROJECTS_EN.md) · [**Work**](WORK_EN.md) · [**Now**](NOW_EN.md) · [**LLM Race ↗**](https://github.com/Gdnbit/llm-race)
+[**Projects**](PROJECTS_EN.md) · [**Work**](WORK_EN.md) · [**Now**](NOW_EN.md)
 
 </div>
 
@@ -22,13 +22,17 @@
 
 **Enterprise AI Delivery** · `2026 — Now`
 
-I work between **business requirements, product logic, system design and AI implementation** — turning department-level needs into software that can actually be used.
+**Requirements → buildable systems**  
+I interpret department-level requirements, model business processes and rules, and define fields, inputs/outputs, permissions and edge cases so ambiguous requests become implementable and testable system behavior.
 
-`Requirement Interpretation`  
-→ `Process & Rule Modeling`  
-→ `Product / System Design`  
-→ `AI Workflow / Tools / Data`  
-→ `Validation & Delivery`
+**Design → implementation**  
+I use Coding Agents heavily for implementation and iteration. My focus is on repository context, task decomposition, product/system logic, API & data contracts, acceptance criteria and output judgment.
+
+**Implementation → delivery**  
+I work on internal enterprise workflows across operations, administration and procurement, moving from MVP/prototype to integration, user feedback and delivery readiness — with emphasis on whether the workflow actually works end to end.
+
+**Projects → reusable capabilities**  
+I am gradually extracting repeated capabilities such as `OCR / ASR / document parsing / model access / tools / permissions / workflows` into reusable building blocks for a broader Enterprise AI Core.
 
 <sub>Client identities, internal repositories, business data and identifying details are intentionally not published.</sub>
 
@@ -37,22 +41,19 @@ I work between **business requirements, product logic, system design and AI impl
 </td>
 <td valign="top" width="50%">
 
-#### 🚀 Selected Projects
+#### 🚀 Core Projects
 
 **🏢 Enterprise AI Core** · `🧭 Planning`  
-For organizations still split across Excel, OA, ERP, documents and manual handoffs: a reusable context / capability / agent layer so each new departmental AI request does not require rebuilding the same integrations from scratch.
+A reusable enterprise AI foundation that connects `ERP / OA / SaaS / Excel / Files` and exposes shared `Context`, capabilities, permissions/audit, Agent Runtime and Domain Packs so each new departmental use case does not rebuild the same integrations.
 
 **🏫 Class OS** · `🚧 Building`  
-For homeroom teachers whose daily work is fragmented across chats, spreadsheets, paper notes and ad-hoc tasks: a shared workspace where structured facts, events, tasks, communication and agent assistance live in one operational state.
+A homeroom-teacher workbench with class/roster management, typed student facts, follow-up Tasks, Today, Student Timeline, corrections/audit, and controlled Agent query/draft flows. The goal is to make class work trackable and traceable.
 
 **🩺 Health OS** · `🚧 Building`  
-For personal and family health information scattered across checkups, visits, reports and wearables: a longitudinal health timeline with review plans and human-confirmed AI extraction.
+A personal/family health record system with report uploads, OCR/parser candidates, human-reviewed formal records, lab/vital trends, checkup-batch comparison, member sharing, export and backup/restore. AI output never becomes a health fact automatically.
 
 **🔬 Research OS** · `🚧 Building`  
-For research and decisions where AI gives an answer but the evidence disappears later: a system that connects sources, claims, evidence, decisions and outcomes so the reasoning can be reviewed and replayed.
-
-**🏎️ [LLM Race](https://github.com/Gdnbit/llm-race)** · `Public`  
-For agents that need to choose models by cost, context, modalities and capability: model discovery and recommendation exposed as an MCP tool instead of a manual leaderboard lookup.
+A personal research and decision system with source ingestion, `RawSource / ClaimCard / EvidenceSpan`, selected-source chat and Briefing, persistent citations, and a `DecisionSnapshot → Outcome → Replay` loop. When evidence is insufficient, model calls stop before generation.
 
 [Full project map →](PROJECTS_EN.md)
 
@@ -66,9 +67,9 @@ I am moving from **one-off AI delivery** toward **reusable enterprise AI systems
 
 `Custom Delivery` → `Reusable Capabilities` → `Domain Packs` → `Enterprise Context / Capability Layer` → `Agent Runtime`
 
-The long-term question I care about is: **how do agents become part of the operating system of a real organization — reading business state, invoking capabilities, respecting permissions, advancing workflows and writing outcomes back into the system — instead of sitting beside it as a chat interface?**
+The longer-term question I care about is: **how can agents become part of real organizational operations — reading business state, invoking capabilities, respecting permissions, advancing workflows and writing outcomes back into systems?**
 
-In parallel, I also explore **personal agents, durable memory, skills, computer use and local-first AI**.
+In parallel, I also explore `Personal Agents`, durable memory, skills, computer use and local-first AI.
 
 [What I'm exploring now →](NOW_EN.md)
 
