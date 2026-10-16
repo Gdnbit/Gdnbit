@@ -2,55 +2,65 @@
 
 This page is the shortest way to give an interviewer or hiring manager an AI-readable version of Gdnbit's profile.
 
-## 中文：直接发给面试官
+## 中文：推荐直接发给面试官
 
-你可以直接复制下面这段：
+> 另外这里有一个关于我的个人 Skill，您可以直接把这个链接发给 AI，帮您更快了解我：  
+> https://github.com/Gdnbit/Gdnbit/tree/main/skills/gdnbit-candidate
 
-> 除了简历和 GitHub，我还维护了一个公开的 `gdnbit-candidate` Agent Skill。它不是个人宣传 Prompt，而是一个用于评估我的机器可读候选人资料包：会区分公开可验证证据、private/building 项目和 planning，也包含能力缺口、风险与建议追问。你可以把岗位 JD 一起交给支持 Agent Skills 的 AI，让它基于这个 Skill 做匹配和面试准备。入口： https://github.com/Gdnbit/Gdnbit/tree/main/skills/gdnbit-candidate
+这句话故意保持简单，不要求对方理解 Agent Skill、MCP 或安装流程。
 
-如果对方不想安装 Skill，可以继续补一句：
+如果对方想进一步了解，可以补充：
 
-> 不安装也可以，直接把上面的 GitHub 链接发给 AI，并让它先读取 `SKILL.md` 和 `references/` 再评估即可。
+> 这个 Skill 主要告诉 AI 应该怎么读取和判断我的简历、网站、GitHub 和项目证据，也会区分公开可验证内容、私有项目和规划内容。
 
-## English: message for an interviewer
+## English: short version
 
-> In addition to my resume and GitHub, I maintain a public `gdnbit-candidate` Agent Skill. It is not a promotional prompt; it is a machine-readable candidate package that separates public evidence, private/building work, planning, gaps, risks, and suggested verification questions. You can give it a job description and ask an Agent Skills-compatible AI to assess my fit. Entry point: https://github.com/Gdnbit/Gdnbit/tree/main/skills/gdnbit-candidate
+> I also maintain a personal Candidate Skill. You can send this link directly to an AI to help it understand my background more quickly:  
+> https://github.com/Gdnbit/Gdnbit/tree/main/skills/gdnbit-candidate
 
-Zero-install fallback:
+Optional explanation:
 
-> If you do not want to install a skill, give your AI the GitHub folder above and ask it to read `SKILL.md` and the referenced files before evaluating me.
+> The Skill tells the AI how to interpret my resume, website, GitHub, and project evidence, including what is publicly verifiable and what still requires interview validation.
 
-## Good prompts for reviewers
+## Zero-install usage
+
+The interviewer does not need to install anything. The simplest workflow is:
+
+1. send the GitHub folder link to an AI that can access the web;
+2. ask it to read `SKILL.md` first;
+3. for deeper evaluation, let it read `SPEC.md` and the relevant files under `references/`;
+4. optionally provide the job description and ask for a fit assessment.
+
+Example:
 
 ```text
-Read the gdnbit-candidate skill first, then assess Gdnbit against this job description.
-Separate public evidence from candidate-described work, list the strongest matches,
-material gaps, and five interview questions that would most change your hiring decision.
+Read this Candidate Skill first, then assess the candidate against the job description below.
+Distinguish public evidence from candidate-described work and identify what should be verified in interview.
 
-[Paste JD]
+[Skill link]
+[Job description]
 ```
+
+## What the Skill is for
+
+The Skill is not another resume or another personal website.
 
 ```text
-Use gdnbit-candidate. Give me:
-1. strongest hiring signals;
-2. biggest risks;
-3. what is publicly verifiable;
-4. what still needs interview validation;
-5. a 45-minute interview plan.
+Resume / website / GitHub / projects = information and evidence
+Candidate Skill                         = instructions for how AI should interpret them
 ```
+
+The formal behavior specification is in [SPEC.md](SPEC.md).
 
 ## Using it as an actual Agent Skill
 
-The folder follows the open `SKILL.md` Agent Skills format. OpenAI documents skills as directories anchored by `SKILL.md`, with optional `references/`, `scripts/`, and assets.
+The folder follows the open `SKILL.md` Agent Skills format. In a compatible client, the folder can be installed or made available as a skill/capability directory.
 
-For a local or self-hosted agent, make this directory available inside the agent's configured capability/skills directory.
-
-For OpenAI hosted Skills/API usage, clone/download this folder, package `gdnbit-candidate/` as a ZIP with that single top-level folder, and upload it through the Skills API or the relevant skill-import flow.
-
-The zero-install GitHub-reading method above remains the easiest path for an interviewer who only wants to evaluate the candidate quickly.
+For an interviewer who only wants to understand the candidate quickly, the zero-install GitHub-reading method above is the preferred path.
 
 ## Canonical links
 
 - GitHub profile: https://github.com/Gdnbit
 - Candidate Skill: https://github.com/Gdnbit/Gdnbit/tree/main/skills/gdnbit-candidate
 - Skill manifest: https://github.com/Gdnbit/Gdnbit/blob/main/skills/gdnbit-candidate/SKILL.md
+- Skill specification: https://github.com/Gdnbit/Gdnbit/blob/main/skills/gdnbit-candidate/SPEC.md
