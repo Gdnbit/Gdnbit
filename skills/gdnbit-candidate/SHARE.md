@@ -4,51 +4,60 @@ This page contains the simplest way to share the Candidate Skill with a recruite
 
 ## 中文：推荐直接发
 
-> 另外这里有一个关于我的个人 Skill，您可以直接把这个链接发给 AI，帮您更快了解我：  
+最稳妥的版本是直接给对方一条可以复制给 AI 的话：
+
+> 另外这里有一个关于我的个人 Skill。您可以直接把下面这句话发给 AI：  
+> **请根据这个 Skill 先快速了解一下这位候选人：**  
 > https://github.com/Gdnbit/Gdnbit/tree/main/skills/gdnbit-candidate
 
-就用这一句即可。
+这样做的原因是：不同 AI 对 GitHub 链接和 Agent Skill 的处理方式不同。直接把“要做什么”写在用户消息里，比只依赖网页内部说明更稳定。
 
-对方不需要理解 Agent Skill、MCP、安装方式或 GitHub 文件结构。Skill 本身会告诉可访问网页 / GitHub 的 AI 应该如何继续读取资料并建立候选人上下文。
+对方不需要理解 Agent Skill、MCP、安装方式或 GitHub 文件结构。
 
 ## 预期的 AI 行为
 
-对方把上面的文字和链接直接发给 AI 后，AI 理想上应该：
+收到上面的直接指令和链接后，AI 理想上应该：
 
-1. 理解 `Gdnbit` 就是这段话里“我”所指的候选人；
-2. 自动读取 Skill 的入口和 source map，而不是停在解释“Skill 是什么”；
-3. 继续读取当前 Profile / Work / Projects 等必要公开资料；
-4. 快速说明候选人的职业定位、实际工作方式和主要项目；
-5. 区分公开可检查证据、候选人自述 / 私有项目和规划内容；
-6. 最后主动给出后续选项，例如：
-   - 完整介绍项目；
+1. 快速建立 Gdnbit 的候选人上下文；
+2. 说明他的职业定位和实际工作方式；
+3. 给出主要项目的简短地图；
+4. 区分公开可检查证据、候选人自述 / 私有项目和规划内容；
+5. 不把回答写成“这个 Skill 是什么”的元解释；
+6. 最后主动给出后续路径，例如：
+   - 完整介绍所有项目；
    - 选择一个项目做深度分析；
    - 结合 JD 做岗位匹配。
 
 Skill 的目标是让面试官**少写 Prompt 也能得到有效结果**。
 
-## 如果某个 AI 没有自动继续读取
+## 兼容性说明
 
-不同 AI / 浏览环境的网页访问能力可能不同。如果它只解释了 Skill 而没有继续了解候选人，可以补一句：
+零安装场景下，AI 可能把 GitHub 页面当普通网页，而不是把其中的指令作为真正安装后的 Skill 执行。
 
-> 请直接按照这个 Skill 的说明继续读取相关公开资料，并先帮我快速了解这个候选人，不需要解释 Skill 本身。
+因此当前设计采用双保险：
 
-这是兼容性 fallback，不是正常情况下必须发送的话术。
+- `README.md` 顶部直接提供简短的 Candidate Quick Context，即使 AI 只做网页阅读也能得到有效候选人信息；
+- `SKILL.md` / `SOURCE_MAP.md` 负责在支持进一步读取或真正安装 Skill 时提供更完整的检索与评估行为。
+
+如果某个 AI 仍然只解释 Skill，可以补一句：
+
+> 不需要解释 Skill 本身，请直接根据里面的候选人资料和链接，先快速介绍这位候选人。
 
 ## English
 
-Recommended short version:
+Recommended version:
 
-> I also maintain a personal Candidate Skill. You can send this link directly to an AI to help it understand me more quickly:  
+> I also maintain a personal Candidate Skill. You can send this directly to an AI:  
+> **Please use this Skill to give me a quick understanding of this candidate:**  
 > https://github.com/Gdnbit/Gdnbit/tree/main/skills/gdnbit-candidate
 
 Fallback if needed:
 
-> Please follow the Skill instructions, read the relevant public sources, and give me a quick understanding of the candidate rather than explaining the Skill itself.
+> Do not explain the Skill itself. Use the candidate context and linked public sources to give me a quick candidate brief first.
 
-## What the Skill should help with
+## Useful follow-up questions
 
-Once the reviewer has basic context, the same Skill should support follow-up questions such as:
+Once the reviewer has basic context, the same Skill should support questions such as:
 
 - `完整介绍一下他的项目。`
 - `深入看一下 LLM Race，这个项目能证明什么？`
