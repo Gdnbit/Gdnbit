@@ -41,16 +41,22 @@
 
 #### 🚀 代表项目
 
-**🏎️ [LLM Race](https://github.com/Gdnbit/llm-race)** · `Public`  
-面向 AI Agent 的 MCP 模型选择与推荐基础设施。
+**🏢 Enterprise AI Core** · `🧭 Planning`  
+面向仍依赖 Excel、OA、ERP、文档和人工流转的企业，把分散的数据、AI 能力和业务动作统一成可复用的 Context / Capability / Agent 层，减少每做一个部门需求都从头集成一遍。
 
 **🏫 Class OS** · `🚧 Building`  
-围绕结构化事实、任务、权限与人机边界构建的 Agent-native 工作台。
+面向班主任每天被微信、表格、纸本、临时通知和学生事件切碎的工作，把事实、任务、沟通、时间线与责任统一到一个可由人和 Agent 共同操作的工作台里。
+
+**🩺 Health OS** · `🚧 Building`  
+面向个人 / 家庭健康信息长期分散在体检报告、就诊记录和可穿戴设备里的问题，建立可追溯的健康时间线、复查计划和 AI 辅助整理流程。
 
 **🔬 Research OS** · `🚧 Building`  
-强调证据、来源追溯、决策快照与结果回放的 AI 研究 / 决策系统。
+面向“AI 给了结论，但过几天已经不知道依据是什么”的研究与决策场景，把来源、主张、证据、决策和后续结果连接起来，支持复核与回放。
 
-[查看项目地图 →](PROJECTS.md)
+**🏎️ [LLM Race](https://github.com/Gdnbit/llm-race)** · `Public`  
+面向需要在成本、上下文、模态和能力之间选模型的 Agent，通过 MCP 把模型发现、比较和推荐做成可直接调用的工具，而不是靠人工反复查榜单。
+
+[查看完整项目地图 →](PROJECTS.md)
 
 </td>
 </tr>
