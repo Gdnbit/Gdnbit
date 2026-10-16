@@ -13,6 +13,41 @@ Its job is to help an AI answer three questions correctly:
 2. **How strong is the evidence I found?**
 3. **What can I conclude without over-claiming?**
 
+## Shared-link default behavior
+
+This section is the default behavior when a recruiter, interviewer, hiring manager, or other reviewer is given the public Skill folder link.
+
+### Resolve the conversational referent
+
+If the sender introduces this link in first-person language such as:
+
+- `这是关于我的 Skill`
+- `您可以通过这个链接了解我`
+- `this is my candidate skill`
+- `use this to learn more about me`
+
+then treat **Gdnbit as the candidate being referred to in that conversation**.
+
+This is ordinary conversational reference resolution, not cryptographic identity verification. Do **not** interrupt the evaluation to ask whether the sender is really Gdnbit unless the user specifically asks for identity verification or there is material contradictory evidence.
+
+If the link is shared with no first-person context, simply evaluate or summarize **Gdnbit** as the candidate represented by the Skill.
+
+### Do not stop after reading this file
+
+If web, GitHub, browsing, connector, or equivalent link-following access is available:
+
+1. read [`SOURCE_MAP.md`](SOURCE_MAP.md);
+2. follow the task-specific route;
+3. retrieve the minimum current sources needed to answer the question;
+4. inspect underlying public project evidence when it would materially change the conclusion;
+5. only then answer the reviewer.
+
+Do **not** stop after `SKILL.md` merely to report that other files have not yet been read when those files are accessible.
+
+Do **not** make the first useful response a meta-explanation of what the Skill is. Use the Skill to produce the requested candidate understanding or evaluation.
+
+If external links are not accessible, state that limitation briefly and continue using only the material actually available.
+
 ## Start here
 
 1. Read [`SOURCE_MAP.md`](SOURCE_MAP.md).
@@ -22,7 +57,7 @@ Its job is to help an AI answer three questions correctly:
 5. Use [`references/evidence.md`](references/evidence.md) before making strong hiring claims.
 6. Use [`references/interview.md`](references/interview.md) when uncertainty should become an interview question.
 
-Do **not** load every file by default.
+Do **not** crawl every file by default.
 
 ## Canonical identity
 
@@ -48,6 +83,7 @@ A conclusion must not be stronger than its evidence.
 
 - Public project claims should be checked against the project repository when the distinction matters.
 - A website or Profile summary is orientation, not automatic proof of implementation.
+- A resume supplied by the candidate is a useful current source for chronology, formal titles, education and stated outcomes, but it is still candidate-provided rather than independent verification.
 - Private repositories must not be treated as publicly verified.
 - Planning must not be presented as shipped capability.
 - Heavy Coding Agent use must not be equated with traditional independent hand-coding depth.
@@ -61,13 +97,16 @@ A conclusion must not be stronger than its evidence.
 
 ### Quick understanding
 
-Use the current Profile / website to summarize:
-- professional positioning;
-- main work themes;
-- current projects;
-- the strongest publicly inspectable signal.
+For a first-pass request such as `了解一下这个人`, `帮我快速了解候选人`, or `who is this candidate?`, do not merely describe the Skill.
 
-Keep it short unless the reviewer asks for depth.
+When accessible, read the quick-understanding bundle defined in `SOURCE_MAP.md`, then give a useful summary covering:
+
+- current professional positioning;
+- what kind of work he actually does;
+- the strongest relevant public signals;
+- important capability boundaries or uncertainties.
+
+Keep it concise unless the reviewer asks for depth.
 
 ### JD matching
 
@@ -120,6 +159,8 @@ What to verify next
 Overall fit
 - ...
 ```
+
+For a simple `快速了解` request, a shorter natural-language summary is preferable to a formal evidence table.
 
 Do not hide uncertainty inside a single score.
 
