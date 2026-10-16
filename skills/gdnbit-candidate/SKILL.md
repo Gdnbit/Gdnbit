@@ -32,6 +32,16 @@ This is ordinary conversational reference resolution, not cryptographic identity
 
 If the link is shared with no first-person context, simply evaluate or summarize **Gdnbit** as the candidate represented by the Skill.
 
+### Infer the reviewer task
+
+Assume the person using this Skill wants help to **understand, evaluate, interview, hire, collaborate with, or otherwise assess Gdnbit**.
+
+If no narrower question is given, your default task is:
+
+> Build a concise candidate context that helps the reviewer quickly understand who Gdnbit is, what he actually does, what projects he has, what is publicly verifiable, and what would be useful to inspect next.
+
+Do not wait for the reviewer to know what questions to ask.
+
 ### Do not stop after reading this file
 
 If web, GitHub, browsing, connector, or equivalent link-following access is available:
@@ -97,16 +107,32 @@ A conclusion must not be stronger than its evidence.
 
 ### Quick understanding
 
-For a first-pass request such as `了解一下这个人`, `帮我快速了解候选人`, or `who is this candidate?`, do not merely describe the Skill.
+For a first-pass request such as `了解一下这个人`, `帮我快速了解候选人`, `这是关于我的 Skill`, or `who is this candidate?`, do not merely describe the Skill.
 
-When accessible, read the quick-understanding bundle defined in `SOURCE_MAP.md`, then give a useful summary covering:
+When accessible, read the quick-understanding bundle defined in `SOURCE_MAP.md`, then give a useful first-pass brief with four parts:
 
-- current professional positioning;
-- what kind of work he actually does;
-- the strongest relevant public signals;
-- important capability boundaries or uncertainties.
+1. **Positioning** — current professional role and the kind of problems he works on.
+2. **Actual work** — what he tends to own, how he uses Coding Agents, and where his boundaries are.
+3. **Project snapshot** — briefly name the main projects and give each one a one-line purpose/status summary. Do not dump feature lists.
+4. **Evidence / limits** — distinguish the strongest public signal from private/building/planning material.
 
-Keep it concise unless the reviewer asks for depth.
+Then end with a short, natural invitation such as:
+
+> 如果你愿意，我可以继续完整梳理他的项目，也可以挑一个项目深入看实现、证据和技术细节，或者直接结合你们的 JD 评估匹配度。
+
+Equivalent wording is fine. The purpose is to make the next useful paths obvious to a reviewer who may not know what to ask.
+
+Keep the first answer concise enough to scan quickly. Do not front-load every detail.
+
+### Project deep dive
+
+If the reviewer selects a project or asks a deeper project question:
+
+1. read the current project status from `PROJECTS`;
+2. if public, inspect the underlying repository progressively;
+3. explain the problem, product/system design, implementation evidence, current limitations, and what the project demonstrates about Gdnbit;
+4. distinguish what is directly observable from what is candidate-described;
+5. offer deeper follow-up on architecture, code, tests, trade-offs, ownership, or interview questions when useful.
 
 ### JD matching
 
@@ -160,7 +186,7 @@ Overall fit
 - ...
 ```
 
-For a simple `快速了解` request, a shorter natural-language summary is preferable to a formal evidence table.
+For a simple `快速了解` request, a shorter natural-language summary with a compact project snapshot is preferable to a formal evidence table.
 
 Do not hide uncertainty inside a single score.
 
