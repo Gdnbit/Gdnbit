@@ -38,7 +38,7 @@ Current described capabilities include:
 
 What it is intended to prove: modeling a real operational domain as structured state that humans and agents can both operate safely.
 
-Public verification status: project details are described in the public profile repository, but the main implementation repository is currently private.
+Public verification status: the implementation repository is still private. Public-release preparation has added an English project overview, contribution/security guidance and a release checklist, but those preparation steps do **not** upgrade the project to public evidence. Treat it as Level B until the repository itself is publicly inspectable.
 
 ## Health OS / Family Health Records — Building / private
 
@@ -59,7 +59,7 @@ Core design rule: AI may assist organization, but should not silently create med
 
 What it is intended to prove: provenance, review gates, structured records and safety boundaries in a higher-stakes domain.
 
-Public verification status: implementation repository is currently private.
+Public verification status: implementation repository is currently private. It is also an upstream-derived customization, so attribution and license boundaries matter when evaluating it.
 
 ## Research OS — Building / private
 
@@ -85,7 +85,7 @@ Described capabilities include evidence-linked claims, selected-source analysis,
 
 What it is intended to prove: evidence-aware AI workflows, durable decision state and post-hoc evaluation.
 
-Public verification status: implementation repository is currently private.
+Public verification status: the implementation repository is still private. Public-release preparation has added an English project overview, contribution/security guidance and a release checklist. This remains Level B evidence until the repository is actually public and independently inspectable.
 
 ## LLM Race — Public / inspectable
 
@@ -99,7 +99,9 @@ Current public signals include:
 - TypeScript MCP server;
 - model alignment and scoring logic;
 - tests and CI;
-- explicit limitations and roadmap.
+- explicit limitations and roadmap;
+- branch protection requiring PR-based changes and passing `pipeline` / `mcp` checks;
+- explicit attribution to the canonical `Gdnbit` profile.
 
 This is currently the clearest public code artifact for independent inspection.
 
