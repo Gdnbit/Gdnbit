@@ -39,16 +39,22 @@ I work between **business requirements, product logic, system design and AI impl
 
 #### 🚀 Selected Projects
 
-**🏎️ [LLM Race](https://github.com/Gdnbit/llm-race)** · `Public`  
-MCP-powered model selection infrastructure for AI agents.
+**🏢 Enterprise AI Core** · `🧭 Planning`  
+For organizations still split across Excel, OA, ERP, documents and manual handoffs: a reusable context / capability / agent layer so each new departmental AI request does not require rebuilding the same integrations from scratch.
 
 **🏫 Class OS** · `🚧 Building`  
-An agent-native workspace built around structured facts, tasks, permissions and human/agent boundaries.
+For homeroom teachers whose daily work is fragmented across chats, spreadsheets, paper notes and ad-hoc tasks: a shared workspace where structured facts, events, tasks, communication and agent assistance live in one operational state.
+
+**🩺 Health OS** · `🚧 Building`  
+For personal and family health information scattered across checkups, visits, reports and wearables: a longitudinal health timeline with review plans and human-confirmed AI extraction.
 
 **🔬 Research OS** · `🚧 Building`  
-An evidence-driven AI research and decision workflow with traceable sources and replayable outcomes.
+For research and decisions where AI gives an answer but the evidence disappears later: a system that connects sources, claims, evidence, decisions and outcomes so the reasoning can be reviewed and replayed.
 
-[Project map →](PROJECTS_EN.md)
+**🏎️ [LLM Race](https://github.com/Gdnbit/llm-race)** · `Public`  
+For agents that need to choose models by cost, context, modalities and capability: model discovery and recommendation exposed as an MCP tool instead of a manual leaderboard lookup.
+
+[Full project map →](PROJECTS_EN.md)
 
 </td>
 </tr>
