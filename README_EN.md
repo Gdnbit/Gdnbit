@@ -1,6 +1,6 @@
 <div align="center">
 
-# Hi, I'm Gdnbit 👋
+# Gdnbit — AI Solution & Product Engineer 👋
 
 ### AI Solution & Product Engineer · Enterprise AI Delivery
 
@@ -79,6 +79,6 @@ In parallel, I also explore `Personal Agents`, durable memory, skills, computer 
 
 ### Business → Systems → Agents → Outcomes
 
-<sub>Gdnbit · Giraffes Don't Believe in Tears. 🦒</sub>
+<sub>[github.com/Gdnbit](https://github.com/Gdnbit) · Giraffes Don't Believe in Tears. 🦒</sub>
 
 </div>
