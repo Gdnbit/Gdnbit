@@ -1,13 +1,14 @@
-# Professional Profile Reference
+# Professional Profile Calibration
 
-This file is a **calibration note**, not the primary source of truth for Gdnbit's current profile.
+This file is a **small calibration note**, not the primary profile and not a second resume.
 
-For current positioning and work, prefer:
+For current candidate information, prefer:
 
-- https://github.com/Gdnbit/Gdnbit/blob/main/README.md
-- https://github.com/Gdnbit/Gdnbit/blob/main/WORK.md
-- https://github.com/Gdnbit/Gdnbit/blob/main/NOW.md
-- https://gdnbit.com when available
+- Profile: https://github.com/Gdnbit/Gdnbit/blob/main/README.md
+- Work: https://github.com/Gdnbit/Gdnbit/blob/main/WORK.md
+- Projects: https://github.com/Gdnbit/Gdnbit/blob/main/PROJECTS.md
+- Current direction: https://github.com/Gdnbit/Gdnbit/blob/main/NOW.md
+- Personal website: https://gdnbit.com when current and available
 
 ## Stable positioning
 
@@ -15,34 +16,40 @@ Gdnbit is best understood as an early-career **AI Solution / Product Engineer** 
 
 - business requirement interpretation;
 - workflow and product/system design;
-- AI-assisted implementation;
-- enterprise delivery and iteration.
+- AI-assisted implementation using Coding Agents as a core production interface;
+- enterprise delivery, validation, and iteration.
 
 Useful role labels include:
 
-- AI Solution Engineer
-- AI Product Engineer
-- Enterprise AI Delivery
-- FDE-style overlap, with stronger product/business weighting than traditional low-level engineering
+- AI Solution Engineer;
+- AI Product Engineer;
+- Enterprise AI Delivery;
+- FDE-style overlap, with stronger product/business weighting than traditional low-level engineering.
+
+This positioning is a routing aid. Current Profile / Work material should be used for the actual explanation.
 
 ## Important non-claims
 
-Do not assume from the public materials alone that Gdnbit has senior-level depth in:
+Do not infer from positioning or architecture vocabulary alone that Gdnbit has demonstrated senior-level depth in:
 
 - low-level systems engineering;
 - large-scale distributed systems;
 - performance engineering;
 - independent from-scratch hand-coding without AI assistance;
-- mature DevOps/SRE ownership;
+- mature DevOps / SRE ownership;
 - production ML research or model training;
 - many years of enterprise architecture experience.
 
-Do not infer full consulting-style process discovery ownership when enterprise work began from requirements already collected or proposed by client-side departments.
+Do not infer full consulting-style discovery ownership when enterprise work began from requirements already collected or proposed by client-side departments.
 
-## How to evaluate deeper
+Do not treat the use of Coding Agents as either automatic evidence of weakness or automatic evidence of engineering depth. Evaluate the control loop: problem definition, context, constraints, review, debugging, acceptance, and ability to explain the resulting system.
 
-If the question is about current work scope, read `WORK.md`.
+## Reviewer use
 
-If the question is about current project evidence, route through `SOURCE_MAP.md` and inspect the relevant repository when public.
+For a first-pass candidate brief, read the current Profile and Work material rather than quoting this file.
 
-If the question is about technical depth, do not rely on this file; inspect implementation evidence and use `interview.md` to test unresolved areas.
+For project evidence, route through `SOURCE_MAP.md` and the relevant public repository.
+
+For technical depth, inspect implementation evidence and use `interview.md` to test unresolved areas.
+
+For job fit, let the supplied JD determine which evidence matters most.
