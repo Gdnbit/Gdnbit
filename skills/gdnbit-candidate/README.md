@@ -20,13 +20,21 @@ Do this now, when the sources are accessible:
 
 Do **not** stop after saying you have read only `SKILL.md` if the linked sources are available.
 
-A good first answer should usually tell the reviewer:
+A good first answer should usually contain:
 
-- what kind of professional Gdnbit is;
-- what work he actually does and owns;
-- what the strongest public evidence is;
-- what important limitations or uncertainties remain;
-- what to inspect or ask next if deeper evaluation is needed.
+- **who Gdnbit is professionally**;
+- **what work he actually does and owns**;
+- **a compact project map** — briefly name the main projects and give each a one-line purpose / current status;
+- **the strongest public evidence** currently available;
+- **important limitations or uncertainties** that still need validation.
+
+Do not dump detailed feature lists in the first answer. The project map should make the reviewer aware of the available evidence and give them obvious paths to continue.
+
+End the first answer with a short invitation such as:
+
+> 如果你愿意，我可以继续完整介绍他的项目，也可以挑一个项目深入看实现、证据和技术细节，或者结合你们的 JD 直接评估匹配度。
+
+Equivalent wording is fine. The goal is to help a reviewer who may not yet know what to ask next.
 
 ## What this Skill is
 
