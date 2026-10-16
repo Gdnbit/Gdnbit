@@ -1,116 +1,63 @@
-# Project Map
+# Project Evidence Registry
 
-This reference summarizes the projects currently used in Gdnbit's public professional narrative. Status labels matter.
+This file is a **routing registry**, not a second project portfolio.
 
-## Enterprise AI Core — Planning
+For current descriptions, read:
+https://github.com/Gdnbit/Gdnbit/blob/main/PROJECTS.md
 
-A reusable enterprise AI foundation intended to connect existing business systems and repeatedly needed AI capabilities.
+For implementation claims, inspect the project repository itself when it is public and accessible.
 
-Planned layers include:
+## LLM Race
 
-- ERP / OA / SaaS / Excel / Files integration;
-- enterprise context and business state;
-- OCR / ASR / document parsing / search / model access capability layer;
-- model and tool gateway;
-- domain packs for business areas;
-- permissions, approvals and audit;
-- agent runtime / business command boundary.
+Status: **Public / inspectable**
 
-What it currently proves: architectural direction and abstraction ability.
+Repository:
+https://github.com/Gdnbit/llm-race
 
-What it does not yet prove: a completed public platform or production-grade implementation.
+Use the repository README, source, tests, CI, issues/PRs and design documents as appropriate to the question.
 
-## Class OS — Building / private
+Do not treat the brief summary in the Profile or this Skill as stronger evidence than the repository.
 
-A class-management workbench for Chinese K-12 homeroom teachers.
+## Research OS
 
-Current described capabilities include:
+Status: **Building / private** unless public visibility can be directly observed at evaluation time.
 
-- class and roster management;
-- typed student facts / events;
-- tasks and follow-up;
-- Today view;
-- Student Timeline;
-- corrections and audit;
-- identity / permission boundary;
-- query and business-command gateways;
-- controlled agent query / drafting under validation.
+Use the Profile project map for candidate-described scope. If the repository is not publicly accessible, keep implementation claims at Level B.
 
-What it is intended to prove: modeling a real operational domain as structured state that humans and agents can both operate safely.
+If the repository later becomes public, inspect the repository directly and update the evidence level based on what is actually observable.
 
-Public verification status: the implementation repository is still private. Public-release preparation has added an English project overview, contribution/security guidance and a release checklist, but those preparation steps do **not** upgrade the project to public evidence. Treat it as Level B until the repository itself is publicly inspectable.
+## Class OS
 
-## Health OS / Family Health Records — Building / private
+Status: **Building / private** unless public visibility can be directly observed at evaluation time.
 
-A personal/family health information system based on a customized extension of the open-source MediKeep project.
+Use the Profile project map for candidate-described scope. Do not infer private implementation details.
 
-Described capabilities include:
+If the repository later becomes public, prefer its current README, status docs, tests and source for implementation claims.
 
-- report upload and source preservation;
-- OCR / parser candidates;
-- human review before official records;
-- labs, vitals, medications, allergies, vaccines and visits;
-- trends and checkup-batch comparison;
-- constrained AI assistance with record references;
-- family member separation and scoped sharing;
-- export, backup and restore.
+## Family Health Records / Health OS
 
-Core design rule: AI may assist organization, but should not silently create medical facts.
+Status: **Building / private** unless public visibility can be directly observed at evaluation time.
 
-What it is intended to prove: provenance, review gates, structured records and safety boundaries in a higher-stakes domain.
+This is based on an upstream open-source project, so evaluate separately:
 
-Public verification status: implementation repository is currently private. It is also an upstream-derived customization, so attribution and license boundaries matter when evaluating it.
+- what comes from the upstream project;
+- what Gdnbit modified or added;
+- what is publicly inspectable;
+- what remains candidate-described.
 
-## Research OS — Building / private
+## Enterprise AI Core
 
-An evidence-driven personal research and decision system.
+Status: **Planning / directional** unless a public implementation source can be directly inspected.
 
-Described flow:
+Treat it as architecture/product direction rather than shipped capability.
 
-```text
-Source ingestion
-   ↓
-RawSource / ClaimCard / EvidenceSpan
-   ↓
-Selected-source analysis / briefing
-   ↓
-DecisionSnapshot
-   ↓
-Outcome
-   ↓
-Replay
-```
+## Evaluation rule
 
-Described capabilities include evidence-linked claims, selected-source analysis, stop-before-generation when evidence is insufficient, decision snapshots, outcome capture, replay and optional multi-model review.
+Do not count projects equally.
 
-What it is intended to prove: evidence-aware AI workflows, durable decision state and post-hoc evaluation.
+- public repository evidence can support Level A claims;
+- private/building projects remain Level B unless additional evidence is supplied;
+- planning remains Level C;
+- current observable repository visibility overrides stale labels in this file.
 
-Public verification status: the implementation repository is still private. Public-release preparation has added an English project overview, contribution/security guidance and a release checklist. This remains Level B evidence until the repository is actually public and independently inspectable.
-
-## LLM Race — Public / inspectable
-
-Repository: https://github.com/Gdnbit/llm-race
-
-An MCP-powered model-selection engine that combines model catalog metadata, alignment and heuristic scoring to shortlist models for workflow steps.
-
-Current public signals include:
-
-- Python ingestion pipeline;
-- TypeScript MCP server;
-- model alignment and scoring logic;
-- tests and CI;
-- explicit limitations and roadmap;
-- branch protection requiring PR-based changes and passing `pipeline` / `mcp` checks;
-- explicit attribution to the canonical `Gdnbit` profile.
-
-This is currently the clearest public code artifact for independent inspection.
-
-## How to use the project map in evaluation
-
-Do not count all projects equally.
-
-- `Public / inspectable` = strongest evidence.
-- `Building / private` = useful candidate-described evidence, but validate with interview walkthroughs, screenshots, architecture explanations or later public release.
-- `Planning` = evidence of direction and reasoning, not shipped capability.
-
-When matching to a role, ask which project most directly exercises the role's core constraint rather than simply counting repositories.
+When matching a role, choose the project that best tests the role's core constraint, then inspect the strongest available evidence for that project.
