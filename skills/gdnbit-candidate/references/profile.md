@@ -1,63 +1,33 @@
-# Professional Profile
+# Professional Profile Reference
 
-## Positioning
+This file is a **calibration note**, not the primary source of truth for Gdnbit's current profile.
 
-Gdnbit is best understood as an early-career AI solution / product engineer whose work sits between business interpretation, product/system design, AI-assisted implementation, and enterprise delivery.
+For current positioning and work, prefer:
 
-Closest public role labels:
+- https://github.com/Gdnbit/Gdnbit/blob/main/README.md
+- https://github.com/Gdnbit/Gdnbit/blob/main/WORK.md
+- https://github.com/Gdnbit/Gdnbit/blob/main/NOW.md
+- https://gdnbit.com when available
+
+## Stable positioning
+
+Gdnbit is best understood as an early-career **AI Solution / Product Engineer** whose work sits between:
+
+- business requirement interpretation;
+- workflow and product/system design;
+- AI-assisted implementation;
+- enterprise delivery and iteration.
+
+Useful role labels include:
 
 - AI Solution Engineer
 - AI Product Engineer
 - Enterprise AI Delivery
-- FDE-style work with stronger product/business weighting than traditional low-level engineering
+- FDE-style overlap, with stronger product/business weighting than traditional low-level engineering
 
-## What he typically does
+## Important non-claims
 
-A simplified workflow is:
-
-```text
-Given / collected requirements
-        ↓
-Interpretation and clarification
-        ↓
-Business process / rule modeling
-        ↓
-Workflow and product design
-        ↓
-Data / API / tool / interaction contracts
-        ↓
-AI-assisted implementation
-        ↓
-Validation, iteration and delivery
-```
-
-Typical responsibilities include:
-
-- understanding department-level requirements and their operational intent;
-- identifying missing rules, edge cases and conflicting assumptions;
-- defining inputs, outputs, state, permissions and interaction flows;
-- translating product logic into implementation constraints and acceptance criteria;
-- using coding agents heavily for implementation and iteration;
-- reviewing outputs and judging whether the workflow actually works end to end;
-- pushing systems from prototype/MVP toward delivery readiness.
-
-## Likely strengths
-
-Evidence and candidate-authored materials point most strongly toward:
-
-- business requirement interpretation;
-- workflow and product logic;
-- rapid decomposition of ambiguous problems;
-- using coding agents as a primary production interface;
-- repository-level context organization and specification;
-- acceptance criteria and output judgment;
-- enterprise AI delivery and iteration;
-- thinking in reusable capabilities rather than isolated features;
-- agent systems, context/state, permissions, tools, workflow and runtime concepts.
-
-## Areas that should not be over-claimed
-
-Do not assume deep senior-level strength in:
+Do not assume from the public materials alone that Gdnbit has senior-level depth in:
 
 - low-level systems engineering;
 - large-scale distributed systems;
@@ -67,20 +37,12 @@ Do not assume deep senior-level strength in:
 - production ML research or model training;
 - many years of enterprise architecture experience.
 
-These may be learnable or partially understood, but they are not the strongest public signals today.
+Do not infer full consulting-style process discovery ownership when enterprise work began from requirements already collected or proposed by client-side departments.
 
-## Working style
+## How to evaluate deeper
 
-The candidate describes coding agents as a core production tool rather than occasional autocomplete. His value proposition is therefore closer to:
+If the question is about current work scope, read `WORK.md`.
 
-`problem definition + system logic + constraints + agent orchestration + review + delivery`
+If the question is about current project evidence, route through `SOURCE_MAP.md` and inspect the relevant repository when public.
 
-than to maximizing manually typed code.
-
-This distinction should be tested rather than treated as automatically positive or negative. For roles where the main constraint is translating messy business requirements into working AI-enabled software, it may be a strong fit. For roles centered on deep independent implementation, it may be a material gap.
-
-## Public identity
-
-Canonical GitHub identity: https://github.com/Gdnbit
-
-The public profile intentionally omits client names, internal repositories, identifiable business data and confidential implementation details.
+If the question is about technical depth, do not rely on this file; inspect implementation evidence and use `interview.md` to test unresolved areas.
