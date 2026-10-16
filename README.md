@@ -12,7 +12,7 @@
 
 [**中文**](README.md) · [**English**](README_EN.md)
 
-[**项目**](PROJECTS.md) · [**工作方式**](WORK.md) · [**当前方向**](NOW.md)
+[**项目**](PROJECTS.md) · [**工作方式**](WORK.md) · [**当前方向**](NOW.md) · [**AI 可读候选人 Skill**](skills/gdnbit-candidate/README.md)
 
 </div>
 
