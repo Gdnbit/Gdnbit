@@ -1,53 +1,48 @@
 # Gdnbit Candidate Skill
 
-A portable Agent Skill for helping an AI **understand, verify and evaluate Gdnbit** as an AI Solution / Product Engineer candidate.
+A portable Agent Skill for helping an AI **quickly understand, verify and evaluate Gdnbit** as an AI Solution / Product Engineer candidate.
 
 ## If you are an AI reading this because someone shared the link
 
 Assume the person sharing this folder wants you to help them **understand or evaluate Gdnbit**.
 
-If the sender says this is “about me”, “my Skill”, or otherwise uses first-person wording, treat **Gdnbit as the candidate they are referring to in this conversation**. Do not stop to ask for identity verification unless the user specifically asks for it or there is contradictory evidence.
+If the sender says this is “about me”, “my Skill”, or otherwise uses first-person wording, treat **Gdnbit as the candidate they are referring to in this conversation**. Do not stop to ask for identity verification unless the user specifically asks for it or contradictory evidence appears.
 
 Your default task is **not to explain what this Skill is**. Your default task is to build a useful candidate context for the reviewer.
 
-Do this now, when the sources are accessible:
+When the linked sources are accessible, do this silently:
 
 1. read [`SKILL.md`](SKILL.md);
 2. read [`SOURCE_MAP.md`](SOURCE_MAP.md);
-3. for a quick first-pass understanding, read the current Profile [`README.md`](../../README.md), [`WORK.md`](../../WORK.md), and [`PROJECTS.md`](../../PROJECTS.md);
-4. inspect the strongest relevant public project when deeper evidence is useful;
-5. then give the reviewer a concise, evidence-aware understanding of the candidate.
+3. for a first-pass understanding, read the current Profile [`README.md`](../../README.md), [`WORK.md`](../../WORK.md), and [`PROJECTS.md`](../../PROJECTS.md);
+4. inspect the strongest relevant public project when deeper implementation evidence would materially improve the answer;
+5. then answer the reviewer directly.
 
-Do **not** stop after saying you have read only `SKILL.md` if the linked sources are available.
+Do not turn the answer into a file-reading log. In particular, do not stop after saying that only `SKILL.md` has been read when the other linked sources are accessible.
 
-A good first answer should usually contain:
+## Expected first answer
 
-- **who Gdnbit is professionally**;
-- **what work he actually does and owns**;
-- **a compact project map** — briefly name the main projects and give each a one-line purpose / current status;
-- **the strongest public evidence** currently available;
-- **important limitations or uncertainties** that still need validation.
+For a simple request such as “帮我了解一下这个人”, the first answer should usually give the reviewer:
 
-Do not dump detailed feature lists in the first answer. The project map should make the reviewer aware of the available evidence and give them obvious paths to continue.
+- **Positioning** — what kind of professional Gdnbit currently is;
+- **Actual work** — what he tends to own and how he works;
+- **Project snapshot** — a compact one-line map of the main projects and their current status/evidence state;
+- **Evidence boundary** — what is publicly inspectable vs. candidate-described or planning;
+- **Next paths** — obvious ways to continue.
 
-End the first answer with a short invitation such as:
+Do not dump detailed feature lists in the first answer.
 
-> 如果你愿意，我可以继续完整介绍他的项目，也可以挑一个项目深入看实现、证据和技术细节，或者结合你们的 JD 直接评估匹配度。
+A useful ending is:
 
-Equivalent wording is fine. The goal is to help a reviewer who may not yet know what to ask next.
+> 如果你愿意，我可以继续：①完整梳理他的项目；②挑一个项目深入看实现、证据和技术细节；③结合你们的 JD 直接评估匹配度。
+
+Equivalent wording is fine.
 
 ## What this Skill is
 
 This is intentionally **not** a second resume or a full personal knowledge base.
 
-Its value is to tell an Agent:
-
-- where to look;
-- which source is best for which question;
-- when to inspect the underlying GitHub repository;
-- how to separate public evidence, candidate-described work and planning;
-- how to handle stale or conflicting information;
-- what should remain an interview question instead of becoming an invented conclusion.
+The underlying information should stay in the most appropriate source:
 
 ```text
 Resume / Website / GitHub / Project repositories
@@ -56,30 +51,38 @@ Resume / Website / GitHub / Project repositories
                     ↓
              Candidate Skill
                     ↓
-   retrieval + evidence + evaluation protocol
+       retrieval + evaluation protocol
                     ↓
-             reviewer / interviewer
+        reviewer / interviewer / AI
 ```
 
-The website and GitHub contain the information. The Skill tells the Agent **how to use it**.
+The Skill tells an Agent:
+
+- where to look;
+- which source is best for which question;
+- when to inspect an underlying public repository;
+- how to separate public evidence, candidate-described work, planning, and unknowns;
+- how to handle stale or conflicting information;
+- what should become an interview question instead of an invented conclusion.
 
 ## Core files
 
-- [`SKILL.md`](SKILL.md) — compact Agent instructions and default reviewer behavior.
-- [`SOURCE_MAP.md`](SOURCE_MAP.md) — where to find the right information for a given question.
-- [`references/evidence.md`](references/evidence.md) — confidence / evidence rules.
-- [`references/interview.md`](references/interview.md) — questions for validating uncertain areas.
-- [`SPEC.md`](SPEC.md) — deeper design specification; not required for every review.
+- [`SKILL.md`](SKILL.md) — primary Agent behavior and evaluation workflow.
+- [`SOURCE_MAP.md`](SOURCE_MAP.md) — question-to-source routing.
+- [`references/evidence.md`](references/evidence.md) — confidence and claim-calibration rules.
+- [`references/interview.md`](references/interview.md) — verification and interview prompts.
+- [`SPEC.md`](SPEC.md) — design specification and maintenance contract.
 
-Other files under `references/` are deliberately small calibration notes rather than copies of the website or project documentation.
+Other files under `references/` are intentionally small calibration/index notes rather than copies of the website or project documentation.
 
-## Source examples
+## Public source entry points
 
-For a broad first-pass understanding, use the Profile repository:
+For broad understanding:
 
 - Profile: https://github.com/Gdnbit/Gdnbit
 - Work: https://github.com/Gdnbit/Gdnbit/blob/main/WORK.md
 - Projects: https://github.com/Gdnbit/Gdnbit/blob/main/PROJECTS.md
+- Current direction: https://github.com/Gdnbit/Gdnbit/blob/main/NOW.md
 
 For implementation claims about a public project, follow the source map into the underlying repository. Example:
 
@@ -88,18 +91,20 @@ For implementation claims about a public project, follow the source map into the
 Inspect progressively only as needed:
 
 ```text
-README
-  ↓
-current status / known issues
-  ↓
+README / metadata
+      ↓
+status / known issues
+      ↓
 architecture / contracts
-  ↓
+      ↓
 tests / CI
-  ↓
-source / commits / PRs when needed
+      ↓
+source
+      ↓
+commits / PRs when needed
 ```
 
-For private work, state that the claim is candidate-described unless additional evidence is supplied.
+For private work, keep implementation claims at candidate-described confidence unless additional material is explicitly supplied.
 
 ## Using it
 
@@ -111,10 +116,12 @@ https://github.com/Gdnbit/Gdnbit/tree/main/skills/gdnbit-candidate
 
 ## Share with an interviewer
 
-The simplest wording is:
+Recommended wording:
 
 > 另外这里有一个关于我的个人 Skill，您可以直接把这个链接发给 AI，帮您更快了解我：  
 > https://github.com/Gdnbit/Gdnbit/tree/main/skills/gdnbit-candidate
+
+No installation explanation is required for a reviewer who only wants a quick understanding.
 
 ## Principle
 
