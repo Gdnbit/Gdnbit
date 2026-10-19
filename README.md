@@ -46,16 +46,16 @@
 #### 🚀 核心项目
 
 <strong>🏫 <a href="https://github.com/Gdnbit/classmatter">班事有谱 · ClassMatter</a></strong>  
-围绕班主任真实工作设计的班级事务系统。把学生事实、日常记录和跟进任务串进同一条时间线，让每件事有来龙去脉，也有后续可追踪。
+面向班主任的 Agent-native 班级工作台。让学生记录、跟进任务与时间线连成可追溯的工作记忆；AI 帮忙查询和起草，事实与重要决定仍由人把关。
 
 <strong>🔬 <a href="https://github.com/Gdnbit/thinkroom">思考间 · ThinkRoom</a></strong>  
-让个人知识不只停留在收藏夹。把文章、笔记与不同观点整理成有出处的资料，通过检索问答、多视角讨论和决策复盘，让积累的信息持续参与思考。
+让个人知识不只停留在收藏夹。把文章、笔记与不同观点整理成有出处的资料，通过检索问答、研究简报和多视角讨论，让积累的信息持续参与判断。
 
-**🩺 HealthBox**  
-面向个人与家庭的长期健康档案。整合体检报告、健康记录和指标趋势，结合报告解析、人工核对与成员共享，让分散的数据逐渐成为可回顾的健康历史。
+<strong>🩺 <a href="https://github.com/Gdnbit/healthbox">健康档案盒 · HealthBox</a></strong>  
+把散落的医疗报告变成长期健康档案。基于 MediKeep 扩展原件留存、解析后人工复核、指标趋势与家庭授权共享，让健康记录能积累、核对、回顾和导出。
 
 **🏢 Enterprise AI Core**  
-从企业 AI 交付实践延伸出的架构思考：把业务 Context、可复用工具、权限与 Agent Runtime 组织起来，让 Agent 不只回答问题，也能在明确边界内参与业务流程。
+从企业 AI 交付中延伸出的架构思考：将业务 Context、可复用能力、权限和 Agent Runtime 组织起来，让 Agent 不只回答问题，也能在明确边界内参与真实流程。
 
 [查看完整项目地图 →](PROJECTS.md)
 
