@@ -45,10 +45,10 @@
 
 #### 🚀 核心项目
 
-**🏫 [班事有谱 · ClassMatter](https://github.com/Gdnbit/classmatter)** · `Public / Pre-alpha`  
+<strong>🏫 <a href="https://github.com/Gdnbit/classmatter">班事有谱 · ClassMatter</a></strong> · `Public / Pre-alpha`  
 面向班主任的班级事务工作台：名单、结构化学生事实、跟进任务、Today / Timeline、受控更正与审计。让班务记录可查、待办可跟、未闭环事项有迹可循。**仅限合成数据开发验证，尚非正式 R1 或生产产品。**
 
-**🔬 [思考间 · ThinkRoom](https://github.com/Gdnbit/thinkroom)** · `Public / Early-stage`  
+<strong>🔬 <a href="https://github.com/Gdnbit/thinkroom">思考间 · ThinkRoom</a></strong> · `Public / Early-stage`  
 个人私域知识与多视角思考系统：把文档、笔记与观点整理成有出处的知识，通过资料问答、研究简报、多角色讨论与决策复盘辅助判断。公开源码支持本地体验，真实模型质量和生产适用性仍需验证。
 
 **🩺 HealthBox / Family Health Records** · `Private / Preparing for open source`  
