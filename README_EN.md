@@ -1,22 +1,22 @@
 <div align="center">
 
-<h1>Hi, I'm Gdnbit 🦒</h1>
+<h1>Gdnbit 🦒</h1>
 
-<p><strong>AI Solution &amp; Product Engineer</strong> · Enterprise AI Delivery</p>
+<p><strong>AI Solution &amp; Product Engineer · Enterprise AI Delivery</strong></p>
 
-<p>I work on enterprise systems, and I also love building little things that start with, “I wish something like this existed.”</p>
+<p><strong>Finding structure in real-world complexity, then turning it into working systems.</strong></p>
 
-<p><strong>I'm less interested in what AI can show off than in whose day it can actually make easier.</strong></p>
+<p>Business modeling · AI-native development · Agent workflows · Enterprise AI</p>
 
 <p>
 <a href="README.md">中文</a> · <a href="README_EN.md">English</a>
 </p>
 
 <p>
-<a href="PROJECTS_EN.md">Things I'm building</a> ·
+<a href="PROJECTS_EN.md">Projects</a> ·
 <a href="WORK_EN.md">How I work</a> ·
-<a href="NOW_EN.md">What I'm thinking about</a> ·
-<a href="skills/gdnbit-candidate/README.md">An intro for AI</a>
+<a href="NOW_EN.md">Ideas &amp; direction</a> ·
+<a href="skills/gdnbit-candidate/README.md">AI-readable Candidate Skill</a>
 </p>
 
 </div>
@@ -25,34 +25,38 @@
 <tr>
 <td valign="top" width="50%">
 
-<h3>👋 A little about me</h3>
+<h3>💼 What I do</h3>
 
-<p><strong>At work,</strong> I help deliver enterprise AI applications. Most problems aren't glamorous: they're the everyday details behind production, administration and procurement workflows.</p>
+<p><strong>Understand the business</strong><br/>
+Clarify real requirements, people, workflows, rules and constraints — identifying what the system actually needs to take on.</p>
 
-<p><strong>When a request comes in,</strong> I like to figure out who does what, where the data goes, which rules matter, and what happens when something breaks — then turn that into a buildable system.</p>
+<p><strong>Design the system</strong><br/>
+Translate business processes into data, states, interactions and permissions that can be implemented and verified.</p>
 
-<p><strong>When building,</strong> Coding Agents are my main collaborators. I set up the context and constraints, review the behavior, and keep iterating until the workflow actually makes sense.</p>
+<p><strong>Build AI-natively</strong><br/>
+Use Coding Agents as core development tools, organizing context, tasks and acceptance criteria while judging system logic and outcomes.</p>
 
-<p><strong>Outside work,</strong> I build things inspired by people and problems around me. Different domains, usually the same starting thought: surely this could be a little less complicated.</p>
+<p><strong>Drive delivery</strong><br/>
+Work through integration and iteration across operations, administration and procurement workflows, focusing on real use rather than demos alone.</p>
 
-<p><a href="WORK_EN.md">More about how I work →</a></p>
+<p><a href="WORK_EN.md">How I work →</a></p>
 
 </td>
 <td valign="top" width="50%">
 
-<h3>🛠️ Things I'm building</h3>
+<h3>🚀 Core projects</h3>
 
 <p><strong>🏫 <a href="https://github.com/Gdnbit/classmatter">ClassMatter · 班事有谱</a></strong><br/>
-Homeroom teachers shouldn't have to remember everything. Bring student records, class matters and follow-ups together so important things don't get lost in a busy day.</p>
+An external working memory for homeroom teachers: student records, class matters and follow-ups with context, clear next steps and traceable history.</p>
 
 <p><strong>🔬 <a href="https://github.com/Gdnbit/thinkroom">ThinkRoom · 思考间</a></strong><br/>
-We save a lot of information and use surprisingly little of it. I want notes, documents and ideas to come back with their sources and help with the next decision.</p>
+Make saved information part of the next decision: organize sources and viewpoints for evidence-based retrieval, multi-perspective discussion and reflection.</p>
 
 <p><strong>🩺 HealthBox</strong><br/>
-Health reports shouldn't become another pile of forgotten files every year. A place to keep family records, measurements and history together so they can be revisited over time.</p>
+A long-term personal and family health record system, turning scattered reports and measurements into records people can review, compare and trace.</p>
 
 <p><strong>🏢 Enterprise AI Core</strong><br/>
-Enterprise projects keep revealing similar problems around context, tools and permissions. I'm exploring how those common pieces could make agents fit naturally into real workflows.</p>
+Exploring a reusable enterprise AI foundation connecting business context, tools and permissions, so agents can take part in workflows — not just answer questions.</p>
 
 <p><a href="PROJECTS_EN.md">Explore the project map →</a></p>
 
@@ -60,11 +64,11 @@ Enterprise projects keep revealing similar problems around context, tools and pe
 </tr>
 </table>
 
-### 💭 A question I keep coming back to
+### 🧭 A question I keep exploring
 
-**If agents can really participate in work — not just answer questions — shouldn't we rethink how software itself is designed?**
+**If agents become participants in workflows rather than chatbots beside them, how should software organize its state, capabilities and permissions?**
 
-It's a question that connects my enterprise work with the personal projects I keep building. [A few thoughts I'm still working through →](NOW_EN.md)
+This connects my enterprise AI delivery work, personal projects and interest in agent-native software. [Read more about my direction →](NOW_EN.md)
 
 ---
 
