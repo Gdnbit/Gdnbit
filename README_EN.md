@@ -43,17 +43,17 @@ I am gradually extracting repeated capabilities such as `OCR / ASR / document pa
 
 #### 🚀 Core Projects
 
-<strong>🏫 <a href="https://github.com/Gdnbit/classmatter">ClassMatter · 班事有谱</a></strong> · `Public / Pre-alpha`  
-A homeroom-teacher workbench for rosters, typed student facts, follow-up Tasks, Today / Timeline, controlled corrections and audit history. **Synthetic-data development only; not a production product or formal R1 release.**
+<strong>🏫 <a href="https://github.com/Gdnbit/classmatter">ClassMatter · 班事有谱</a></strong>  
+A homeroom-teacher workspace that brings scattered student records and follow-ups together, using timelines and trackable tasks so important class matters don't get lost.
 
-<strong>🔬 <a href="https://github.com/Gdnbit/thinkroom">ThinkRoom · 思考间</a></strong> · `Public / Early-stage`  
-A private-knowledge and multi-perspective thinking system that organizes documents, notes and claims with traceable sources, then supports grounded chat, Briefing, Committee discussions and decision replay. Local source is inspectable; model quality and production readiness are not assumed.
+<strong>🔬 <a href="https://github.com/Gdnbit/thinkroom">ThinkRoom · 思考间</a></strong>  
+Make saved articles, notes and documents useful in your next decision. Organize knowledge and evidence, then explore it through questions, multiple perspectives and decision reviews.
 
-**🩺 HealthBox / Family Health Records** · `Private / Preparing for open source`  
-A personal / family health record system with human-reviewed report extraction, longitudinal trends, scoped household sharing and backup/restore. Customized from the open-source MediKeep project. **HealthBox is the intended public-facing name; the repository is not public yet.**
+**🩺 HealthBox**  
+A personal and family health record system for organizing medical reports, measurements and health history, with document parsing, human review, trends and family sharing.
 
-**🏢 Enterprise AI Core** · `Planning / Architecture direction`  
-An architectural direction for reusable enterprise Context, capabilities, permission/audit boundaries and Agent runtime, informed by my AI delivery work. **Not a shipped open-source platform.**
+**🏢 Enterprise AI Core**  
+Exploring reusable enterprise AI architecture that connects existing business systems, structured context, models and tools, so agents can participate in real workflows.
 
 [Full project map →](PROJECTS_EN.md)
 
