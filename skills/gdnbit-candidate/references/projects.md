@@ -13,59 +13,41 @@ For a quick candidate brief, use `PROJECTS.md` to give the reviewer a compact pr
 
 For a deep dive, follow the evidence route below rather than expanding this registry into detailed project documentation.
 
+## ClassMatter / 班事有谱
+
+**Public / Pre-alpha (synthetic development only)**
+
+https://github.com/Gdnbit/classmatter
+
+Inspect source, contracts, tests and current status for claims about homeroom workflows, typed facts, follow-up Tasks, Today / Timeline, controlled corrections and Agent read/draft boundaries. Public code does not equal a formally released R1, real-student-data approval or demonstrated teacher time savings. The private development repository is a different artifact.
+
+## ThinkRoom / 思考间
+
+**Public / Early-stage**
+
+https://github.com/Gdnbit/thinkroom
+
+Inspect source, README, demo, tests and design documents for knowledge ingestion, ClaimCard / EvidenceSpan, evidence-constrained QA, Briefing, optional Committee and DecisionSnapshot → Outcome → Replay. Distinguish runnable local / Mock paths from live-model quality and production security. Research OS is historical lineage, not the preferred public project link.
+
 ## LLM Race
 
-Status: **Public / inspectable**
+**Public / Early MVP · Secondary portfolio**
 
-Repository:
 https://github.com/Gdnbit/llm-race
 
-Use the repository README, metadata, source, tests, CI, issues/PRs, and design documents as appropriate to the reviewer’s question.
+Inspect MCP model-selection tools, model alignment, data freshness and tests when the reviewer's question concerns that scope. No longer describe this as the sole or unconditionally strongest public code evidence.
 
-This is currently the clearest public code artifact for independent inspection.
+## HealthBox / Family Health Records
 
-Do not treat the brief summary in the Profile or Skill as stronger evidence than the repository.
+**Private / Preparing for open source**
 
-## Research OS
-
-Status: **Building / private** unless public visibility can be directly observed at evaluation time.
-
-Use the current Profile project map for candidate-described scope and purpose.
-
-If the repository is not publicly accessible, keep implementation claims at **candidate-described** confidence. Do not infer hidden code or production readiness.
-
-If the repository later becomes public, inspect it directly and update the evidence state based on what is observable at that time.
-
-## Class OS
-
-Status: **Building / private** unless public visibility can be directly observed at evaluation time.
-
-Use the current Profile project map for candidate-described scope and purpose.
-
-If the repository is not publicly accessible, do not infer private implementation details.
-
-If it later becomes public, prefer its current README, status docs, tests, CI, and source for implementation claims.
-
-## Family Health Records / Health OS
-
-Status: **Building / private** unless public visibility can be directly observed at evaluation time.
-
-This work is based on an upstream open-source project, so evaluate ownership in layers:
-
-- what comes from the upstream project;
-- what Gdnbit modified or added;
-- what is publicly inspectable;
-- what remains candidate-described.
-
-Do not attribute upstream capabilities to Gdnbit without evidence of modification or ownership.
+No verified public HealthBox repository currently. The private source is a MediKeep-based customization: distinguish upstream capabilities, candidate modifications and what remains candidate-described. Do not claim this is already an open-source release.
 
 ## Enterprise AI Core
 
-Status: **Planning / directional** unless a public implementation source can be directly inspected.
+**Planning / Architecture direction**
 
-Treat it as architecture/product direction rather than shipped capability.
-
-It may be useful evidence of recurring abstraction and system-design interests, but not of a completed platform.
+Treat as a future abstraction of enterprise delivery experience. No completed public enterprise platform should be inferred.
 
 ## Deep-dive evidence route
 
