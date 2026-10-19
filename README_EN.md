@@ -2,11 +2,11 @@
 
 <h1>Gdnbit 🦒</h1>
 
-<p><strong>AI Solution &amp; Product Engineer · Enterprise AI Delivery</strong></p>
+<p><strong>AI Solution &amp; Product Engineer</strong> · Enterprise AI Delivery</p>
 
-<p><strong>Finding structure in real-world complexity, then turning it into working systems.</strong></p>
+<p><strong>Turning complex business needs into clear systems where agents can do meaningful work.</strong></p>
 
-<p>Business modeling · AI-native development · Agent workflows · Enterprise AI</p>
+<p><sub>Business Modeling · Product Systems · Agent Workflows · AI-native Development</sub></p>
 
 <p>
 <a href="README.md">中文</a> · <a href="README_EN.md">English</a>
@@ -27,17 +27,17 @@
 
 <h3>💼 What I do</h3>
 
-<p><strong>Understand the business</strong><br/>
-Clarify real requirements, people, workflows, rules and constraints — identifying what the system actually needs to take on.</p>
+<p><strong>Business understanding &amp; rule modeling</strong><br/>
+Clarify department requirements, workflow participants, business rules, state changes and edge cases, turning scattered requests into clear system boundaries.</p>
 
-<p><strong>Design the system</strong><br/>
-Translate business processes into data, states, interactions and permissions that can be implemented and verified.</p>
+<p><strong>Product systems &amp; workflow design</strong><br/>
+Translate business needs into data models, API contracts, permissions and interactions, with explicit inputs, states and acceptance criteria.</p>
 
-<p><strong>Build AI-natively</strong><br/>
-Use Coding Agents as core development tools, organizing context, tasks and acceptance criteria while judging system logic and outcomes.</p>
+<p><strong>AI-native engineering collaboration</strong><br/>
+Use Coding Agents as core development tools, shaping repository context, task breakdowns, tests and review loops while judging actual system behavior.</p>
 
-<p><strong>Drive delivery</strong><br/>
-Work through integration and iteration across operations, administration and procurement workflows, focusing on real use rather than demos alone.</p>
+<p><strong>Delivery, validation &amp; iteration</strong><br/>
+Work across enterprise operations, administration and procurement workflows, focusing on integration, end-to-end behavior and turning feedback into improvements.</p>
 
 <p><a href="WORK_EN.md">How I work →</a></p>
 
@@ -47,16 +47,16 @@ Work through integration and iteration across operations, administration and pro
 <h3>🚀 Core projects</h3>
 
 <p><strong>🏫 <a href="https://github.com/Gdnbit/classmatter">ClassMatter · 班事有谱</a></strong><br/>
-An external working memory for homeroom teachers: student records, class matters and follow-ups with context, clear next steps and traceable history.</p>
+An external working memory for homeroom teachers, connecting student facts, class matters and follow-ups with context, next steps and traceable history.</p>
 
 <p><strong>🔬 <a href="https://github.com/Gdnbit/thinkroom">ThinkRoom · 思考间</a></strong><br/>
-Make saved information part of the next decision: organize sources and viewpoints for evidence-based retrieval, multi-perspective discussion and reflection.</p>
+Make saved information useful in the next thinking session: organize notes, articles and viewpoints for source-grounded exploration, multi-perspective discussion and reflection.</p>
 
 <p><strong>🩺 HealthBox</strong><br/>
-A long-term personal and family health record system, turning scattered reports and measurements into records people can review, compare and trace.</p>
+Long-term health records for individuals and families, bringing reports, measurement trends and history together in a reviewable, source-aware view.</p>
 
 <p><strong>🏢 Enterprise AI Core</strong><br/>
-Exploring a reusable enterprise AI foundation connecting business context, tools and permissions, so agents can take part in workflows — not just answer questions.</p>
+An exploration of reusable enterprise AI architecture, connecting business context, capabilities, permissions and agent workflows beyond the chatbot interface.</p>
 
 <p><a href="PROJECTS_EN.md">Explore the project map →</a></p>
 
@@ -64,11 +64,11 @@ Exploring a reusable enterprise AI foundation connecting business context, tools
 </tr>
 </table>
 
-### 🧭 A question I keep exploring
+### 🧭 The question I'm exploring
 
-**If agents become participants in workflows rather than chatbots beside them, how should software organize its state, capabilities and permissions?**
+**If agents become participants in workflows rather than just chat interfaces, how should software organize business state, capabilities, permissions and execution?**
 
-This connects my enterprise AI delivery work, personal projects and interest in agent-native software. [Read more about my direction →](NOW_EN.md)
+This connects my enterprise AI delivery work, personal projects and longer-term interest in agent-native systems. [Explore my direction →](NOW_EN.md)
 
 ---
 
