@@ -4,151 +4,95 @@
 
 This page prioritizes **what each system actually does**. Architecture and technical terms are used to explain implementation, not to replace the product itself.
 
-> **Status:** `Building` = active/private implementation exists · `Planning` = a defined design direction that is not yet a complete project.
+> **Status guide:** `Public` means source is currently visible and inspectable, **not** that a production release exists; `Private` means implementation exists but is not publicly inspectable; `Planning` denotes architectural direction.
 
 ---
 
 # Four Core Projects
 
+## 🏫 [ClassMatter · 班事有谱](https://github.com/Gdnbit/classmatter)
+
+`Public / Pre-alpha` · Agent-assisted Homeroom Workbench
+
+**Problem:** Homeroom teachers manage scattered student records and long-running follow-ups, making it hard to track open loops and maintain reliable evidence of what happened.
+
+**Inspectable implementation scope:**
+
+- local owner setup / login and class / roster management;
+- typed student facts, events and follow-up Tasks;
+- Today and Student Timeline for work and context;
+- preview / explicit approval for controlled corrections, version history and audit;
+- controlled Agent queries and drafts, without autonomous business-write approval.
+
+The public repository is an **isolated publication candidate**, separate from the private development repository. It is **Pre-alpha and synthetic-data only**, not an approved R1, real-student-data deployment or production release. Tests and CI do not establish real-world teacher time savings.
+
+[Inspect source, setup and limitations →](https://github.com/Gdnbit/classmatter)
+
+---
+
+## 🔬 [ThinkRoom · 思考间](https://github.com/Gdnbit/thinkroom)
+
+`Public / Early-stage` · Private Knowledge & Multi-perspective Thinking
+
+**Problem:** Saved articles, research, documents and notes are hard to retrieve and compare when new questions arise. ThinkRoom is meant to make accumulated information usable again, with traceable sources and different reasoning modes.
+
+**Current source workflow:**
+
+```text
+Collect Uploads / Feeds
+  → Parse Text / OCR
+  → Process RawSource / ClaimCard / EvidenceSpan
+  → Store raw and derived information
+  → Retrieve within relevant source scope
+  → Chat / Briefing / Committee / Replay
+```
+
+- ingest documents and optional feeds while retaining source context;
+- associate claims with supporting evidence and constrain answers to selected sources;
+- support chat, structured Briefing and manually selected multi-perspective Committee discussions;
+- preserve DecisionSnapshot, record Outcome and review through Replay.
+
+Financial research was an early use case, but this is **not a validated investment adviser or automated trading system**. Mock/local tests do not establish real-model quality or public-hosting readiness; optional modules have different maturity levels.
+
+[Inspect source, synthetic demo and design rationale →](https://github.com/Gdnbit/thinkroom)
+
+---
+
+## 🩺 HealthBox / Family Health Records
+
+`Private / Preparing for open source` · Personal & Family Health Records
+
+**Problem:** Health reports and longitudinal measurements are scattered and hard to compare, validate and recover.
+
+This is a customization and extension of the upstream open-source **MediKeep** project. `HealthBox` is the intended public-facing name; **there is not yet a public HealthBox repository**. The following is a description of private implementation rather than independently inspectable evidence:
+
+- multi-file upload with original reports and provenance;
+- OCR/parser candidates requiring human approval before formal entry;
+- lab/vital trends and checkup-batch comparisons;
+- household member boundaries, sharing, export and backup/restore;
+- constrained AI assistance that cannot silently create or alter official health facts.
+
+Upstream features and the candidate's modifications must be evaluated separately. Public release awaits its own audit.
+
+---
+
 ## 🏢 Enterprise AI Core
 
-`Planning` · Enterprise AI / Reusable Infrastructure
+`Planning / Architecture direction` · Enterprise AI / Reusable Infrastructure
 
-A reusable **AI-native enterprise foundation** for small and traditional organizations. The goal is not another standalone SaaS product, but a shared layer connecting existing systems and repeatedly needed AI capabilities.
+A design direction informed by my enterprise AI delivery work, **not a shipped stand-alone platform**.
 
-### Planned capabilities
-
-- **Connect existing systems**: consume data and exports from `ERP / OA / SaaS / Excel / CSV / Files` without requiring a rip-and-replace migration.
-- **Enterprise Context Layer**: represent people, organizations, roles, business objects, events, tasks, state and evidence as queryable enterprise context.
-- **Capability Layer**: standardize `OCR / ASR / Vision / Document Parsing / File Conversion / Search / RAG / Model Access` for reuse across business modules.
-- **Model / Tool Gateway**: hide provider/model differences so the business layer can switch implementations without being rebuilt.
-- **Domain Packs**: package schemas, rules, workflows and agent capabilities for procurement, administration, finance, operations and other domains.
-- **Permission / Approval / Audit**: make read scope, action scope, human approval and execution history explicit.
-- **Agent Runtime / Business Command Gateway**: let agents advance real workflows through controlled commands and write results back safely.
+It explores linking `ERP / OA / SaaS / Excel / Files` to reusable `OCR / ASR / document parsing / RAG / model / tool` capabilities, an Enterprise Context / State layer, explicit permissions / approvals / audit and controlled Agent Runtime for domain workflows such as procurement, administration and operations.
 
 ```text
 Existing Systems / Files
-          ↓
-Enterprise Context
-          ↓
-Reusable Capabilities
-          ↓
-Permissions / Audit
-          ↓
-Agent Runtime
-          ↓
-Domain Apps & Workflows
+      → Enterprise Context / State
+      → Reusable Capabilities
+      → Permissions / Approval / Audit
+      → Agent Runtime / Domain Workflows
 ```
 
-This is the next abstraction layer above my current enterprise AI delivery work: **moving from building one system per request toward reusable enterprise AI capabilities.**
-
----
-
-## 🏫 Class OS
-
-`Building` · Agent-native Work System
-
-A personal class-management workbench for Chinese K-12 homeroom teachers. The core idea is not “AI chat for teachers,” but keeping long-running facts, follow-ups and responsibilities inside one traceable operational system.
-
-### Existing / actively validated functionality
-
-- **Class & roster**: classes, student rosters, immutable student IDs and controlled name corrections.
-- **Typed Facts**: record student facts/events as structured records instead of loose text.
-- **Task / Follow-up**: turn follow-up work into Tasks with responsibility, status and source relationships.
-- **Today**: a focused view of what needs attention now.
-- **Student Timeline**: inspect facts, events and tasks for one student over time.
-- **Corrections & audit**: preserve previous values, versions and audit history instead of silently overwriting facts.
-- **Identity / Permission Boundary**: local owner, login, sessions and recovery boundaries.
-- **Query Gateway / Business Command Gateway**: route reads and writes through explicit boundaries instead of letting UI/agents edit storage directly.
-- **Agent query / drafts**: implementation exists, but database regression and formal gates are still in progress, so this is not presented as fully validated production capability.
-
-Typical flow:
-
-```text
-Login
- → Create class / import roster
- → Record student facts or follow-ups
- → Review Today
- → Inspect Student Timeline
- → Preview / confirm corrections and business changes
-```
-
-The project tests whether a real work domain can become **structured state that both humans and agents can operate safely.**
-
----
-
-## 🩺 Health OS / Family Health Records
-
-`Building` · Personal / Family Health Information System
-
-A long-term health record system for personal and family use. The current implementation is a Chinese household-oriented customization and extension of the open-source project **MediKeep**, with emphasis on source preservation, human review, trends, member isolation and recoverability.
-
-### Current source capabilities
-
-- **Multi-file upload & source preservation** for checkups, lab reports and other health documents.
-- **OCR / parser candidates** that remain provisional instead of becoming official facts automatically.
-- **Human review → official record** with editable candidates and revision history.
-- **Health records** for labs, vitals, medications, allergies, vaccines, visits and attachments.
-- **Trends & batch comparison** across measurements and checkup sessions.
-- **AI assistance** in constrained flows such as “what changed recently,” with source references and no direct writes to official facts.
-- **Members & sharing** with household member separation, invitations and scoped visibility.
-- **Export & recovery** including CSV/SVG/report export, full backups, verification and isolated restore drills.
-
-Core data path:
-
-```text
-Original Report
-      ↓
-OCR / Parsed Candidate
-      ↓
-Human Review
-      ↓
-Official Health Record
-      ↓
-Trend / Comparison / Export
-```
-
-The key rule is simple: **AI can help organize health data, but it must not silently create medical facts.**
-
----
-
-## 🔬 Research OS
-
-`Building` · Evidence-driven Personal Research & Decision System
-
-A personal **evidence-driven decision support system**. The current goal is not a generic search engine or a chat archive, but a recoverable end-to-end flow from source ingestion to judgment, outcome capture and later replay.
-
-### Current local v0.1 flow
-
-```text
-Upload / Ingestion
-      ↓
-RawSource / ClaimCard / EvidenceSpan
-      ↓
-Selected-source Chat / Briefing
-      ↓
-DecisionSnapshot
-      ↓
-Outcome
-      ↓
-Replay
-```
-
-### Current functionality
-
-- **Source upload / parsing / ingestion** into persistent RawSource records.
-- **ClaimCard / EvidenceSpan** linking claims back to original evidence passages.
-- **Strict selected-source chat** where the user defines which sources are allowed for the current analysis.
-- **Stop-before-generation on insufficient evidence** across chat, briefing and committee flows.
-- **Briefing mode** with direction, action, summary, supporting points, counterpoints, risk and field-level evidence state.
-- **DecisionSnapshot** to persist the evidence/judgment state at decision time.
-- **Outcome** capture after real-world results become available.
-- **Replay** to compare original evidence/judgment with later outcomes.
-- **Committee** as an optional multi-model review mode, without claiming it is inherently better than the default flow.
-
-The loop is:
-
-**sources → evidence → analysis → judgment → decision snapshot → real outcome → replay.**
+The long-term goal is to make agents participants in authorized business workflows, rather than chat interfaces bolted onto them. Implementation and suitability need independent future validation.
 
 ---
 
@@ -184,7 +128,7 @@ Tools + Permission + Runtime
 Agent-native System
 ```
 
-- **Class OS / Health OS / Research OS** are three domain systems in different real-world contexts.
+- **ClassMatter / ThinkRoom / HealthBox** are domain systems in different contexts. The first two have public source; HealthBox remains private and in preparation.
 - **Enterprise AI Core** abstracts repeated capabilities from enterprise delivery into a reusable foundation.
 - **Personal Context / Audio Gateway** add reusable context and capabilities for long-running personal agents and other products.
 
