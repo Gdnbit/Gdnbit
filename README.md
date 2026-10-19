@@ -45,17 +45,17 @@
 
 #### 🚀 核心项目
 
-<strong>🏫 <a href="https://github.com/Gdnbit/classmatter">班事有谱 · ClassMatter</a></strong> · `Public / Pre-alpha`  
-面向班主任的班级事务工作台：名单、结构化学生事实、跟进任务、Today / Timeline、受控更正与审计。让班务记录可查、待办可跟、未闭环事项有迹可循。**仅限合成数据开发验证，尚非正式 R1 或生产产品。**
+<strong>🏫 <a href="https://github.com/Gdnbit/classmatter">班事有谱 · ClassMatter</a></strong>  
+把班主任散落在表格、聊天和脑海里的事务集中起来，通过学生记录、任务跟进与时间线，让班里的事记得住、跟得上、查得到。
 
-<strong>🔬 <a href="https://github.com/Gdnbit/thinkroom">思考间 · ThinkRoom</a></strong> · `Public / Early-stage`  
-个人私域知识与多视角思考系统：把文档、笔记与观点整理成有出处的知识，通过资料问答、研究简报、多角色讨论与决策复盘辅助判断。公开源码支持本地体验，真实模型质量和生产适用性仍需验证。
+<strong>🔬 <a href="https://github.com/Gdnbit/thinkroom">思考间 · ThinkRoom</a></strong>  
+让收藏的文章、笔记和文档真正参与思考：整理资料与观点、找回相关证据，并通过问答、多视角讨论和决策复盘辅助判断。
 
-**🩺 HealthBox / Family Health Records** · `Private / Preparing for open source`  
-个人 / 家庭健康档案：报告解析候选、人工复核、长期指标趋势、成员共享与导出恢复。基于开源 MediKeep 定制扩展；**HealthBox 为计划使用的公开名称，目前尚未发布公开仓库。**
+**🩺 HealthBox**  
+面向个人与家庭的健康档案系统，集中整理体检报告、检验指标和健康记录，提供报告解析、人工复核、趋势对比与家庭共享。
 
-**🏢 Enterprise AI Core** · `Planning / Architecture direction`  
-从企业 AI 系统交付中抽象可复用的业务 Context、模型 / 工具能力、权限审计和 Agent Runtime。**这是架构方向，不是已交付的开源平台。**
+**🏢 Enterprise AI Core**  
+探索可复用的企业 AI 系统架构，连接现有业务系统、结构化 Context、模型与工具能力，让 Agent 能够参与真实业务流程。
 
 [查看完整项目地图 →](PROJECTS.md)
 
