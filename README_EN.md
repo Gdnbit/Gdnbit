@@ -1,16 +1,23 @@
 <div align="center">
 
-# Gdnbit — AI Solution & Product Engineer 👋
+<h1>Gdnbit 🦒</h1>
 
-### AI Solution & Product Engineer · Enterprise AI Delivery
+<p><strong>AI Solution &amp; Product Engineer · Enterprise AI Delivery</strong></p>
 
-**Turning real business requirements into workflows, rules and working systems — then shipping them with an AI-native development process.**
+<p><strong>Finding structure in real-world complexity, then turning it into working systems.</strong></p>
 
-`Enterprise AI` · `Agent Systems` · `Workflow Automation` · `MCP / Tooling` · `AI-native Development`
+<p>Business modeling · AI-native development · Agent workflows · Enterprise AI</p>
 
-[**中文**](README.md) · [**English**](README_EN.md)
+<p>
+<a href="README.md">中文</a> · <a href="README_EN.md">English</a>
+</p>
 
-[**Projects**](PROJECTS_EN.md) · [**Work**](WORK_EN.md) · [**Now**](NOW_EN.md) · [**AI-readable Candidate Skill**](skills/gdnbit-candidate/README.md)
+<p>
+<a href="PROJECTS_EN.md">Projects</a> ·
+<a href="WORK_EN.md">How I work</a> ·
+<a href="NOW_EN.md">Ideas &amp; direction</a> ·
+<a href="skills/gdnbit-candidate/README.md">AI-readable Candidate Skill</a>
+</p>
 
 </div>
 
@@ -18,67 +25,53 @@
 <tr>
 <td valign="top" width="50%">
 
-#### 💼 What I do
+<h3>💼 What I do</h3>
 
-**Enterprise AI Delivery** · `2026 — Now`
+<p><strong>Understand the business</strong><br/>
+Clarify real requirements, people, workflows, rules and constraints — identifying what the system actually needs to take on.</p>
 
-**Requirements → buildable systems**  
-I interpret department-level requirements, model business processes and rules, and define fields, inputs/outputs, permissions and edge cases so ambiguous requests become implementable and testable system behavior.
+<p><strong>Design the system</strong><br/>
+Translate business processes into data, states, interactions and permissions that can be implemented and verified.</p>
 
-**Design → implementation**  
-I use Coding Agents heavily for implementation and iteration. My focus is on repository context, task decomposition, product/system logic, API & data contracts, acceptance criteria and output judgment.
+<p><strong>Build AI-natively</strong><br/>
+Use Coding Agents as core development tools, organizing context, tasks and acceptance criteria while judging system logic and outcomes.</p>
 
-**Implementation → delivery**  
-I work on internal enterprise workflows across operations, administration and procurement, moving from MVP/prototype to integration, user feedback and delivery readiness — with emphasis on whether the workflow actually works end to end.
+<p><strong>Drive delivery</strong><br/>
+Work through integration and iteration across operations, administration and procurement workflows, focusing on real use rather than demos alone.</p>
 
-**Projects → reusable capabilities**  
-I am gradually extracting repeated capabilities such as `OCR / ASR / document parsing / model access / tools / permissions / workflows` into reusable building blocks for a broader Enterprise AI Core.
-
-<sub>Client identities, internal repositories, business data and identifying details are intentionally not published.</sub>
-
-[How I work →](WORK_EN.md)
+<p><a href="WORK_EN.md">How I work →</a></p>
 
 </td>
 <td valign="top" width="50%">
 
-#### 🚀 Core Projects
+<h3>🚀 Core projects</h3>
 
-<strong>🏫 <a href="https://github.com/Gdnbit/classmatter">ClassMatter · 班事有谱</a></strong>  
-A homeroom-teacher workspace that brings scattered student records and follow-ups together, using timelines and trackable tasks so important class matters don't get lost.
+<p><strong>🏫 <a href="https://github.com/Gdnbit/classmatter">ClassMatter · 班事有谱</a></strong><br/>
+An external working memory for homeroom teachers: student records, class matters and follow-ups with context, clear next steps and traceable history.</p>
 
-<strong>🔬 <a href="https://github.com/Gdnbit/thinkroom">ThinkRoom · 思考间</a></strong>  
-Make saved articles, notes and documents useful in your next decision. Organize knowledge and evidence, then explore it through questions, multiple perspectives and decision reviews.
+<p><strong>🔬 <a href="https://github.com/Gdnbit/thinkroom">ThinkRoom · 思考间</a></strong><br/>
+Make saved information part of the next decision: organize sources and viewpoints for evidence-based retrieval, multi-perspective discussion and reflection.</p>
 
-**🩺 HealthBox**  
-A personal and family health record system for organizing medical reports, measurements and health history, with document parsing, human review, trends and family sharing.
+<p><strong>🩺 HealthBox</strong><br/>
+A long-term personal and family health record system, turning scattered reports and measurements into records people can review, compare and trace.</p>
 
-**🏢 Enterprise AI Core**  
-Exploring reusable enterprise AI architecture that connects existing business systems, structured context, models and tools, so agents can participate in real workflows.
+<p><strong>🏢 Enterprise AI Core</strong><br/>
+Exploring a reusable enterprise AI foundation connecting business context, tools and permissions, so agents can take part in workflows — not just answer questions.</p>
 
-[Full project map →](PROJECTS_EN.md)
+<p><a href="PROJECTS_EN.md">Explore the project map →</a></p>
 
 </td>
 </tr>
 </table>
 
-### 🧭 Where I'm heading
+### 🧭 A question I keep exploring
 
-I am moving from **one-off AI delivery** toward **reusable enterprise AI systems**:
+**If agents become participants in workflows rather than chatbots beside them, how should software organize its state, capabilities and permissions?**
 
-`Custom Delivery` → `Reusable Capabilities` → `Domain Packs` → `Enterprise Context / Capability Layer` → `Agent Runtime`
-
-The longer-term question I care about is: **how can agents become part of real organizational operations — reading business state, invoking capabilities, respecting permissions, advancing workflows and writing outcomes back into systems?**
-
-In parallel, I also explore `Personal Agents`, durable memory, skills, computer use and local-first AI.
-
-[What I'm exploring now →](NOW_EN.md)
+This connects my enterprise AI delivery work, personal projects and interest in agent-native software. [Read more about my direction →](NOW_EN.md)
 
 ---
 
 <div align="center">
-
-### Business → Systems → Agents → Outcomes
-
-<sub>[github.com/Gdnbit](https://github.com/Gdnbit) · Giraffes Don't Believe in Tears. 🦒</sub>
-
+<sub><a href="https://github.com/Gdnbit">github.com/Gdnbit</a> · Giraffes Don't Believe in Tears. 🦒</sub>
 </div>
