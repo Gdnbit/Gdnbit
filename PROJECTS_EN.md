@@ -2,8 +2,6 @@
 
 [中文](PROJECTS.md) · [English](PROJECTS_EN.md)
 
-This page prioritizes **what each system actually does**. Architecture and technical terms are used to explain implementation, not to replace the product itself.
-
 Projects are presented by the problems they tackle, their core capabilities and the product ideas behind them. Visit each project repository for implementation details.
 
 ---
