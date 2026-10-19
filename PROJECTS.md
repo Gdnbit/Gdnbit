@@ -4,151 +4,95 @@
 
 这里优先写 **系统实际做什么**。架构和技术词是为了说明实现方式，不替代产品本身。
 
-> **状态：** `Building` = 已有实际开发 / 私有实现 · `Planning` = 已形成明确方案，尚未作为完整项目落地。
+> **状态说明：** `Public` 表示源码已经公开、可检查，不等于正式发布或生产可用；`Private` 表示已有私有实现但尚不可公开检查；`Planning` 表示明确的规划/架构方向。
 
 ---
 
 # 四个核心项目
 
+## 🏫 [班事有谱 · ClassMatter](https://github.com/Gdnbit/classmatter)
+
+`Public / Pre-alpha` · Agent-assisted Homeroom Workbench
+
+**解决什么问题：** 班主任日常面对分散的学生事实、待办跟进和长期未闭环事项，很难同时保证及时处理与事后可追溯。ClassMatter 尝试把这些信息放进一个有状态、可更正、可审计的班级工作台。
+
+**公开源码中的主要路径：**
+
+- 本机 owner 初始化 / 登录 → 创建班级与名单；
+- 记录类型化学生事实、事件及跟进 Task；
+- 在 Today 和 Student Timeline 中查看待处理事项与学生上下文；
+- 对重要更正执行预览、明确批准和版本 / 审计记录；
+- Agent 通过受控边界查询、生成草稿，不直接批准或提交业务写入。
+
+这是与私有开发主仓分离的**独立公开候选仓库**；代码处于 Pre-alpha，**只允许合成数据开发验证**。尚未形成正式 R1、真实学生数据准入或生产发布。不要把 CI / 合成测试通过等同于教师减负效果已验证。
+
+[查看源码、运行说明与限制 →](https://github.com/Gdnbit/classmatter)
+
+---
+
+## 🔬 [思考间 · ThinkRoom](https://github.com/Gdnbit/thinkroom)
+
+`Public / Early-stage` · Personal Knowledge & Multi-perspective Reasoning
+
+**解决什么问题：** 人们收藏了大量文章、研究文档和笔记，但下一次遇到问题时，很难快速找回相关观点、来源与分歧。ThinkRoom 让积累的信息能够带着证据参与新的思考，而不只是被保存。
+
+**当前公开代码的六步主线：**
+
+```text
+收集 Uploads / Feeds
+  → 解析 Text / OCR
+  → 处理 RawSource / ClaimCard / EvidenceSpan
+  → 存储原文与衍生知识
+  → 按问题和来源范围召回
+  → Chat / Briefing / Committee / Replay
+```
+
+- **知识入库**：文档、笔记及可选信息源经解析与关联，保留来源；
+- **资料范围与证据**：选定来源问答，观点可回溯原文，证据不足时应停止生成而非编造；
+- **多种思考模式**：日常问答、结构化简报及可手动选择的多角色讨论；
+- **判断复盘**：保存决策快照，记录后续结果，再回看当时依据。
+
+早期应用场景包含金融研究，但它**不是已验证的投资建议或自动交易系统**；公开的本地测试 / Mock 路径不等于真实模型效果与生产托管安全性。不同来源和高级模块成熟度有差异，以仓库 README 和验证材料为准。
+
+[查看源码、合成演示与设计思路 →](https://github.com/Gdnbit/thinkroom)
+
+---
+
+## 🩺 HealthBox / Family Health Records
+
+`Private / Preparing for open source` · Personal & Family Health Records
+
+**解决什么问题：** 家庭医疗报告、体检批次和健康指标散落在各处，缺乏统一归档、人工核对和长期对比的工具。
+
+私有实现基于开源 **MediKeep** 定制和扩展；`HealthBox` 是计划采用的公开名称，**当前未公开发布名为 HealthBox 的仓库**。以下属于项目描述，暂不等于可供外部独立检查的证据：
+
+- 多文件上传、保留原始报告与来源；
+- OCR / 解析结果先成为候选，经人工复核后才正式入库；
+- 检验与生命体征趋势、体检批次对比；
+- 家庭成员与共享边界、导出和备份恢复；
+- AI 用于受控辅助分析，不能静默生成或修改正式健康事实。
+
+该项目继承上游开源代码，评价个人贡献时应区分上游能力与新增定制实现。计划完成公开审计后再发布，不将准备中当作已经开源。
+
+---
+
 ## 🏢 Enterprise AI Core
 
-`Planning` · Enterprise AI / Reusable Infrastructure
+`Planning / Architecture direction` · Enterprise AI / Reusable Infrastructure
 
-一个面向中小企业与传统组织的 **可复用 AI-native 企业底座**。目标不是再做一个独立 SaaS，而是把企业现有系统和反复出现的 AI 能力接成统一层。
+这是我从当前企业 AI 应用交付中进一步抽象的架构方向，**不是已完成的独立平台或可公开检查的代码成果**。
 
-### 计划功能
-
-- **接入现有业务系统**：承接 `ERP / OA / SaaS / Excel / CSV / Files` 的数据与导出结果，不要求企业一次性推翻旧系统。
-- **Enterprise Context Layer**：把人员、组织、角色、业务对象、事件、任务、状态、证据等沉淀成可查询的企业 Context。
-- **Capability Layer**：统一封装 `OCR / ASR / Vision / Document Parsing / File Conversion / Search / RAG / Model Access`，供多个业务模块复用。
-- **Model / Tool Gateway**：屏蔽不同模型与供应商差异，让业务层可以更换模型、工具和实现方式。
-- **Domain Packs**：把采购、行政、财务、生产等不同领域的 Schema、规则、Workflow 与 Agent 能力做成可插拔业务包。
-- **Permission / Approval / Audit**：Agent 读取什么、能执行什么、什么操作需要人工批准、发生过什么，都要有明确边界。
-- **Agent Runtime / Business Command Gateway**：让 Agent 不只回答问题，而是通过受控命令推进真实业务流程并回写结果。
+它考虑把 `ERP / OA / SaaS / Excel / Files` 等业务系统与重复使用的 `OCR / ASR / 文档解析 / RAG / Model / Tool` 能力连接起来，再通过统一的企业 Context、权限 / 审批 / 审计边界和可受控执行的 Agent Runtime，为采购、行政、生产等 Domain Packs 提供可复用基础。
 
 ```text
 Existing Systems / Files
-          ↓
-Enterprise Context
-          ↓
-Reusable Capabilities
-          ↓
-Permissions / Audit
-          ↓
-Agent Runtime
-          ↓
-Domain Apps & Workflows
+      → Enterprise Context / State
+      → Reusable Capabilities
+      → Permissions / Approval / Audit
+      → Agent Runtime / Domain Workflows
 ```
 
-它对应我现在企业 AI 交付工作的下一层抽象：**从一个需求做一个系统，逐步变成一套可以复用的企业 AI 能力。**
-
----
-
-## 🏫 Class OS
-
-`Building` · Agent-native Work System
-
-面向中国中小学班主任的个人班级工作台。核心不是“AI 帮老师聊天”，而是把班务中需要长期跟进的事实、事项和责任放到同一套可追溯系统里。
-
-### 当前已有 / 正在验证的功能
-
-- **班级与名单**：班级、学生名单、不可变学生 ID，以及姓名更正等受控变更。
-- **Typed Facts**：记录学生事实 / 事件，而不是只保存散乱文本。
-- **Task / Follow-up**：把需要后续处理的事项转成 Task，保留责任、状态与关联来源。
-- **Today**：集中查看当前要处理和跟进的事情。
-- **Student Timeline**：按学生查看相关事实、事件和任务的时间线。
-- **更正与审计**：变更保留旧值、版本和审计记录，不直接覆盖历史事实。
-- **Identity / Permission Boundary**：本机 owner、登录、会话、恢复等身份边界。
-- **Query Gateway / Business Command Gateway**：查询与业务写入走明确边界，而不是让 UI / Agent 直接改数据库。
-- **Agent 查询 / 草稿**：相关实现已存在，但当前仍在做数据库回归与正式 Gate 验证，不把它描述成已完成的正式能力。
-
-典型使用路径：
-
-```text
-登录
- → 建班 / 导入名单
- → 记录学生事实或跟进事项
- → Today 查看待办
- → Student Timeline 回看上下文
- → 预览 / 确认更正与业务变更
-```
-
-项目重点是验证：**真实工作域能不能被建模成一套人和 Agent 都能安全操作的结构化业务系统。**
-
----
-
-## 🩺 Health OS / Family Health Records
-
-`Building` · Personal / Family Health Information System
-
-面向本人和家庭成员的长期健康档案系统。当前实现基于开源项目 **MediKeep** 做中文家庭化定制与扩展，重点放在长期资料保存、人工复核、趋势、成员隔离和可恢复性上。
-
-### 当前源码中的功能
-
-- **多文件上传与原件保留**：保存体检报告、检验单和其他健康资料，同时保留来源。
-- **OCR / Parser 候选结果**：解析结果先进入候选区，不直接成为正式健康事实。
-- **人工复核 → 正式入库**：候选可编辑、确认后提交；正式修订保留历史。
-- **健康记录**：检验、生命体征、用药、过敏、疫苗、就诊及附件。
-- **趋势与批次对比**：查看指标趋势、体检批次变化与数据质量。
-- **AI 辅助**：当前限定在受控范围，例如总结“最近有哪些变化”；回答需要引用记录，不能直接写入正式事实。
-- **成员与共享**：家庭成员身份隔离、受邀开户和明确范围的相互可见。
-- **导出与恢复**：CSV / SVG / 报告导出，以及完整备份、校验和隔离恢复演练。
-
-核心数据链路是：
-
-```text
-Original Report
-      ↓
-OCR / Parsed Candidate
-      ↓
-Human Review
-      ↓
-Official Health Record
-      ↓
-Trend / Comparison / Export
-```
-
-这里最重要的设计原则是：**AI 可以帮助整理，但不能静默创造医疗事实。**
-
----
-
-## 🔬 Research OS
-
-`Building` · Evidence-driven Personal Research & Decision System
-
-这是一个面向个人研究的 **证据驱动决策辅助系统**。当前目标不是做通用搜索引擎，也不是单纯“保存 AI 对话”，而是让从资料进入到形成判断、记录结果、事后复盘的整个流程可以真实运行和恢复。
-
-### 当前本地 v0.1 主流程
-
-```text
-Upload / Ingestion
-      ↓
-RawSource / ClaimCard / EvidenceSpan
-      ↓
-Selected-source Chat / Briefing
-      ↓
-DecisionSnapshot
-      ↓
-Outcome
-      ↓
-Replay
-```
-
-### 当前功能
-
-- **资料上传 / 解析 / 入库**：把用户资料转为可持续查询的 RawSource。
-- **ClaimCard / EvidenceSpan**：把主张与原始证据片段关联起来，可回查原文。
-- **严格选定资料问答**：用户先选定本轮允许使用的资料，回答和引用限定在这个范围内。
-- **证据不足时停止调用**：chat、briefing、committee 在证据不足时会在模型调用前停止，而不是硬编答案。
-- **Briefing 模式**：输出方向、行动、摘要、支持点、反面点、风险，并保留字段证据状态。
-- **DecisionSnapshot**：把当时资料、判断和决策状态保存下来，而不是只留一段聊天。
-- **Outcome**：后续记录真实结果。
-- **Replay**：把当时的证据 / 判断与后续实际结果重新放到一起比较，支持复盘。
-- **Committee**：可手动开启多模型审议，但目前不把它宣传成一定比单模型更好。
-
-Research OS 真正想完成的是一个闭环：
-
-**资料 → 证据 → 分析 → 判断 → 决策快照 → 实际结果 → 复盘。**
+它体现我长期想研究的方向：让 Agent 不只回答问题，还能在明确的业务、权限和审计边界内可靠推进工作。实现深度和适用性需要未来单独证明。
 
 ---
 
@@ -184,7 +128,7 @@ Tools + Permission + Runtime
 Agent-native System
 ```
 
-- **Class OS / Health OS / Research OS**：三个不同场景下的 Domain System。
+- **ClassMatter / ThinkRoom / HealthBox**：三个不同场景下的 Domain System；前两者已有公开源码，HealthBox 仍为私有准备中。
 - **Enterprise AI Core**：把企业交付里反复出现的能力进一步抽象成通用底座。
 - **Personal Context / Audio Gateway**：为长期 Personal Agent 和其他产品补充可复用 Context / Capability。
 
