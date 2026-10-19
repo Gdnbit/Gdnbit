@@ -44,16 +44,16 @@ I am gradually extracting repeated capabilities such as `OCR / ASR / document pa
 #### 🚀 Core Projects
 
 <strong>🏫 <a href="https://github.com/Gdnbit/classmatter">ClassMatter · 班事有谱</a></strong>  
-A class-management workspace shaped around a homeroom teacher's daily work. It connects student facts, activity records and follow-up tasks on a shared timeline, so each matter has context and a next step.
+An agent-native workspace for homeroom teachers. It connects student records, follow-up tasks and timelines into traceable working memory, with AI assisting on queries and drafts while people retain control of decisions.
 
 <strong>🔬 <a href="https://github.com/Gdnbit/thinkroom">ThinkRoom · 思考间</a></strong>  
-A place for personal knowledge to do more than sit in bookmarks. It connects articles, notes and viewpoints with traceable sources, bringing them into research, multi-perspective discussion and decision reviews.
+Make personal knowledge useful beyond the bookmark folder. Organize articles, notes and viewpoints with traceable sources, then bring them into grounded questions, research briefs and multi-perspective thinking.
 
-**🩺 HealthBox**  
-Long-term health records for individuals and families. It brings reports, health history and measurement trends together with document parsing, human review and family sharing, making changes easier to revisit over time.
+<strong>🩺 <a href="https://github.com/Gdnbit/healthbox">HealthBox · 健康档案盒</a></strong>  
+Turn scattered medical reports into a long-term health record. Built on MediKeep, with extensions for original-file retention, human-reviewed extraction, trends and permission-scoped family sharing.
 
 **🏢 Enterprise AI Core**  
-An architectural idea growing out of enterprise AI delivery: connect business context, reusable tools, permissions and Agent runtime so agents can take part in business workflows within clear boundaries—not just answer questions.
+An architectural direction informed by enterprise AI delivery: connecting business context, reusable capabilities, permissions and Agent runtime so agents can participate in real workflows within clear boundaries—not just answer questions.
 
 [Full project map →](PROJECTS_EN.md)
 
