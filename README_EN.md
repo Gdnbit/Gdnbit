@@ -43,10 +43,10 @@ I am gradually extracting repeated capabilities such as `OCR / ASR / document pa
 
 #### 🚀 Core Projects
 
-**🏫 [ClassMatter · 班事有谱](https://github.com/Gdnbit/classmatter)** · `Public / Pre-alpha`  
+<strong>🏫 <a href="https://github.com/Gdnbit/classmatter">ClassMatter · 班事有谱</a></strong> · `Public / Pre-alpha`  
 A homeroom-teacher workbench for rosters, typed student facts, follow-up Tasks, Today / Timeline, controlled corrections and audit history. **Synthetic-data development only; not a production product or formal R1 release.**
 
-**🔬 [ThinkRoom · 思考间](https://github.com/Gdnbit/thinkroom)** · `Public / Early-stage`  
+<strong>🔬 <a href="https://github.com/Gdnbit/thinkroom">ThinkRoom · 思考间</a></strong> · `Public / Early-stage`  
 A private-knowledge and multi-perspective thinking system that organizes documents, notes and claims with traceable sources, then supports grounded chat, Briefing, Committee discussions and decision replay. Local source is inspectable; model quality and production readiness are not assumed.
 
 **🩺 HealthBox / Family Health Records** · `Private / Preparing for open source`  
