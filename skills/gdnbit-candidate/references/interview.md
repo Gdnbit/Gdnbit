@@ -46,40 +46,44 @@ Weak signal: answers reduce to prompt-writing or accepting generated output.
 
 ## 3. Public project deep dive
 
-For a public repository, inspect the repository before or during the interview and ask from actual artifacts.
+Start with one of the featured public repositories relevant to the role:
 
-Current obvious starting point:
+- ClassMatter: https://github.com/Gdnbit/classmatter
+- ThinkRoom: https://github.com/Gdnbit/thinkroom
+- LLM Race (secondary, MCP/model selection): https://github.com/Gdnbit/llm-race
 
-https://github.com/Gdnbit/llm-race
+Inspect the current repository rather than relying on the Skill summary.
 
-Possible questions:
+**For ClassMatter**, useful questions include:
 
-- What problem is this project solving, and for whom?
-- Why use an MCP server instead of only a web UI or library?
-- How are model aliases aligned across sources?
-- What happens when upstream data is missing or stale?
-- What do the current tests actually protect?
-- Which current recommendation logic is heuristic, and what would be needed to make it stronger?
-- Which part would you redesign first for production use?
-- Show one implementation decision you changed after seeing a failure or limitation.
+- How do typed facts, tasks and timeline entries relate, and which are stored vs. projected?
+- What prevents an Agent draft from directly becoming a business fact?
+- How are corrections versioned, approved and audited?
+- Which checks are synthetic-only, and what still blocks formal R1 or real student data?
 
-The exact questions should evolve with the repository rather than being treated as a frozen script.
+**For ThinkRoom**, ask:
+
+- How are RawSource, ClaimCard and EvidenceSpan related?
+- What enforces selected-source boundaries and insufficient-evidence refusal?
+- What does a DecisionSnapshot preserve for later Outcome / Replay?
+- Which modes and optional data sources are exercised in Mock vs. with real models?
+- What would be necessary before safe public hosting or measurable quality claims?
+
+**For LLM Race**, ask about alias matching, stale source data, missing metrics, MCP tool contracts and limits of current ranking heuristics.
+
+In every case ask the candidate to locate a concrete implementation path, explain a failure mode or trade-off, and separate their own decisions from upstream code and Coding Agent output.
 
 ## 4. Private project verification
 
-For Research OS, Class OS, Health OS, or enterprise work that is still private, do not ask the reviewer to trust the portfolio summary alone.
+For HealthBox / Family Health Records or anonymized enterprise work that is still private, do not ask the reviewer to trust the portfolio summary alone. Request safe, appropriately redacted evidence such as:
 
-Ask for whichever evidence can be shared safely:
+- architecture and data-flow walkthroughs;
+- synthetic-only local demonstrations;
+- API/contract or test explanations;
+- debugging and acceptance stories;
+- a clear separation of personal, team, upstream and Coding Agent contributions.
 
-- architecture / state model walkthrough;
-- redacted screenshots;
-- live local demo;
-- data model or API contract explanation;
-- test / acceptance examples;
-- failure case and debugging story;
-- clear separation of personal work, team work, upstream work, and Agent-generated implementation.
-
-If the project is central to the hiring decision and no meaningful demonstration can be provided, keep confidence appropriately limited.
+Never request real student records, household medical information or confidential client data. If an important claim cannot be demonstrated, keep confidence limited.
 
 ## 5. System depth
 
