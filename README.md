@@ -45,17 +45,17 @@
 
 #### 🚀 核心项目
 
-**🏢 Enterprise AI Core** · `🧭 Planning`  
-可复用的企业 AI 底座：连接 `ERP / OA / SaaS / Excel / Files`，向上提供统一的 `Context`、能力调用、权限 / 审计、Agent Runtime 与 Domain Packs，减少每个部门需求都重新集成一遍。
+**🏫 [班事有谱 · ClassMatter](https://github.com/Gdnbit/classmatter)** · `Public / Pre-alpha`  
+面向班主任的班级事务工作台：名单、结构化学生事实、跟进任务、Today / Timeline、受控更正与审计。让班务记录可查、待办可跟、未闭环事项有迹可循。**仅限合成数据开发验证，尚非正式 R1 或生产产品。**
 
-**🏫 Class OS** · `🚧 Building`  
-班主任工作台：班级 / 名单、学生事实、跟进 Task、Today、Student Timeline、更正与审计，以及正在验证的受控 Agent 查询 / 草稿链路。目标是让班务事项可记录、可跟进、可追溯。
+**🔬 [思考间 · ThinkRoom](https://github.com/Gdnbit/thinkroom)** · `Public / Early-stage`  
+个人私域知识与多视角思考系统：把文档、笔记与观点整理成有出处的知识，通过资料问答、研究简报、多角色讨论与决策复盘辅助判断。公开源码支持本地体验，真实模型质量和生产适用性仍需验证。
 
-**🩺 Health OS** · `🚧 Building`  
-个人 / 家庭健康档案：报告与多文件上传、OCR / 解析候选、人工复核后正式入库、检验与生命体征趋势、体检批次对比、成员共享、导出与备份恢复。AI 输出不会直接写成健康事实。
+**🩺 HealthBox / Family Health Records** · `Private / Preparing for open source`  
+个人 / 家庭健康档案：报告解析候选、人工复核、长期指标趋势、成员共享与导出恢复。基于开源 MediKeep 定制扩展；**HealthBox 为计划使用的公开名称，目前尚未发布公开仓库。**
 
-**🔬 Research OS** · `🚧 Building`  
-个人研究与决策系统：资料上传 / 解析、`RawSource / ClaimCard / EvidenceSpan`、选定资料问答与 Briefing、引用持久化、`DecisionSnapshot → Outcome → Replay`；证据不足时会在调用模型前停止。
+**🏢 Enterprise AI Core** · `Planning / Architecture direction`  
+从企业 AI 系统交付中抽象可复用的业务 Context、模型 / 工具能力、权限审计和 Agent Runtime。**这是架构方向，不是已交付的开源平台。**
 
 [查看完整项目地图 →](PROJECTS.md)
 
