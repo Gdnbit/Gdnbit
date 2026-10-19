@@ -4,105 +4,55 @@
 
 这里优先写 **系统实际做什么**。架构和技术词是为了说明实现方式，不替代产品本身。
 
-> **状态说明：** `Public` 表示源码已经公开、可检查，不等于正式发布或生产可用；`Private` 表示已有私有实现但尚不可公开检查；`Planning` 表示明确的规划/架构方向。
+这里按实际使用场景介绍项目：它解决什么问题、有哪些核心能力，以及背后的产品思路。更完整的实现细节可以在各项目仓库查看。
 
 ---
 
-# 四个核心项目
+# 核心项目
 
 ## 🏫 [班事有谱 · ClassMatter](https://github.com/Gdnbit/classmatter)
 
-`Public / Pre-alpha` · Agent-assisted Homeroom Workbench
+**面向班主任的班级事务工作台。** 把分散在聊天、表格和个人记忆中的学生情况与跟进事项集中管理，通过学生记录、任务跟进、Today 和 Timeline，让班里的事记得住、跟得上、查得到。
 
-**解决什么问题：** 班主任日常面对分散的学生事实、待办跟进和长期未闭环事项，很难同时保证及时处理与事后可追溯。ClassMatter 尝试把这些信息放进一个有状态、可更正、可审计的班级工作台。
+项目想解决的不只是“有哪些待办”，更是“哪些事情还没有真正结束”。让班主任减少反复记忆、翻找和确认，把精力留给真正需要判断的事情。
 
-**公开源码中的主要路径：**
-
-- 本机 owner 初始化 / 登录 → 创建班级与名单；
-- 记录类型化学生事实、事件及跟进 Task；
-- 在 Today 和 Student Timeline 中查看待处理事项与学生上下文；
-- 对重要更正执行预览、明确批准和版本 / 审计记录；
-- Agent 通过受控边界查询、生成草稿，不直接批准或提交业务写入。
-
-这是与私有开发主仓分离的**独立公开候选仓库**；代码处于 Pre-alpha，**只允许合成数据开发验证**。尚未形成正式 R1、真实学生数据准入或生产发布。不要把 CI / 合成测试通过等同于教师减负效果已验证。
-
-[查看源码、运行说明与限制 →](https://github.com/Gdnbit/classmatter)
+[了解 ClassMatter →](https://github.com/Gdnbit/classmatter)
 
 ---
 
 ## 🔬 [思考间 · ThinkRoom](https://github.com/Gdnbit/thinkroom)
 
-`Public / Early-stage` · Personal Knowledge & Multi-perspective Reasoning
+**让积累的信息真正参与下一次思考。** 将文章、笔记、文档与不同作者的观点整理成可检索、有出处的个人知识，再通过问答、研究简报、多视角讨论与决策复盘帮助理解、比较和判断。
 
-**解决什么问题：** 人们收藏了大量文章、研究文档和笔记，但下一次遇到问题时，很难快速找回相关观点、来源与分歧。ThinkRoom 让积累的信息能够带着证据参与新的思考，而不只是被保存。
+它不只是“上传文件然后聊天”，更关注信息从收集、理解、召回，到参与决策与事后复盘的完整过程。
 
-**当前公开代码的六步主线：**
-
-```text
-收集 Uploads / Feeds
-  → 解析 Text / OCR
-  → 处理 RawSource / ClaimCard / EvidenceSpan
-  → 存储原文与衍生知识
-  → 按问题和来源范围召回
-  → Chat / Briefing / Committee / Replay
-```
-
-- **知识入库**：文档、笔记及可选信息源经解析与关联，保留来源；
-- **资料范围与证据**：选定来源问答，观点可回溯原文，证据不足时应停止生成而非编造；
-- **多种思考模式**：日常问答、结构化简报及可手动选择的多角色讨论；
-- **判断复盘**：保存决策快照，记录后续结果，再回看当时依据。
-
-早期应用场景包含金融研究，但它**不是已验证的投资建议或自动交易系统**；公开的本地测试 / Mock 路径不等于真实模型效果与生产托管安全性。不同来源和高级模块成熟度有差异，以仓库 README 和验证材料为准。
-
-[查看源码、合成演示与设计思路 →](https://github.com/Gdnbit/thinkroom)
+[了解 ThinkRoom →](https://github.com/Gdnbit/thinkroom)
 
 ---
 
-## 🩺 HealthBox / Family Health Records
+## 🩺 HealthBox
 
-`Private / Preparing for open source` · Personal & Family Health Records
+**面向个人及家庭的长期健康档案系统。** 集中管理体检报告、检验指标和健康历史，结合报告解析、人工复核、趋势对比、家庭成员共享与数据备份，让零散的健康资料能够持续积累和使用。
 
-**解决什么问题：** 家庭医疗报告、体检批次和健康指标散落在各处，缺乏统一归档、人工核对和长期对比的工具。
-
-私有实现基于开源 **MediKeep** 定制和扩展；`HealthBox` 是计划采用的公开名称，**当前未公开发布名为 HealthBox 的仓库**。以下属于项目描述，暂不等于可供外部独立检查的证据：
-
-- 多文件上传、保留原始报告与来源；
-- OCR / 解析结果先成为候选，经人工复核后才正式入库；
-- 检验与生命体征趋势、体检批次对比；
-- 家庭成员与共享边界、导出和备份恢复；
-- AI 用于受控辅助分析，不能静默生成或修改正式健康事实。
-
-该项目继承上游开源代码，评价个人贡献时应区分上游能力与新增定制实现。计划完成公开审计后再发布，不将准备中当作已经开源。
+设计重点是保留数据来源、尊重人工确认，让 AI 辅助整理和理解，而不是替人随意生成健康事实。基于开源 MediKeep 进行家庭化定制与扩展。
 
 ---
 
 ## 🏢 Enterprise AI Core
 
-`Planning / Architecture direction` · Enterprise AI / Reusable Infrastructure
+**从企业 AI 项目交付延伸出的通用架构探索。** 希望把企业已有的 ERP、OA、文件和业务流程，与结构化 Context、OCR / ASR、模型调用、工具能力及权限控制连接起来，形成可复用的 Agent 业务基础设施。
 
-这是我从当前企业 AI 应用交付中进一步抽象的架构方向，**不是已完成的独立平台或可公开检查的代码成果**。
-
-它考虑把 `ERP / OA / SaaS / Excel / Files` 等业务系统与重复使用的 `OCR / ASR / 文档解析 / RAG / Model / Tool` 能力连接起来，再通过统一的企业 Context、权限 / 审批 / 审计边界和可受控执行的 Agent Runtime，为采购、行政、生产等 Domain Packs 提供可复用基础。
-
-```text
-Existing Systems / Files
-      → Enterprise Context / State
-      → Reusable Capabilities
-      → Permissions / Approval / Audit
-      → Agent Runtime / Domain Workflows
-```
-
-它体现我长期想研究的方向：让 Agent 不只回答问题，还能在明确的业务、权限和审计边界内可靠推进工作。实现深度和适用性需要未来单独证明。
+核心思路是：不要每做一个企业需求就重新搭一套系统，而是不断沉淀可复用的能力与业务工作流。
 
 ---
 
 # 其他正在形成的方向
 
-## 🧠 Personal Context Infrastructure · `Planning`
+## 🧠 Personal Context Infrastructure
 
 把录音、位置、日历、应用使用、健康 / 穿戴、文件等多源个人数据对齐到统一时间线，提取 `Event / Person / Claim / Task` 并保留 provenance，再通过 API / MCP 提供给 Personal Agent。核心思想是 **context 属于用户，Agent 只是消费者**。
 
-## 🎙️ Audio Intelligence Gateway · `Planning`
+## 🎙️ Audio Intelligence Gateway
 
 统一封装多 ASR、speaker diarization、上下文纠错、专有名词处理、模型交叉校验与 `Transcript → Artifact`，给 ClassMatter、Personal Context、会议 / 访谈等场景复用。
 
@@ -128,10 +78,10 @@ Tools + Permission + Runtime
 Agent-native System
 ```
 
-- **ClassMatter / ThinkRoom / HealthBox**：三个不同场景下的 Domain System；前两者已有公开源码，HealthBox 仍为私有准备中。
+- **ClassMatter / ThinkRoom / HealthBox**：知识、班务和健康三个场景下的 Domain System。
 - **Enterprise AI Core**：把企业交付里反复出现的能力进一步抽象成通用底座。
 - **Personal Context / Audio Gateway**：为长期 Personal Agent 和其他产品补充可复用 Context / Capability。
 
-我会区分公开可检查的源码、仍在私有开发的项目和规划方向，不会把私有客户项目、上游项目或未经验证的功能包装成自己已交付的成果。
+
 
 [← 返回主页](README.md) · [工作方式 →](WORK.md) · [当前方向 →](NOW.md)
