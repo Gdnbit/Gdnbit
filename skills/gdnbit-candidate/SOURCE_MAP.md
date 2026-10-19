@@ -124,43 +124,31 @@ The Skill is **not** primary proof of project implementation.
 
 This list is a routing registry, not a second project portfolio. For current descriptions and statuses, read `PROJECTS.md`; for public implementation claims, inspect the project repository itself.
 
+### ClassMatter / 班事有谱
+
+Public repository: https://github.com/Gdnbit/classmatter
+
+Use this first for homeroom workflow modeling, typed facts / tasks, controlled corrections, permission boundaries and audit. **Public / Pre-alpha** means code is inspectable, not that formal R1, real-student-data admission or a production release has passed. The separate development repository remains private.
+
+### ThinkRoom / 思考间
+
+Public repository: https://github.com/Gdnbit/thinkroom
+
+Use this for private knowledge ingestion, evidence/provenance, restricted-source retrieval, chat / Briefing / Committee and decision replay. **Public / Early-stage**; distinguish code and local / Mock tests from demonstrated live-model reliability and production deployment. Research OS was the earlier identity/design lineage; do not treat the private `research-os` repository as the public portfolio link.
+
 ### LLM Race
 
-Public repository:
-https://github.com/Gdnbit/llm-race
+Public repository: https://github.com/Gdnbit/llm-race
 
-Use this as the clearest current public code artifact when a reviewer wants inspectable implementation evidence.
+Use this secondary public artifact for MCP model-selection logic. It remains an early MVP, and should not automatically outrank the two featured public domain projects.
 
-If asked what it actually implements, inspect the repository instead of relying on a Profile or Skill summary.
+### HealthBox / Family Health Records
 
-### Research OS
-
-Use the current Profile project map for scope/status.
-
-If the implementation repository is not publicly accessible to the reviewer, keep implementation claims at **candidate-described** confidence. If visibility later becomes public, inspect the repository directly and let observable evidence override stale status labels.
-
-### Class OS
-
-Use the current Profile project map for scope/status.
-
-If the implementation repository is not publicly accessible, do not infer hidden implementation details. If it later becomes public, prefer current repository evidence for implementation claims.
-
-### Family Health Records / Health OS
-
-Use the current Profile project map for scope/status.
-
-Because this work is based on an upstream open-source project, distinguish:
-
-- upstream capability;
-- Gdnbit-specific modifications;
-- publicly inspectable evidence;
-- candidate-described additions.
+Status: **Private / preparing for open source**. No public HealthBox repository has been verified as of this update. The work customizes upstream MediKeep, so distinguish upstream features, candidate contributions and unsupported claims. Use current Profile for descriptions, not private-repo speculation.
 
 ### Enterprise AI Core
 
-Treat as **planning / architectural direction** unless a public implementation source can be directly inspected.
-
-Do not convert architecture direction into shipped capability.
+Treat as **planning / architectural direction** unless a separate inspectable implementation source can be verified. Do not present it as a shipped enterprise platform.
 
 ## Question → source routing
 
