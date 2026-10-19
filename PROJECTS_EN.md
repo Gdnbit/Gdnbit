@@ -104,7 +104,7 @@ Align audio, location, calendars, app usage, health/wearable data and files onto
 
 ## 🎙️ Audio Intelligence Gateway · `Planning`
 
-A reusable layer for multi-ASR, speaker diarization, context correction, domain terminology, cross-model verification and `Transcript → Artifact`, serving Class OS, Personal Context, meetings, interviews and other products.
+A reusable layer for multi-ASR, speaker diarization, context correction, domain terminology, cross-model verification and `Transcript → Artifact`, serving ClassMatter, Personal Context, meetings, interviews and other products.
 
 ## 🖼️ Image Quality Audit / Image Dedup
 
@@ -132,6 +132,6 @@ Agent-native System
 - **Enterprise AI Core** abstracts repeated capabilities from enterprise delivery into a reusable foundation.
 - **Personal Context / Audio Gateway** add reusable context and capabilities for long-running personal agents and other products.
 
-I keep `Building` and `Planning` clearly separated, and I do not present private client systems, other people's repositories or unvalidated features as public proof.
+I distinguish publicly inspectable source, private implementations and directional plans; private client systems, upstream code and unvalidated features are not presented as shipped personal accomplishments.
 
 [← Back to profile](README_EN.md) · [Work →](WORK_EN.md) · [Now →](NOW_EN.md)
