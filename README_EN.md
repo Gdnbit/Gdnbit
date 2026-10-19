@@ -44,16 +44,16 @@ I am gradually extracting repeated capabilities such as `OCR / ASR / document pa
 #### 🚀 Core Projects
 
 <strong>🏫 <a href="https://github.com/Gdnbit/classmatter">ClassMatter · 班事有谱</a></strong>  
-A homeroom-teacher workspace that brings scattered student records and follow-ups together, using timelines and trackable tasks so important class matters don't get lost.
+A class-management workspace shaped around a homeroom teacher's daily work. It connects student facts, activity records and follow-up tasks on a shared timeline, so each matter has context and a next step.
 
 <strong>🔬 <a href="https://github.com/Gdnbit/thinkroom">ThinkRoom · 思考间</a></strong>  
-Make saved articles, notes and documents useful in your next decision. Organize knowledge and evidence, then explore it through questions, multiple perspectives and decision reviews.
+A place for personal knowledge to do more than sit in bookmarks. It connects articles, notes and viewpoints with traceable sources, bringing them into research, multi-perspective discussion and decision reviews.
 
 **🩺 HealthBox**  
-A personal and family health record system for organizing medical reports, measurements and health history, with document parsing, human review, trends and family sharing.
+Long-term health records for individuals and families. It brings reports, health history and measurement trends together with document parsing, human review and family sharing, making changes easier to revisit over time.
 
 **🏢 Enterprise AI Core**  
-Exploring reusable enterprise AI architecture that connects existing business systems, structured context, models and tools, so agents can participate in real workflows.
+An architectural idea growing out of enterprise AI delivery: connect business context, reusable tools, permissions and Agent runtime so agents can take part in business workflows within clear boundaries—not just answer questions.
 
 [Full project map →](PROJECTS_EN.md)
 
