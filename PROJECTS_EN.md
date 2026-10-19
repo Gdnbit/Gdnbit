@@ -4,105 +4,55 @@
 
 This page prioritizes **what each system actually does**. Architecture and technical terms are used to explain implementation, not to replace the product itself.
 
-> **Status guide:** `Public` means source is currently visible and inspectable, **not** that a production release exists; `Private` means implementation exists but is not publicly inspectable; `Planning` denotes architectural direction.
+Projects are presented by the problems they tackle, their core capabilities and the product ideas behind them. Visit each project repository for implementation details.
 
 ---
 
-# Four Core Projects
+# Core Projects
 
 ## 🏫 [ClassMatter · 班事有谱](https://github.com/Gdnbit/classmatter)
 
-`Public / Pre-alpha` · Agent-assisted Homeroom Workbench
+**A workspace for homeroom teachers.** Bring student records and follow-ups out of scattered chats, spreadsheets and personal memory, then organize them through records, tasks, Today and Timeline views so class matters can be tracked and revisited.
 
-**Problem:** Homeroom teachers manage scattered student records and long-running follow-ups, making it hard to track open loops and maintain reliable evidence of what happened.
+The idea goes beyond a to-do list: help teachers notice what remains unresolved, without having to keep everything in their heads.
 
-**Inspectable implementation scope:**
-
-- local owner setup / login and class / roster management;
-- typed student facts, events and follow-up Tasks;
-- Today and Student Timeline for work and context;
-- preview / explicit approval for controlled corrections, version history and audit;
-- controlled Agent queries and drafts, without autonomous business-write approval.
-
-The public repository is an **isolated publication candidate**, separate from the private development repository. It is **Pre-alpha and synthetic-data only**, not an approved R1, real-student-data deployment or production release. Tests and CI do not establish real-world teacher time savings.
-
-[Inspect source, setup and limitations →](https://github.com/Gdnbit/classmatter)
+[Explore ClassMatter →](https://github.com/Gdnbit/classmatter)
 
 ---
 
 ## 🔬 [ThinkRoom · 思考间](https://github.com/Gdnbit/thinkroom)
 
-`Public / Early-stage` · Private Knowledge & Multi-perspective Thinking
+**Make collected knowledge useful in the next thinking session.** Turn articles, notes, documents and different viewpoints into searchable, source-linked knowledge, then explore it through chat, research briefs, multi-perspective discussion and decision review.
 
-**Problem:** Saved articles, research, documents and notes are hard to retrieve and compare when new questions arise. ThinkRoom is meant to make accumulated information usable again, with traceable sources and different reasoning modes.
+More than “chat with your files,” ThinkRoom focuses on the journey from information collection and understanding to reasoning, decisions and learning from outcomes.
 
-**Current source workflow:**
-
-```text
-Collect Uploads / Feeds
-  → Parse Text / OCR
-  → Process RawSource / ClaimCard / EvidenceSpan
-  → Store raw and derived information
-  → Retrieve within relevant source scope
-  → Chat / Briefing / Committee / Replay
-```
-
-- ingest documents and optional feeds while retaining source context;
-- associate claims with supporting evidence and constrain answers to selected sources;
-- support chat, structured Briefing and manually selected multi-perspective Committee discussions;
-- preserve DecisionSnapshot, record Outcome and review through Replay.
-
-Financial research was an early use case, but this is **not a validated investment adviser or automated trading system**. Mock/local tests do not establish real-model quality or public-hosting readiness; optional modules have different maturity levels.
-
-[Inspect source, synthetic demo and design rationale →](https://github.com/Gdnbit/thinkroom)
+[Explore ThinkRoom →](https://github.com/Gdnbit/thinkroom)
 
 ---
 
-## 🩺 HealthBox / Family Health Records
+## 🩺 HealthBox
 
-`Private / Preparing for open source` · Personal & Family Health Records
+**Long-term health records for individuals and families.** Organize medical reports, lab measurements and health history with document parsing, human review, trends, family sharing and backup, so records remain useful over time.
 
-**Problem:** Health reports and longitudinal measurements are scattered and hard to compare, validate and recover.
-
-This is a customization and extension of the upstream open-source **MediKeep** project. `HealthBox` is the intended public-facing name; **there is not yet a public HealthBox repository**. The following is a description of private implementation rather than independently inspectable evidence:
-
-- multi-file upload with original reports and provenance;
-- OCR/parser candidates requiring human approval before formal entry;
-- lab/vital trends and checkup-batch comparisons;
-- household member boundaries, sharing, export and backup/restore;
-- constrained AI assistance that cannot silently create or alter official health facts.
-
-Upstream features and the candidate's modifications must be evaluated separately. Public release awaits its own audit.
+The guiding principle is to retain sources and keep people in control of confirmed health facts. The project builds on the open-source MediKeep foundation with household-focused customization.
 
 ---
 
 ## 🏢 Enterprise AI Core
 
-`Planning / Architecture direction` · Enterprise AI / Reusable Infrastructure
+**An exploration of reusable enterprise AI infrastructure drawn from real delivery work.** The idea is to connect ERP, OA, files and business processes with structured context, OCR / ASR, model access, tools and authorization boundaries for agent workflows.
 
-A design direction informed by my enterprise AI delivery work, **not a shipped stand-alone platform**.
-
-It explores linking `ERP / OA / SaaS / Excel / Files` to reusable `OCR / ASR / document parsing / RAG / model / tool` capabilities, an Enterprise Context / State layer, explicit permissions / approvals / audit and controlled Agent Runtime for domain workflows such as procurement, administration and operations.
-
-```text
-Existing Systems / Files
-      → Enterprise Context / State
-      → Reusable Capabilities
-      → Permissions / Approval / Audit
-      → Agent Runtime / Domain Workflows
-```
-
-The long-term goal is to make agents participants in authorized business workflows, rather than chat interfaces bolted onto them. Implementation and suitability need independent future validation.
+Instead of rebuilding the same integrations for every new request, the aim is to accumulate reusable capabilities and domain workflows.
 
 ---
 
 # Other Directions Taking Shape
 
-## 🧠 Personal Context Infrastructure · `Planning`
+## 🧠 Personal Context Infrastructure
 
 Align audio, location, calendars, app usage, health/wearable data and files onto a canonical timeline; extract `Event / Person / Claim / Task` with provenance; expose the resulting context through API / MCP to personal agents. The key idea is that **the user owns the context layer and agents consume it.**
 
-## 🎙️ Audio Intelligence Gateway · `Planning`
+## 🎙️ Audio Intelligence Gateway
 
 A reusable layer for multi-ASR, speaker diarization, context correction, domain terminology, cross-model verification and `Transcript → Artifact`, serving ClassMatter, Personal Context, meetings, interviews and other products.
 
@@ -128,10 +78,10 @@ Tools + Permission + Runtime
 Agent-native System
 ```
 
-- **ClassMatter / ThinkRoom / HealthBox** are domain systems in different contexts. The first two have public source; HealthBox remains private and in preparation.
+- **ClassMatter / ThinkRoom / HealthBox** address different domains: class management, knowledge and health.
 - **Enterprise AI Core** abstracts repeated capabilities from enterprise delivery into a reusable foundation.
 - **Personal Context / Audio Gateway** add reusable context and capabilities for long-running personal agents and other products.
 
-I distinguish publicly inspectable source, private implementations and directional plans; private client systems, upstream code and unvalidated features are not presented as shipped personal accomplishments.
+
 
 [← Back to profile](README_EN.md) · [Work →](WORK_EN.md) · [Now →](NOW_EN.md)
