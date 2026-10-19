@@ -54,7 +54,7 @@ For a first-pass candidate brief, evidence labels should support readability rat
 
 Good:
 
-> LLM Race is currently his clearest publicly inspectable code artifact, while several larger domain projects are still private/building and therefore rely more on candidate-described evidence.
+> ClassMatter and ThinkRoom are public repositories that can be inspected for product and implementation claims, alongside the smaller LLM Race project. HealthBox and enterprise delivery remain private/candidate-described, while Enterprise AI Core is a planning direction. Public code alone does not prove production readiness.
 
 Less useful for a first answer:
 
