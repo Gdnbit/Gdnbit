@@ -104,7 +104,7 @@ Existing Systems / Files
 
 ## 🎙️ Audio Intelligence Gateway · `Planning`
 
-统一封装多 ASR、speaker diarization、上下文纠错、专有名词处理、模型交叉校验与 `Transcript → Artifact`，给 Class OS、Personal Context、会议 / 访谈等场景复用。
+统一封装多 ASR、speaker diarization、上下文纠错、专有名词处理、模型交叉校验与 `Transcript → Artifact`，给 ClassMatter、Personal Context、会议 / 访谈等场景复用。
 
 ## 🖼️ Image Quality Audit / Image Dedup
 
@@ -132,6 +132,6 @@ Agent-native System
 - **Enterprise AI Core**：把企业交付里反复出现的能力进一步抽象成通用底座。
 - **Personal Context / Audio Gateway**：为长期 Personal Agent 和其他产品补充可复用 Context / Capability。
 
-我会继续明确区分 `Building` 和 `Planning`，也不会把私有客户项目、他人仓库或未验证功能包装成公开成果。
+我会区分公开可检查的源码、仍在私有开发的项目和规划方向，不会把私有客户项目、上游项目或未经验证的功能包装成自己已交付的成果。
 
 [← 返回主页](README.md) · [工作方式 →](WORK.md) · [当前方向 →](NOW.md)
