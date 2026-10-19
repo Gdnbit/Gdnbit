@@ -43,17 +43,17 @@ I am gradually extracting repeated capabilities such as `OCR / ASR / document pa
 
 #### 🚀 Core Projects
 
-**🏢 Enterprise AI Core** · `🧭 Planning`  
-A reusable enterprise AI foundation that connects `ERP / OA / SaaS / Excel / Files` and exposes shared `Context`, capabilities, permissions/audit, Agent Runtime and Domain Packs so each new departmental use case does not rebuild the same integrations.
+**🏫 [ClassMatter · 班事有谱](https://github.com/Gdnbit/classmatter)** · `Public / Pre-alpha`  
+A homeroom-teacher workbench for rosters, typed student facts, follow-up Tasks, Today / Timeline, controlled corrections and audit history. **Synthetic-data development only; not a production product or formal R1 release.**
 
-**🏫 Class OS** · `🚧 Building`  
-A homeroom-teacher workbench with class/roster management, typed student facts, follow-up Tasks, Today, Student Timeline, corrections/audit, and controlled Agent query/draft flows. The goal is to make class work trackable and traceable.
+**🔬 [ThinkRoom · 思考间](https://github.com/Gdnbit/thinkroom)** · `Public / Early-stage`  
+A private-knowledge and multi-perspective thinking system that organizes documents, notes and claims with traceable sources, then supports grounded chat, Briefing, Committee discussions and decision replay. Local source is inspectable; model quality and production readiness are not assumed.
 
-**🩺 Health OS** · `🚧 Building`  
-A personal/family health record system with report uploads, OCR/parser candidates, human-reviewed formal records, lab/vital trends, checkup-batch comparison, member sharing, export and backup/restore. AI output never becomes a health fact automatically.
+**🩺 HealthBox / Family Health Records** · `Private / Preparing for open source`  
+A personal / family health record system with human-reviewed report extraction, longitudinal trends, scoped household sharing and backup/restore. Customized from the open-source MediKeep project. **HealthBox is the intended public-facing name; the repository is not public yet.**
 
-**🔬 Research OS** · `🚧 Building`  
-A personal research and decision system with source ingestion, `RawSource / ClaimCard / EvidenceSpan`, selected-source chat and Briefing, persistent citations, and a `DecisionSnapshot → Outcome → Replay` loop. When evidence is insufficient, model calls stop before generation.
+**🏢 Enterprise AI Core** · `Planning / Architecture direction`  
+An architectural direction for reusable enterprise Context, capabilities, permission/audit boundaries and Agent runtime, informed by my AI delivery work. **Not a shipped open-source platform.**
 
 [Full project map →](PROJECTS_EN.md)
 
