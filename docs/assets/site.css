@@ -28,3 +28,39 @@ body.dark .card,body.dark .mini-tool,body.dark .search-dialog{background:#232323
 .mobile-hero-mascot{display:none}
 .inline-mascot{display:inline-block;width:35px;height:38px;vertical-align:middle;margin-left:8px;cursor:default}
 @media(max-width:767px){.mobile-hero-mascot{display:block;width:80px;height:87px;position:absolute;right:0;top:15px}}
+
+/* Mobile mascot: keep the original floating look without overlapping the hero headline. */
+@media (max-width: 767px) {
+  /* Original mobile concept: headline and giraffe share one flex row. */
+  .hero-main > div:first-child {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    gap: clamp(8px, 3vw, 16px);
+  }
+  .hero-main .hero-title {
+    flex: 1 1 0;
+    min-width: 0;
+    font-size: clamp(33px, 11.5vw, 60px);
+    line-height: 1.15;
+    margin: 0 0 20px;
+  }
+  .hero-main .hero-title .line {
+    white-space: nowrap;
+  }
+  .hero-main .mobile-hero-mascot {
+    display: block;
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    bottom: auto;
+    width: clamp(62px, 20vw, 80px);
+    height: auto;
+    aspect-ratio: 26 / 28;
+    flex: 0 0 clamp(62px, 20vw, 80px);
+    margin-top: 6px;
+    pointer-events: none;
+    cursor: default;
+  }
+}
