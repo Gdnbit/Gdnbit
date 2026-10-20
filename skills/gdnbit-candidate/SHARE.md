@@ -1,97 +1,72 @@
-# Share the Gdnbit Candidate Skill
+# Share Gdnbit Candidate Skill / 分享给招聘方
 
-This page contains the simplest way to share the Candidate Skill with a recruiter, interviewer, hiring manager, collaborator, or other person who wants to understand Gdnbit.
+This page gives copyable instructions for a **zero-install GitHub-link workflow**. The recipient does not need to learn Agent Skills, MCP or GitHub's directory structure.
 
-## 中文：推荐直接发
+## 中文 · 推荐直接使用
 
-最稳妥的版本是直接给对方一条可以复制给 AI 的话：
+**给 HR / 招聘负责人：**
 
-> 另外这里有一个关于我的个人 Skill。您可以直接把下面这句话发给 AI：  
-> **请根据这个 Skill 先快速了解一下这位候选人：**  
+> 另外这里有一个关于我的个人 Candidate Skill，可以直接把下面这句话和链接发给 AI：
+>
+> **请根据这个 Skill 及其链接的最新公开资料，快速了解这位候选人：说明他的职业定位、实际工作内容、代表项目及可验证证据，并推荐最值得继续了解的项目或问题。**
+>
 > https://github.com/Gdnbit/Gdnbit/tree/main/skills/gdnbit-candidate
 
-这样做的原因是：不同 AI 对 GitHub 链接和 Agent Skill 的处理方式不同。直接把“要做什么”写在用户消息里，比只依赖网页内部说明更稳定。
+**已经有岗位 JD 的招聘方：**
 
-对方不需要理解 Agent Skill、MCP、安装方式或 GitHub 文件结构。
+> 请结合以下 JD，使用这个 Candidate Skill 和它链接的最新公开资料，分析候选人适合承担哪些职责、哪些能力有证据、哪些地方需要面试验证。不要只给笼统匹配分数。
+>
+> Skill：https://github.com/Gdnbit/Gdnbit/tree/main/skills/gdnbit-candidate
+>
+> JD：（粘贴岗位描述）
 
-## 预期的 AI 行为
+**技术面试官 / 潜在合作伙伴：**
 
-收到上面的直接指令和链接后，AI 理想上应该：
+> 请从这个 Candidate Skill 进入候选人当前 GitHub，选择与我们需求最相关的项目，验证其实际实现、个人贡献、测试与限制，并提出能够验证能力的技术或交付问题。
+>
+> https://github.com/Gdnbit/Gdnbit/tree/main/skills/gdnbit-candidate
 
-1. 快速建立 Gdnbit 的候选人上下文；
-2. 说明他的职业定位、实际工作方式和相关经历；
-3. 给出主要项目的简短地图；
-4. 区分公开可检查证据、候选人自述 / 私有项目和规划内容；
-5. 不把回答写成“这个 Skill 是什么”的元解释；
-6. 最后主动给出 2–4 个有价值的后续入口，让招聘方或合作方知道还能继续看什么。
+## AI 首轮回答应当是什么样？
 
-Skill 的目标是让面试官或合作伙伴**少写 Prompt 也能得到有效结果，并自然产生下一步问题**。
+- **先回答招聘方的问题**，不要只解释 Skill 是什么。
+- 用简短自然的语言讲清定位、职责边界和项目实际用途。
+- 默认优先读取当前 GitHub Profile、WORK、PROJECTS，而不是复述 Skill 内旧的项目名单。
+- 只在问题需要时进一步发现当前公开仓库及其代码、测试和文档。
+- 区分可以公开核实、候选人自述、规划设想及尚待验证的内容。
+- 根据招聘方关注点，最后给出 2–4 个自然的深入选项，比如项目深挖、具体经历、JD 匹配、面试问题。
+- 不为候选人编造成就，也不因为代码由 AI 协助实现就自动否定其贡献。
 
-## 推荐的后续钩子
+若对方已经提供 JD 或选择了项目，就直接处理现有问题，不重复询问。
 
-首答结束时，AI 可以根据对方身份和当前上下文自然提供这些选项：
+## 兼容性与可信度
 
-- **看项目**：完整介绍 Gdnbit 做过 / 正在做的项目，以及各自解决什么问题、能证明什么；
-- **看经历**：梳理实际工作经历、职责边界、承担范围和交付方式；
-- **深挖项目**：选一个项目继续看实现、架构、测试、证据、限制和 ownership；
-- **看岗位匹配**：让招聘方直接发岗位 JD，基于现有证据分析匹配点、缺口、风险和面试验证项；
-- **准备面试**：生成最值得追问的问题，优先验证会影响招聘决定的部分；
-- **判断合作适配**：如果是潜在合作方，可以分析 Gdnbit 更适合承担哪类项目、问题或角色。
+只有**真正加载/遵循该 Skill** 的 AI 才可能完整执行协议。其他模型可能只把 GitHub 页面当作资料阅读，或无法访问外链。因此分享时**在用户消息中写清任务**比只发送裸链接可靠。
 
-一个自然的首答结尾可以是：
+如果 AI 只解释了 Skill，可以追加：
 
-> 如果你愿意，我还可以继续帮你看：他具体做过哪些项目、实际工作经历和承担范围；你也可以直接把岗位 JD 发给我，我按现有证据帮你判断匹配度。对某个项目感兴趣的话，我也可以直接深挖实现和证据。
+> 不需要解释 Skill 本身。请直接查阅它链接的当前候选人资料，先介绍这位候选人，再告诉我哪些结论有公开证据、哪些还需要验证。
 
-这不是固定广告语。AI 应根据对方已经提供的信息动态调整：
-
-- 已经有 JD → 不再索要 JD，改为提供最相关项目证据、风险点和面试问题；
-- 已经选中某个项目 → 直接进入项目深挖，不再优先推“完整项目介绍”；
-- 对方明显非技术 → 用“做过哪些项目 / 是否匹配岗位 / 值得问什么”这种自然表达；
-- 对方是技术面试官 → 可以主动提供代码、tests、CI、架构、trade-offs、ownership 等深挖方向；
-- 对方是合作伙伴 → 更关注能解决什么问题、项目交付方式和合作边界。
-
-## 兼容性说明
-
-零安装场景下，AI 可能把 GitHub 页面当普通网页，而不是把其中的指令作为真正安装后的 Skill 执行。
-
-因此当前设计采用双保险：
-
-- `README.md` 顶部直接提供简短的 Candidate Quick Context，即使 AI 只做网页阅读也能得到有效候选人信息；
-- `SKILL.md` / `SOURCE_MAP.md` 负责在支持进一步读取或真正安装 Skill 时提供更完整的检索、评估和后续引导行为。
-
-如果某个 AI 仍然只解释 Skill，可以补一句：
-
-> 不需要解释 Skill 本身，请直接根据里面的候选人资料和链接，先快速介绍这位候选人，并告诉我接下来最值得继续了解哪些项目、经历或岗位匹配信息。
+如果 AI 无法访问 GitHub，它应诚实说明限制，不得假装已核验代码或最新项目状态。
 
 ## English
 
-Recommended version:
+**Recruiter:**
 
-> I also maintain a personal Candidate Skill. You can send this directly to an AI:  
-> **Please use this Skill to give me a quick understanding of this candidate:**  
+> Please use this Candidate Skill and the candidate's current linked public sources to introduce the candidate to me. Explain positioning, actual work, notable projects, inspectable evidence, material unknowns, and the most useful next questions.
+>
 > https://github.com/Gdnbit/Gdnbit/tree/main/skills/gdnbit-candidate
 
-Fallback if needed:
+**Hiring manager with a JD:**
 
-> Do not explain the Skill itself. Use the candidate context and linked public sources to give me a quick candidate brief first, then suggest the most useful next things to inspect, such as projects, experience, or fit against a job description.
+> Using this Candidate Skill and the current public evidence linked from it, evaluate the candidate against the JD below. Separate supported matches from unverified claims, identify important gaps, and suggest interview questions.
+>
+> Skill: https://github.com/Gdnbit/Gdnbit/tree/main/skills/gdnbit-candidate
+>
+> JD: (paste here)
 
-## Useful follow-up questions
+## Canonical entrypoints
 
-Once the reviewer has basic context, the same Skill should support questions such as:
-
-- `完整介绍一下他的项目。`
-- `他具体有过哪些工作经历和承担范围？`
-- `深入看一下 LLM Race，这个项目能证明什么？`
-- `他的技术能力到底怎么样？`
-- `这是我们的 JD，看看他是否合适。`
-- `如果面试他，最值得问哪些问题？`
-- `哪些能力目前只是候选人自述，还没有公开证据？`
-- `如果和他合作，他更适合承担什么类型的项目？`
-
-## Canonical links
-
-- GitHub profile: https://github.com/Gdnbit
-- Candidate Skill: https://github.com/Gdnbit/Gdnbit/tree/main/skills/gdnbit-candidate
-- Skill manifest: https://github.com/Gdnbit/Gdnbit/blob/main/skills/gdnbit-candidate/SKILL.md
-- Source map: https://github.com/Gdnbit/Gdnbit/blob/main/skills/gdnbit-candidate/SOURCE_MAP.md
-- Specification: https://github.com/Gdnbit/Gdnbit/blob/main/skills/gdnbit-candidate/SPEC.md
+- [Candidate Skill](https://github.com/Gdnbit/Gdnbit/tree/main/skills/gdnbit-candidate)
+- [Source configuration](CONFIG.md)
+- [Retrieval and evaluation rules](SKILL.md)
+- [GitHub Profile](https://github.com/Gdnbit)
