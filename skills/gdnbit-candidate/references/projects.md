@@ -1,83 +1,63 @@
-# Project Evidence Registry
+# Dynamic Project Discovery & Evidence Guide
 
-This file is a **routing registry**, not a second project portfolio.
+**Do not put a fixed portfolio or private/public-status cache in this file.** Resolve the current featured projects from the live [Profile project map](../../../PROJECTS.md) and find relevant additional public repositories under the GitHub account in [../CONFIG.md](../CONFIG.md).
 
-For current descriptions and status labels, read:
-https://github.com/Gdnbit/Gdnbit/blob/main/PROJECTS.md
+## 1. Discover and curate
 
-For implementation claims, inspect the project repository itself when it is public and accessible.
+1. Read current PROJECTS for the candidate's **featured work** and project intent.
+2. If the question asks for newer work, all projects, a missing project, or technical evidence not covered there, inspect currently public GitHub repositories, with pagination when claiming completeness.
+3. Normalize renamed repositories, aliases, historical lineages, forks, templates and archived experiments. Do not double-count.
+4. Identify **featured work**, **additional original work**, **upstream-derived/customized work**, **historical/archived work**, **forks/mirrors**, **private candidate-described work**, and **planning only** where applicable.
+5. Select projects based on the reviewer's role/interest, candidate's stated focus and inspectable evidence—not stars, last-commit dates or repository volume alone.
 
-## How to use this registry
+Do not assert an entire inventory was checked unless the public listing was actually enumerated and the accessible coverage is known.
 
-For a quick candidate brief, use `PROJECTS.md` to give the reviewer a compact project snapshot. Keep each project to roughly one line: what it is, current status/evidence, and why it matters.
+## 2. Extract project value
 
-For a deep dive, follow the evidence route below rather than expanding this registry into detailed project documentation.
+For each *selected* project, answer:
 
-## ClassMatter / 班事有谱
+- **Problem and target user:** What concrete need is addressed?
+- **Product shape:** What workflow or tool actually serves that need?
+- **Implementation evidence:** What is observable in current repo docs, contracts, tests or code?
+- **Candidate's contribution:** What can be reasonably attributed to this candidate, vs upstream code, tools and collaborators?
+- **Reality check:** Local demo, Mock, tested path, early MVP, production deployment and measured outcome are different claims.
+- **What it demonstrates:** Choose the skill signal relevant to the reviewer's decision.
 
-**Public / Pre-alpha (synthetic development only)**
+When a repository is inaccessible, keep statements attributed to their actual source and avoid inferring hidden implementation.
 
-https://github.com/Gdnbit/classmatter
-
-Inspect source, contracts, tests and current status for claims about homeroom workflows, typed facts, follow-up Tasks, Today / Timeline, controlled corrections and Agent read/draft boundaries. Public code does not equal a formally released R1, real-student-data approval or demonstrated teacher time savings. The private development repository is a different artifact.
-
-## ThinkRoom / 思考间
-
-**Public / Early-stage**
-
-https://github.com/Gdnbit/thinkroom
-
-Inspect source, README, demo, tests and design documents for knowledge ingestion, ClaimCard / EvidenceSpan, evidence-constrained QA, Briefing, optional Committee and DecisionSnapshot → Outcome → Replay. Distinguish runnable local / Mock paths from live-model quality and production security. Research OS is historical lineage, not the preferred public project link.
-
-## LLM Race
-
-**Public / Early MVP · Secondary portfolio**
-
-https://github.com/Gdnbit/llm-race
-
-Inspect MCP model-selection tools, model alignment, data freshness and tests when the reviewer's question concerns that scope. No longer describe this as the sole or unconditionally strongest public code evidence.
-
-## HealthBox / Family Health Records
-
-**Private / Preparing for open source**
-
-No verified public HealthBox repository currently. The private source is a MediKeep-based customization: distinguish upstream capabilities, candidate modifications and what remains candidate-described. Do not claim this is already an open-source release.
-
-## Enterprise AI Core
-
-**Planning / Architecture direction**
-
-Treat as a future abstraction of enterprise delivery experience. No completed public enterprise platform should be inferred.
-
-## Deep-dive evidence route
-
-When a reviewer selects a public project, inspect progressively:
+## 3. Evidence drill-down
 
 ```text
-Profile project entry
-      ↓
-repository metadata / README
-      ↓
-status / known issues
-      ↓
-architecture / contracts / design docs
-      ↓
-tests / CI
-      ↓
-source
-      ↓
-commits / PRs if ownership or evolution matters
+Curated listing / discovered repo
+             ↓
+Repository README / status
+             ↓
+Architecture and contracts
+             ↓
+Relevant tests / CI
+             ↓
+Source implementation
+             ↓
+Commits / PRs / contributors (if ownership matters)
 ```
 
-Stop when enough evidence exists to answer the reviewer’s actual question.
+Inspect only the depth required by the question, while checking directly any claim that materially affects a recommendation.
 
-## Evaluation rule
+## 4. Project-level follow-ups
 
-Do not count all projects equally.
+Generate questions based on observed design and boundaries:
 
-- public repository evidence can support publicly inspectable claims;
-- private/building projects remain candidate-described unless additional evidence is supplied;
-- planning remains directional;
-- current observable repository visibility overrides stale labels in this file.
+- What does a real user do from input to outcome?
+- What data and state changes are involved?
+- Which permissions, approvals and failure modes matter?
+- What implementation path supports the main claimed capability?
+- Which tests validate it, and which scenarios remain untested?
+- What came from upstream / collaborators / Coding Agents?
+- What design decision changed after feedback or debugging?
+- What is not yet production-ready, and what would be required?
 
-When matching a role, choose the project that best tests the role’s core constraint, then inspect the strongest available evidence for that project.
+Do **not** use a fixed questionnaire naming yesterday's projects.
+
+## 5. Source conflicts
+
+For current repository visibility, check the current repository. For implementation, prefer relevant current code/tests over general claims. For featured positioning, use current Profile PROJECTS. When they disagree, note the difference rather than hiding or averaging it.
