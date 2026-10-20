@@ -28,7 +28,7 @@ More than “chat with your files,” ThinkRoom focuses on the journey from info
 
 ---
 
-## 🩺 HealthBox
+## 🩺 [HealthBox](https://github.com/Gdnbit/healthbox)
 
 **Long-term health records for individuals and families.** Organize medical reports, lab measurements and health history with document parsing, human review, trends, family sharing and backup, so records remain useful over time.
 
