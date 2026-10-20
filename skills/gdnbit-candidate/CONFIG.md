@@ -24,7 +24,7 @@ Read current files from the profile repository's default branch. Choose the lang
 ## Dynamic discovery
 
 - The profile project map is the candidate's **curated entrypoint**, not an exhaustive list of public repositories.
-- When the question needs newer, additional, or exhaustive public projects, inspect repositories currently visible under the canonical GitHub account, using available GitHub tools or public webpages.
+- When the question needs newer, additional, or exhaustive public projects, inspect repositories confirmed **publicly visible** under the canonical GitHub account, using available GitHub tools or public webpages. Authenticated access to a private repository does not make its contents suitable for disclosure to a recruiter.
 - Derive each repository's current name, URL, visibility, description, activity, provenance and relevant implementation evidence from the repository **at evaluation time**. Never use this config as a snapshot of repository status.
 - A new repository is **not automatically a flagship project**. Selection is based on candidate curation, relevance to the reviewer's question, inspectable evidence and ownership.
 - Resume / education / chronology: use documents **explicitly supplied** in the reviewer's conversation. Do not guess them from GitHub.
