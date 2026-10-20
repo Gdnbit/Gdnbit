@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f3ee">
+  <meta name="description" content="Gdnbit — AI 解决方案与产品工程师。把真实业务需求拆成流程、规则与系统，用 AI-native 的方式实现、验证和交付。作品集：ClassMatter、ThinkRoom、HealthBox。">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="Gdnbit · 在输入，也输出">
+  <meta property="og:description" content="AI Solution & Product Engineer. Business → Systems → Agents → Outcomes.">
+  <meta name="color-scheme" content="light dark">
+  <title>Gdnbit · 在输入，也输出 — AI Solution & Product Engineer</title>
+  <style>
+    :root{--bg:#f5f3ee;--paper:#fffcf7;--ink:#222721;--muted:#747a70;--line:#d8dbd2;--green:#367d5c;--green-soft:#e8f0e7;--orange:#b07b48;--shadow:0 18px 54px rgba(33,43,35,.045);font-synthesis:none;color-scheme:light}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:88px}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC","Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased}
+    body::before{content:"";position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(#72786c 0.46px,transparent 0.46px);background-size:7px 7px;opacity:.045;z-index:0}
+    a{color:inherit;text-decoration:none}
+    a:focus-visible,button:focus-visible{outline:3px solid var(--green);outline-offset:4px;border-radius:3px}
+    ::selection{background:#b6d6bb;color:#1b2c1f}
+    .wrap{width:min(1180px,calc(100% - 72px));margin-inline:auto;position:relative}
+    .top{position:sticky;top:0;z-index:10;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(153,161,150,.22);background:rgba(245,243,238,.9)}
+    .top .wrap{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:inline-flex;align-items:center;gap:10px;font-size:18px;letter-spacing:-.055em;font-weight:800}
+    .brand-mark{width:31px;height:31px;display:grid;place-items:center;border:1px solid var(--line);border-radius:9px;background:var(--paper);font-size:17px;font-weight:650}
+    .nav{display:flex;align-items:center;gap:31px;font-size:13px;color:#596259}
+    .nav a{transition:color .2s}
+    .nav a:hover{color:var(--green)}
+    .nav .nav-highlight{padding:10px 16px;border:1px solid #bbc5bb;border-radius:7px;background:var(--paper);font-weight:650;color:var(--ink)}
+    .nav .nav-highlight:hover{border-color:var(--green);color:var(--green)}
+    .hero{padding:91px 0 81px;min-height:670px;display:grid;grid-template-columns:minmax(0,1.42fr) minmax(260px,.58fr);gap:70px;align-items:center;border-bottom:1px solid var(--line)}
+    .eyebrow{font-family:"SFMono-Regular",Consolas,Monaco,monospace;letter-spacing:.115em;font-size:11px;color:var(--green);text-transform:uppercase;display:flex;gap:10px;align-items:center}
+    .eyebrow::before{content:"";width:17px;height:1px;background:var(--green)}
+    h1,h2,h3,p{margin-top:0}
+    h1{font-family:Georgia,"Songti SC","Noto Serif SC",SimSun,serif;font-weight:550;font-size:clamp(57px,7.3vw,102px);line-height:1.24;letter-spacing:-.075em;margin:36px 0 26px}
+    h1 .offset{display:block;padding-left:.08em}
+    h1 em{font-style:normal;color:var(--green);font-weight:700;position:relative}
+    h1 em::after{content:"";position:absolute;bottom:-.05em;left:0;width:100%;height:3px;background:#9abf9d;transform:rotate(-1deg)}
+    .lede{font-size:18px;line-height:1.95;color:#48554a;max-width:600px}
+    .lede strong{color:var(--ink);font-weight:650}
+    .hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:34px}
+    .btn{display:inline-flex;align-items:center;gap:22px;justify-content:center;padding:14px 19px;min-height:50px;border:1px solid #a3b7a7;border-radius:7px;font-size:13px;font-weight:700;transition:transform .18s,background .18s,border-color .18s}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:var(--green);border-color:var(--green);color:white}
+    .btn-primary:hover{background:#286b4b}
+    .btn-secondary{background:var(--paper);color:var(--ink)}
+    .btn-secondary:hover{border-color:var(--green)}
+    .hero-side{align-self:stretch;display:flex;flex-direction:column;justify-content:center;gap:18px}
+    .mascot-card{border:1px solid var(--line);border-radius:12px;background:linear-gradient(150deg,#fefdf9,#ecf0e9);height:325px;display:flex;flex-direction:column;justify-content:center;align-items:center;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+    .mascot-card::before{content:"";width:250px;height:250px;border:1px solid rgba(100,141,103,.12);position:absolute;border-radius:50%}
+    .mascot-card::after{content:"";width:190px;height:190px;border:1px solid rgba(100,141,103,.18);position:absolute;border-radius:50%}
+    .giraffe{width:145px;position:relative;z-index:1;filter:drop-shadow(0 12px 10px rgba(43,67,42,.11));animation:bob 5s ease-in-out infinite}
+    .side-label{position:absolute;left:22px;top:20px;font:10px Consolas,monospace;letter-spacing:.12em;color:#818b7e}
+    .side-caption{position:absolute;right:20px;bottom:19px;font-size:11px;color:#7a8579}
+    .side-facts{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+    .fact{border:1px solid var(--line);border-radius:8px;padding:14px 15px;background:rgba(255,252,247,.72)}
+    .fact .label{font-size:10px;color:#8d9588;letter-spacing:.06em;text-transform:uppercase}
+    .fact b{font-size:13px;display:block;line-height:1.5;margin-top:8px;font-weight:650}
+    .ticker{display:flex;gap:11px;align-items:center;flex-wrap:wrap;padding:27px 0 64px;border-bottom:1px solid var(--line)}
+    .ticker-label{font-size:11px;letter-spacing:.12em;color:var(--muted);font-family:Consolas,monospace;margin-right:13px}
+    .tag{font:12px Consolas,monospace;color:#697369;border:1px solid #d2dacf;border-radius:5px;padding:9px 12px;background:#f9faf6}
+    section.area{padding:90px 0;border-bottom:1px solid var(--line)}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:22px;margin-bottom:35px}
+    .section-number{font:12px Consolas,monospace;color:var(--green);margin-bottom:14px;letter-spacing:.07em}
+    h2{font-size:clamp(30px,3.5vw,43px);letter-spacing:-.055em;font-weight:750;line-height:1.3;margin-bottom:0}
+    .section-sub{font-size:13px;color:var(--muted);line-height:1.8;max-width:390px;text-align:right}
+    .project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .project{border:1px solid var(--line);background:var(--paper);padding:29px 31px 25px;min-height:280px;border-radius:10px;display:flex;flex-direction:column;transition:transform .22s,box-shadow .22s,border-color .22s}
+    .project:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#b2c2b3}
+    .project-top{display:flex;align-items:start;justify-content:space-between;gap:20px}
+    .project-icon{font-size:27px;display:grid;place-items:center;width:55px;height:55px;border-radius:11px;background:#f0f2ed}
+    .project-arrow{font-size:24px;color:var(--green);line-height:1;transition:transform .2s}
+    .project:hover .project-arrow{transform:translate(3px,-3px)}
+    .project h3{font-size:23px;letter-spacing:-.04em;margin:26px 0 8px}
+    .project .english{color:#809084;font-size:11px;letter-spacing:.06em}
+    .project p{font-size:13px;color:#626d62;line-height:1.9;margin:13px 0 24px;flex:1}
+    .project .project-foot{font-size:11px;color:var(--green);display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-weight:650}
+    .project .project-foot span{border:1px solid #d6e4d6;background:#f0f6ee;border-radius:4px;padding:6px 9px}
+    .project:last-child{background:#eff3ed}
+    .more-link{display:inline-flex;align-items:center;gap:9px;font-size:13px;color:var(--green);font-weight:650;margin-top:28px}
+    .more-link:hover{text-decoration:underline;text-underline-offset:4px}
+    .work-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:75px}
+    .work-intro{font-size:18px;line-height:1.95;color:#4e594f;max-width:420px;margin:24px 0}
+    .work-points{border-top:1px solid var(--line)}
+    .work-point{display:grid;grid-template-columns:52px 1fr;gap:12px;padding:19px 0;border-bottom:1px solid var(--line)}
+    .work-point .idx{font:13px Consolas,monospace;color:var(--green);padding-top:4px}
+    .work-point h3{font-size:16px;margin-bottom:6px}
+    .work-point p{font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:0}
+    .note{border-left:2px solid var(--green);padding-left:17px;color:#5b695d;font-size:13px;line-height:1.9;margin-top:24px}
+    .now-card{background:#283a2e;border-radius:12px;padding:52px 55px;display:grid;grid-template-columns:.95fr 1.05fr;gap:65px;color:#eff6ee;overflow:hidden;position:relative}
+    .now-card::after{content:"✳";position:absolute;top:-100px;right:-45px;font-size:330px;color:rgba(255,255,255,.025)}
+    .now-card .section-number{color:#acd4ae}
+    .now-card h2{font-family:Georgia,"Songti SC","Noto Serif SC",serif;font-weight:600;font-size:clamp(34px,3.5vw,50px);line-height:1.43}
+    .now-card p{color:#cad6c8;font-size:14px;line-height:2}
+    .now-card .chain{font:12px/2.25 Consolas,monospace;color:#b1d4b5;letter-spacing:.005em}
+    .now-card a{color:white;display:inline-flex;gap:8px;align-items:center;border-bottom:1px solid #769f7d;padding-bottom:5px;font-size:13px;margin-top:10px}
+    .footer{padding:48px 0 44px;display:flex;justify-content:space-between;align-items:center;gap:26px}
+    .footer .signature{font:25px Georgia,serif;letter-spacing:-.03em}
+    .footer .fine{font-size:12px;color:var(--muted);margin-top:8px}
+    .footer .links{display:flex;gap:22px;font-size:12px;font-weight:650}
+    .footer .links a:hover{color:var(--green)}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    @keyframes bob{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-8px) rotate(1deg)}}
+    @media(max-width:900px){
+      .wrap{width:min(100% - 44px,720px)}.hero{grid-template-columns:1fr;min-height:auto;padding:76px 0 55px;gap:46px}.hero-side{display:grid;grid-template-columns:1fr .65fr;gap:15px}
+      .mascot-card{height:215px}.giraffe{width:110px}.side-facts{grid-template-columns:1fr;align-content:center}.fact{padding:15px}
+      .work-grid{grid-template-columns:1fr;gap:25px}.now-card{gap:22px;padding:35px;grid-template-columns:1fr}.ticker{padding-bottom:42px}
+    }
+    @media(max-width:600px){
+      .wrap{width:calc(100% - 36px)}.top .wrap{height:64px}.brand{font-size:17px}.nav{gap:13px;font-size:12px}.nav a:nth-child(2),.nav a:nth-child(3){display:none}
+      .nav .nav-highlight{padding:9px 11px}.hero{padding:55px 0 42px;gap:32px}h1{font-size:clamp(52px,13vw,78px);margin:30px 0 21px}.lede{font-size:15px}
+      .hero-side{grid-template-columns:1fr .86fr}.mascot-card{height:174px}.giraffe{width:89px}.side-label{font-size:9px;left:12px;top:12px}.side-caption{display:none}
+      .fact{padding:9px 11px}.fact .label{font-size:9px}.fact b{font-size:11px;margin-top:4px}
+      .hero-actions{gap:10px}.btn{min-height:47px;padding:12px 13px;font-size:12px;gap:10px}
+      .ticker{padding:19px 0 37px;gap:8px}.ticker-label{display:block;width:100%}.tag{padding:7px 9px;font-size:10px}
+      section.area{padding:67px 0}.section-head{display:block}.section-sub{text-align:left;margin:14px 0 0}
+      .project-grid{grid-template-columns:1fr;gap:12px}.project{padding:24px;min-height:245px}.project h3{margin-top:19px}.project p{margin-bottom:16px}
+      .now-card{padding:28px 23px}.footer{align-items:start;flex-direction:column;gap:22px;padding:37px 0}.footer .links{gap:18px}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.giraffe{animation:none}.project,.btn,.project-arrow{transition:none}}
+    @media(prefers-color-scheme:dark){
+      :root{--bg:#171d18;--paper:#202820;--ink:#edf3e9;--muted:#9aa99a;--line:#3d4b3e;--green:#91c79f;--green-soft:#24392a;--shadow:0 18px 54px rgba(0,0,0,.18);color-scheme:dark}
+      .top{background:rgba(23,29,24,.90);border-color:#425144}.brand-mark,.nav .nav-highlight{background:var(--paper)}
+      .nav{color:#bdcabb}.lede,.work-intro{color:#b9c9b7}.fact{background:#242e24}.fact .label{color:#a6b6a5}
+      .mascot-card{background:linear-gradient(150deg,#273327,#1f2921)}.mascot-card::before,.mascot-card::after{border-color:rgba(150,194,148,.13)}
+      .tag{background:#222c23;border-color:#425144;color:#b2c9b5}.project{background:var(--paper)}.project:last-child{background:#28372b}
+      .project-icon{background:#303d31}.project p{color:#bbc9ba}.project .project-foot span{background:#2e4433;border-color:#446449}
+      .note{color:#bacbbb}.side-label,.side-caption,.project .english{color:#a6b6a3}.now-card{background:#284232}
+    }
+  </style>
+</head>
+<body>
+  <a class="sr-only" href="#main">跳转到主要内容</a>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="#top" aria-label="Gdnbit 网站首页"><span class="brand-mark" aria-hidden="true">G.</span> gdnbit<span style="color:var(--green)">/</span></a>
+      <nav class="nav" aria-label="主要导航">
+        <a href="#projects">作品</a><a href="#approach">工作方式</a><a href="#thinking">正在思考</a>
+        <a class="nav-highlight" href="https://github.com/Gdnbit" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap" id="top">
+      <div class="hero">
+        <div>
+          <div class="eyebrow">Hello, I'm Gdnbit / AI-native builder</div>
+          <h1>在输入，<span class="offset">也<em>输出</em>。</span></h1>
+          <p class="lede">我是 Gdnbit，一名 <strong>AI 解决方案 / 产品工程师</strong>。我喜欢把真实业务里的复杂问题拆成清晰的流程、规则与系统，再和 AI 一起，把想法推进到真正可验证的产品。</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">探索我的项目 <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-secondary" href="https://github.com/Gdnbit/Gdnbit/blob/main/WORK.md" target="_blank" rel="noopener noreferrer">了解我的工作方式 <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <aside class="hero-side" aria-label="关于 Gdnbit">
+          <div class="mascot-card">
+            <span class="side-label">GIRAFFES DON'T BELIEVE IN TEARS</span>
+            <svg class="giraffe" viewBox="0 0 26 28" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gdnbit 的像素长颈鹿标志" shape-rendering="crispEdges">
+              <g fill="#899b8d"><rect x="3" y="14" width="1" height="1"/><rect x="2" y="15" width="1" height="1"/><rect x="1" y="16" width="1" height="1"/><rect x="4" y="14" width="11" height="5"/><rect x="5" y="19" width="2" height="6"/><rect x="12" y="19" width="2" height="6"/><rect x="9" y="5" width="3" height="9"/><rect x="10" y="2" width="6" height="1"/><rect x="9" y="3" width="7" height="2"/><rect x="16" y="3" width="2" height="2"/></g>
+              <g fill="#4c6352"><rect x="5" y="15" width="2" height="2"/><rect x="9" y="15" width="2" height="1"/><rect x="8" y="17" width="2" height="1"/><rect x="12" y="16" width="2" height="2"/><rect x="5" y="25" width="2" height="1"/><rect x="12" y="25" width="2" height="1"/><rect x="10" y="6" width="1" height="2"/><rect x="9" y="9" width="2" height="1"/><rect x="10" y="11" width="1" height="2"/><rect x="11" y="1" width="1" height="1"/><rect x="14" y="1" width="1" height="1"/><rect x="17" y="3.5" width=".6" height=".6"/></g>
+              <rect x="12" y="3" width="1.5" height="1.5" rx=".3" fill="#ffffff"/><rect x="12.5" y="3.3" width=".7" height=".7" fill="#23362b"/>
+            </svg>
+            <span class="side-caption">一只不相信眼泪的长颈鹿。</span>
+          </div>
+          <div class="side-facts">
+            <div class="fact"><div class="label">CURRENTLY</div><b>AI Solution<br> & Product Engineer</b></div>
+            <div class="fact"><div class="label">PHILOSOPHY</div><b>Safe.<br> Clean. Soft.</b></div>
+          </div>
+        </aside>
+      </div>
+      <div class="ticker" aria-label="关注的领域"><span class="ticker-label">FOCUS AREAS</span><span class="tag">AI-native Development</span><span class="tag">Agent Systems</span><span class="tag">Enterprise AI</span><span class="tag">Workflow Automation</span><span class="tag">Context Engineering</span></div>
+    </div>
+
+    <section class="area" id="projects" aria-labelledby="project-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="section-number">01 / SELECTED WORK</div><h2 id="project-title">一些正在生长的想法。</h2></div>
+          <p class="section-sub">来自真实问题，也来自好奇心。这里展示的是产品思路与可公开检查的项目，而不是一排完成率。</p>
+        </div>
+        <div class="project-grid">
+          <a class="project" href="https://github.com/Gdnbit/classmatter" target="_blank" rel="noopener noreferrer">
+            <div class="project-top"><span class="project-icon" aria-hidden="true">🏫</span><span class="project-arrow" aria-hidden="true">↗</span></div>
+            <h3>班事有谱</h3><span class="english">CLASSMATTER · AGENT-NATIVE CLASS OS</span>
+            <p>为班主任设计的班级事务工作台。把学生记录、待办跟进与事件时间线串成可追溯的工作记忆，让 AI 帮忙查询和起草，重要事实仍由人把关。</p>
+            <div class="project-foot"><span>Education</span><span>Agent Workflow</span><span>查看仓库 ↗</span></div>
+          </a>
+          <a class="project" href="https://github.com/Gdnbit/thinkroom" target="_blank" rel="noopener noreferrer">
+            <div class="project-top"><span class="project-icon" aria-hidden="true">🔬</span><span class="project-arrow" aria-hidden="true">↗</span></div>
+            <h3>思考间</h3><span class="english">THINKROOM · PERSONAL RESEARCH OS</span>
+            <p>让收藏的信息真正参与思考。将文章、笔记和不同观点组织成有出处的知识，通过检索、研究简报和多视角讨论，支持持续判断与决策复盘。</p>
+            <div class="project-foot"><span>Research</span><span>Knowledge</span><span>查看仓库 ↗</span></div>
+          </a>
+          <a class="project" href="https://github.com/Gdnbit/healthbox" target="_blank" rel="noopener noreferrer">
+            <div class="project-top"><span class="project-icon" aria-hidden="true">🩺</span><span class="project-arrow" aria-hidden="true">↗</span></div>
+            <h3>健康档案盒</h3><span class="english">HEALTHBOX · PERSONAL HEALTH RECORDS</span>
+            <p>让零散的体检报告与检验指标成为可追溯的长期档案。强调原件留存、解析后人工复核、指标趋势和家庭授权共享；基于 MediKeep 进行扩展。</p>
+            <div class="project-foot"><span>Health</span><span>Data Provenance</span><span>查看仓库 ↗</span></div>
+          </a>
+          <a class="project" href="https://github.com/Gdnbit/Gdnbit/blob/main/NOW.md" target="_blank" rel="noopener noreferrer">
+            <div class="project-top"><span class="project-icon" aria-hidden="true">🏢</span><span class="project-arrow" aria-hidden="true">↗</span></div>
+            <h3>Enterprise AI Core</h3><span class="english">ARCHITECTURE EXPLORATION · BUSINESS AGENTS</span>
+            <p>从企业 AI 交付中抽象出的架构方向：把业务 Context、可复用能力、权限和 Agent Runtime 组织在一起，让 Agent 进入真实流程而不止停留在对话框。</p>
+            <div class="project-foot"><span>Enterprise AI</span><span>Architecture Idea</span><span>阅读思考 ↗</span></div>
+          </a>
+        </div>
+        <a class="more-link" href="https://github.com/Gdnbit/Gdnbit/blob/main/PROJECTS.md" target="_blank" rel="noopener noreferrer">查看完整项目地图 <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section class="area" id="approach" aria-labelledby="approach-title">
+      <div class="wrap work-grid">
+        <div>
+          <div class="section-number">02 / HOW I WORK</div>
+          <h2 id="approach-title">从模糊需求，<br>到可验证的系统。</h2>
+          <p class="work-intro">我更擅长把问题理解清楚、把系统边界定义清楚，再让 Coding Agents 成为实现与迭代过程中的真实协作者。</p>
+          <a class="more-link" href="https://github.com/Gdnbit/Gdnbit/blob/main/WORK.md" target="_blank" rel="noopener noreferrer">我的完整工作方式 →</a>
+        </div>
+        <div class="work-points">
+          <div class="work-point"><div class="idx">01</div><div><h3>理解问题，而不只是接收需求</h3><p>补齐业务规则、输入输出、状态、角色、权限与异常场景，识别系统真正要解决的约束。</p></div></div>
+          <div class="work-point"><div class="idx">02</div><div><h3>把业务逻辑转译为开发接口</h3><p>拆解任务，定义数据和 API 契约、验收标准与上下文，让 Agent 可以持续推进实现。</p></div></div>
+          <div class="work-point"><div class="idx">03</div><div><h3>让验证与交付形成闭环</h3><p>通过测试、实际流程联调、反馈迭代与结果检查，判断方案能否解决真实问题。</p></div></div>
+          <div class="note">AI-native 不是把代码全部交给 AI 就结束了；更重要的是，人能够维护问题定义、上下文、约束和评价机制。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="area" id="thinking" aria-labelledby="thinking-title">
+      <div class="wrap">
+        <div class="now-card">
+          <div>
+            <div class="section-number">03 / WHAT'S NEXT</div>
+            <h2 id="thinking-title">不只为软件<br>加一个 AI 功能。</h2>
+          </div>
+          <div>
+            <p>我更关心的是：当 Agent 真正进入组织，能够读取状态、调用能力、遵守权限、推进流程，并把结果持续沉淀，软件本身应该变成什么样？</p>
+            <div class="chain" aria-label="研究路径">Custom Delivery → Reusable Capabilities<br>→ Enterprise Context &amp; State<br>→ Tools, Permissions &amp; Agent Runtime<br>→ AI-native Systems</div>
+            <a href="https://github.com/Gdnbit/Gdnbit/blob/main/NOW.md" target="_blank" rel="noopener noreferrer">查看我现在的研究方向 ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="wrap footer">
+    <div><div class="signature">Gdnbit<span style="color:var(--green)">.</span></div><div class="fine">Giraffes Don't Believe in Tears. 🦒<br>一个持续更新的数字笔记本。© <span id="year">2026</span> Gdnbit.</div></div>
+    <div class="links"><a href="#top">返回顶部 ↑</a><a href="https://github.com/Gdnbit" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://github.com/Gdnbit/Gdnbit/tree/main/skills/gdnbit-candidate" target="_blank" rel="noopener noreferrer">Candidate Skill ↗</a></div>
+  </footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
