@@ -39,7 +39,7 @@ A public GitHub account may have more or fewer repositories tomorrow. The discov
 When current repo inventory is needed and tools allow:
 
 1. Resolve the account using the canonical GitHub link from CONFIG, not a display-name guess.
-2. List repositories under that account using GitHub connector/API or public GitHub UI. Handle pagination when completeness is requested.
+2. List **publicly visible** repositories under that account using GitHub connector/API or public GitHub UI. Handle pagination when completeness is requested. A connected GitHub account may return private repositories too: **filter on confirmed public visibility before inspection or disclosure**, and do not assume an omitted visibility field means public.
 3. Check each potentially relevant repo's actual URL, default branch, public visibility, README, provenance (original / fork / template), archived status and current contents.
 4. Cross-reference the curated PROJECTS links. Prefer explicit curation when selecting **featured** work, while allowing newly discovered work to be described as **additional**.
 5. Collapse renamed repositories and historical lineages; do not double-count aliases, old mirrors or forks.
