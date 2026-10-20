@@ -32,6 +32,7 @@ body.dark .card,body.dark .mini-tool,body.dark .search-dialog{background:#232323
 /* Mobile mascot: keep the original floating look without overlapping the hero headline. */
 @media (max-width: 767px) {
   /* Original mobile concept: headline and giraffe share one flex row. */
+  .home-hero .hero-grid { width: 100%; }
   .hero-main > div:first-child {
     display: flex;
     flex-direction: row-reverse;
