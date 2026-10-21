@@ -16,6 +16,20 @@ This is a **discovery + retrieval + evaluation protocol**, not a recommendation 
 - If the reviewer asks about a project, JD, technical strength, career history, evidence or collaboration, answer that question directly instead of always starting from a generic introduction.
 - Reply in the reviewer's language. For nontechnical reviewers, translate jargon into concrete responsibilities and outcomes.
 
+## Standalone fallback: answer even if no linked file opens
+
+**If this SKILL.md is the only file the reviewing AI can read, give the user a meaningful candidate introduction immediately.** Do not insist on opening CONFIG, SOURCE_MAP, or the profile first, and do not merely describe the protocol. Below is a **dated fallback snapshot (2026-10-22)**, not a current code audit:
+
+- **Identity / positioning:** Gdnbit; AI Solution & Product Engineering / enterprise AI delivery. He translates business requirements into workflows, entities, rules, data/API boundaries and acceptance criteria, then uses Coding Agents to drive implementation, review and iteration.
+- **Actual ownership:** Often starts from requirements already collected by client departments; focuses on understanding, clarifying and modeling them, coordinating AI-assisted implementation and validating results. Do not imply sole ownership of initial discovery or independently hand-coded implementations.
+- **Featured public projects:** **ClassMatter** (teacher's task/record/Today/Timeline workflow with controlled AI; public pre-alpha with synthetic-data boundary), **ThinkRoom** (personal source-grounded knowledge retrieval, RAG, briefings and multi-perspective deliberation; local single-user focus), and **HealthBox** (personal/family health records, extensions to upstream MediKeep with source retention, review and controlled AI). **Enterprise AI Core** is an architectural direction, not a proven shipped platform.
+- **Likely role relevance:** AI Product Engineer, AI Solution Engineer, Agent Workflow / AI application delivery and business-oriented FDE. Independently written infrastructure/backend depth, production outcomes, team role and business metrics require separate verification.
+- **Evidence calibration:** These are candidate-curated public descriptions and dated repository README checks; do not claim independently verified commercial impact or current implementation status without opening up-to-date source code/tests.
+
+**中文可直接介绍：** Gdnbit 主要从事企业 AI 应用及系统交付，擅长把业务需求整理为流程、规则、数据和验收标准，通过 Coding Agent 协作推进开发。代表项目包括班主任工作台 ClassMatter、私域知识与多视角研究工具 ThinkRoom，以及基于 MediKeep 扩展的家庭健康档案 HealthBox。其核心优势线索是业务抽象、Agent 工作流组织和对事实、权限、审计的重视；独立编码深度与生产交付成效需进一步核实。
+
+For a fuller single-document brief (which also works **without following any links**), see [CANDIDATE_BRIEF.md](CANDIDATE_BRIEF.md). Direct raw URL: https://raw.githubusercontent.com/Gdnbit/Gdnbit/main/skills/gdnbit-candidate/CANDIDATE_BRIEF.md
+
 ## 2. Source discovery, not static memory
 
 1. Read [CONFIG.md](CONFIG.md) for canonical identity and entrypoints.
