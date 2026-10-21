@@ -1,72 +1,54 @@
-# Share Gdnbit Candidate Skill / 分享给招聘方
+# Share Gdnbit Candidate Brief & Skill / 分享给招聘方
 
-This page gives copyable instructions for a **zero-install GitHub-link workflow**. The recipient does not need to learn Agent Skills, MCP or GitHub's directory structure.
+**两种入口：**
 
-## 中文 · 推荐直接使用
+1. **首次介绍（默认）：单文件候选人速览。** AI 只需读取一个 Raw Markdown 链接；不要求它继续访问 GitHub。
+2. **深度评估：动态 Candidate Skill。** 有 GitHub 读取能力时，可进一步审查最新公开源码、证据及 JD 匹配；无外链能力时使用 Skill 内置的简要 fallback。
 
-**给 HR / 招聘负责人：**
+## 中文 · 直接发给招聘方的 AI
 
-> 另外这里有一个关于我的个人 Candidate Skill，可以直接把下面这句话和链接发给 AI：
+> 请阅读这份独立的候选人资料，直接介绍这个人：他的职业定位、实际工作、代表项目、核心优势与能力边界，以及适合进一步评估的岗位。区分公开自述、作品可见信息与尚未验证的成果。**即使打不开其他链接，也直接依据本文作答，不要只介绍文档本身。**
 >
-> **请根据这个 Skill 及其链接的最新公开资料，快速了解这位候选人：说明他的职业定位、实际工作内容、代表项目及可验证证据，并推荐最值得继续了解的项目或问题。**
->
-> https://github.com/Gdnbit/Gdnbit/tree/main/skills/gdnbit-candidate
+> https://raw.githubusercontent.com/Gdnbit/Gdnbit/main/skills/gdnbit-candidate/CANDIDATE_BRIEF.md
 
-**已经有岗位 JD 的招聘方：**
+### 已经有 JD
 
-> 请结合以下 JD，使用这个 Candidate Skill 和它链接的最新公开资料，分析候选人适合承担哪些职责、哪些能力有证据、哪些地方需要面试验证。不要只给笼统匹配分数。
+> 请结合下面的岗位 JD 和这份单文件候选人资料，判断哪些职责较匹配、证据有多强、哪些疑点值得面试核实。不要凭未经验证的内容下定论，也不要只给匹配分数。
 >
-> Skill：https://github.com/Gdnbit/Gdnbit/tree/main/skills/gdnbit-candidate
+> Candidate: https://raw.githubusercontent.com/Gdnbit/Gdnbit/main/skills/gdnbit-candidate/CANDIDATE_BRIEF.md
 >
 > JD：（粘贴岗位描述）
 
-**技术面试官 / 潜在合作伙伴：**
+### 技术面试 / 深度审查
 
-> 请从这个 Candidate Skill 进入候选人当前 GitHub，选择与我们需求最相关的项目，验证其实际实现、个人贡献、测试与限制，并提出能够验证能力的技术或交付问题。
+> 请从这个候选人 Skill 出发，按我提供的岗位或技术方向审查候选人的最新**公开**仓库；重点验证工作归属、实现、测试、限制与真实问题解决能力。若外链不可访问，先依据 Skill 内的备用介绍作有限评估，并说明需要验证什么。
 >
-> https://github.com/Gdnbit/Gdnbit/tree/main/skills/gdnbit-candidate
-
-## AI 首轮回答应当是什么样？
-
-- **先回答招聘方的问题**，不要只解释 Skill 是什么。
-- 用简短自然的语言讲清定位、职责边界和项目实际用途。
-- 默认优先读取当前 GitHub Profile、WORK、PROJECTS，而不是复述 Skill 内旧的项目名单。
-- 只在问题需要时进一步发现当前公开仓库及其代码、测试和文档。
-- 区分可以公开核实、候选人自述、规划设想及尚待验证的内容。
-- 根据招聘方关注点，最后给出 2–4 个自然的深入选项，比如项目深挖、具体经历、JD 匹配、面试问题。
-- 不为候选人编造成就，也不因为代码由 AI 协助实现就自动否定其贡献。
-
-若对方已经提供 JD 或选择了项目，就直接处理现有问题，不重复询问。
+> https://raw.githubusercontent.com/Gdnbit/Gdnbit/main/skills/gdnbit-candidate/SKILL.md
 
 ## 兼容性与可信度
 
-只有**真正加载/遵循该 Skill** 的 AI 才可能完整执行协议。其他模型可能只把 GitHub 页面当作资料阅读，或无法访问外链。因此分享时**在用户消息中写清任务**比只发送裸链接可靠。
-
-如果 AI 只解释了 Skill，可以追加：
-
-> 不需要解释 Skill 本身。请直接查阅它链接的当前候选人资料，先介绍这位候选人，再告诉我哪些结论有公开证据、哪些还需要验证。
-
-如果 AI 无法访问 GitHub，它应诚实说明限制，不得假装已核验代码或最新项目状态。
+- **Raw Markdown ≠ 所有 AI 均可联网。** 已有测试中某 AI 能读取原始 SKILL.md，但无法沿相对链接继续打开其他文件；单文件候选人速览专门降低这种依赖。
+- **单文件解决的是首轮介绍，不是实时核验。** 内容带有更新日期，仓库状态和能力证明仍可能变化；有条件时应打开当前代码与测试。
+- **若连 Raw 链接也打不开，** 直接把该文件的 Markdown 正文粘贴进对话，或上传文件；不要让 AI 根据用户名猜测。
+- 不应凭仓库归属、AI-assisted 代码、设计文档或 Demo 自动认定生产级交付、独立编码或商业成果。
 
 ## English
 
-**Recruiter:**
+**First impression (single file):**
 
-> Please use this Candidate Skill and the candidate's current linked public sources to introduce the candidate to me. Explain positioning, actual work, notable projects, inspectable evidence, material unknowns, and the most useful next questions.
+> Please read this self-contained brief and introduce the candidate directly, covering positioning, actual responsibilities, relevant projects, evidence strength, role fit and verification questions. Do not require access to any additional files.
 >
-> https://github.com/Gdnbit/Gdnbit/tree/main/skills/gdnbit-candidate
+> https://raw.githubusercontent.com/Gdnbit/Gdnbit/main/skills/gdnbit-candidate/CANDIDATE_BRIEF.md
 
-**Hiring manager with a JD:**
+**Deeper evidence-based evaluation (when browsing works):**
 
-> Using this Candidate Skill and the current public evidence linked from it, evaluate the candidate against the JD below. Separate supported matches from unverified claims, identify important gaps, and suggest interview questions.
+> Use this Candidate Skill to evaluate current public repository evidence against my job description. Separate demonstrable implementation from candidate descriptions and plans, and identify decisive unknowns.
 >
-> Skill: https://github.com/Gdnbit/Gdnbit/tree/main/skills/gdnbit-candidate
->
-> JD: (paste here)
+> https://raw.githubusercontent.com/Gdnbit/Gdnbit/main/skills/gdnbit-candidate/SKILL.md
 
-## Canonical entrypoints
+## Entrypoints
 
-- [Candidate Skill](https://github.com/Gdnbit/Gdnbit/tree/main/skills/gdnbit-candidate)
-- [Source configuration](CONFIG.md)
-- [Retrieval and evaluation rules](SKILL.md)
+- [Single-file Candidate Brief](CANDIDATE_BRIEF.md) — recommended sharing link
+- [Full evaluation Skill](SKILL.md) — dynamic deep review
 - [GitHub Profile](https://github.com/Gdnbit)
+- [Source configuration](CONFIG.md)
